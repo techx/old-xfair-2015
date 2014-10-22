@@ -24,8 +24,9 @@ body {
 }
 
 #mainContainer {
-    position: absolute;
-    top: 20%;
+    margin: auto;
+    width: 375px;
+    margin-top: 10%;
 }
 
 a {
