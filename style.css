@@ -1,0 +1,38 @@
+body {
+    font-family: "Open Sans";
+}
+
+#x {
+    font-weight: 400;
+}
+
+#fair {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.fair {
+    font-weight: 700;
+}
+
+.xfairTitle {
+    font-size: 150px;
+}
+
+#xfairText {
+    font-weight: 300;
+}
+
+#mainContainer {
+    position: absolute;
+    top: 20%;
+}
+
+a {
+    color: #909090;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #C0C0C0;
+}
