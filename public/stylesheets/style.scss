@@ -5,6 +5,7 @@ body {
     height: auto;
     top: 0;
     left: 0;
+    background-color: $light;
 }
 
 
@@ -25,6 +26,7 @@ section.main {
     .title {
         color: $black;
         text-align: center;
+        z-index: 9;
 
         h1 {
             font-family: $avenir;
@@ -33,7 +35,90 @@ section.main {
 
     .subtitle{
         text-align: center;
+        z-index: 9;
+    }
+
+    .triangle-contrast {
+        width: 0; 
+        height: 0; 
+        border-top: 0vh solid transparent;
+        border-bottom: 90vh solid transparent; 
+        position: absolute;
+        top: 0;
+        border-left: 90vw solid $contrast; 
+        border-right: 0;
+        overflow-x: hidden;
+        z-index: -1;
+    }
+
+    .triangle-dark {
+        width: 0; 
+        height: 0; 
+        border-top: 90vh solid transparent;
+        border-bottom: 60vh solid transparent; 
+        position: absolute; 
+        top: 40vh;
+        border-left: 110vw solid $dark; 
+        border-right: 0;
+        overflow-x: hidden; 
+        z-index: -2;
     }
 }
 
+section.about {
+    @extend section.main;
 
+    .triangle-contrast {
+        width: 0; 
+        height: 0; 
+        border-top: 0vh solid transparent;
+        border-bottom: 110vh solid transparent; 
+        position: absolute;
+        top: 130vh;
+        right: 0;
+        border-left: 0;
+        border-right: 80vw solid $contrast; 
+        overflow-x: hidden;
+        z-index: -3;
+    }
+}
+
+section.sponsor {
+    @extend section.main;
+
+    .triangle-dark {
+        width: 0; 
+        height: 0; 
+        border-top: 150vh solid transparent;
+        border-bottom: 60vh solid transparent; 
+        position: absolute; 
+        top: 210vh;
+        right: 0;
+        border-left: 0;
+        border-right: 120vw solid $dark;
+        overflow-x: hidden; 
+        z-index: -4;
+    }
+
+    .content {
+        text-align: center;
+        z-index: 9;
+    }
+}
+
+section.student {
+    @extend section.main;
+
+    .triangle-contrast {
+        width: 0; 
+        height: 0; 
+        border-top: 120vh solid transparent;
+        border-bottom: 110vh solid transparent; 
+        position: absolute;
+        top: 310vh;
+        border-left: 120vw solid $contrast;
+        border-right: 0; 
+        overflow-x: hidden;
+        z-index: -3;
+    }
+}
