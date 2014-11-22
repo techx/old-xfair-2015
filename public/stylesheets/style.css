@@ -1,8 +1,10 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  width: 100%; }
 
-a {
-  color: #00B7FF;
-}
+section.main .container .wrapper .title {
+  color: #222020;
+  text-align: center; }
+section.main .container .wrapper .subtitle {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

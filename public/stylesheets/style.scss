@@ -1,16 +1,21 @@
+@import '_constants';
+
 body {
     width:100%;
 }
 
 
-.main {
-    .title {
-        width:100%
+section.main {
+    .container {
+        .wrapper {
+            .title {
+                color: $black;
+                text-align: center;
+            }
+
+            .subtitle{
+                text-align: center;
+            }
+        }
     }
-
-    .subtitle {
-        width:100%;
-    }
-
-
 }
