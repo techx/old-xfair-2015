@@ -10,10 +10,11 @@ body {
 section {
   height: 100vh;
   width: 100vw; }
-  section .main .container .wrapper .title {
-    color: #222020;
-    text-align: center; }
-    section .main .container .wrapper .title h1 {
-      font-family: "Avenir" "Helvetica" sans-serif; }
-  section .main .container .wrapper .subtitle {
-    text-align: center; }
+
+section.main .title {
+  color: #222020;
+  text-align: center; }
+  section.main .title h1 {
+    font-family: "Avenir" "Helvetica" sans-serif; }
+section.main .subtitle {
+  text-align: center; }

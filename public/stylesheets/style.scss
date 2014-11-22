@@ -11,29 +11,29 @@ body {
 section {
     height: 100vh;
     width: 100vw;
+}
+
+section.main {
+    .container {
+
+    }
+
+    .wrapper {
+
+    }
     
-    .main {
-        .container {
-            .wrapper {
-                .title {
-                    color: $black;
-                    text-align: center;
+    .title {
+        color: $black;
+        text-align: center;
 
-                    h1 {
-                        font-family: $avenir;
-                    }
-                    
-                }
-
-                .subtitle{
-                    text-align: center;
-                }
-            }
+        h1 {
+            font-family: $avenir;
         }
     }
 
-
-
+    .subtitle{
+        text-align: center;
+    }
 }
 
 
