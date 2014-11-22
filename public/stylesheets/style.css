@@ -12,77 +12,74 @@ section {
   height: 100vh;
   width: 100vw; }
 
-section.main .title, section.about .title, section.sponsor .title, section.student .title {
+section.main .title, section.about .title, section.sponsor .title, section.student .title, section.info .title {
   color: #222020;
   text-align: center;
   z-index: 9; }
-  section.main .title h1, section.about .title h1, section.sponsor .title h1, section.student .title h1 {
+  section.main .title h1, section.about .title h1, section.sponsor .title h1, section.student .title h1, section.info .title h1 {
     font-family: "Avenir" sans-serif; }
-section.main .subtitle, section.about .subtitle, section.sponsor .subtitle, section.student .subtitle {
+section.main .subtitle, section.about .subtitle, section.sponsor .subtitle, section.student .subtitle, section.info .subtitle {
   text-align: center;
   z-index: 9; }
-section.main .triangle-contrast, section.about .triangle-contrast, section.sponsor .triangle-contrast, section.student .triangle-contrast {
-  width: 0;
-  height: 0;
+section.main .triangle-dark, section.about .triangle-dark, section.sponsor .triangle-dark, section.student .triangle-dark, section.info .triangle-dark {
   border-top: 0vh solid transparent;
-  border-bottom: 90vh solid transparent;
+  border-bottom: 70vh solid transparent;
   position: absolute;
   top: 0;
-  border-left: 90vw solid #32e682;
+  border-left: 50vw solid #0a0a0a;
   border-right: 0;
   overflow-x: hidden;
   z-index: -1; }
-section.main .triangle-dark, section.about .triangle-dark, section.sponsor .triangle-dark, section.student .triangle-dark {
-  width: 0;
-  height: 0;
-  border-top: 90vh solid transparent;
-  border-bottom: 60vh solid transparent;
+section.main .triangle-contrast, section.about .triangle-contrast, section.sponsor .triangle-contrast, section.student .triangle-contrast, section.info .triangle-contrast {
+  border-top: 150vh solid transparent;
+  border-bottom: 0;
   position: absolute;
-  top: 40vh;
-  border-left: 110vw solid #0a0a0a;
+  top: -50vh;
+  border-left: 100vw solid #32e682;
   border-right: 0;
   overflow-x: hidden;
   z-index: -2; }
 
-section.about .triangle-contrast {
-  width: 0;
-  height: 0;
-  border-top: 0vh solid transparent;
-  border-bottom: 110vh solid transparent;
-  position: absolute;
-  top: 130vh;
-  right: 0;
-  border-left: 0;
-  border-right: 80vw solid #32e682;
-  overflow-x: hidden;
-  z-index: -3; }
+section.about {
+  background-color: #32e682; }
 
-section.sponsor .triangle-dark {
-  width: 0;
-  height: 0;
-  border-top: 150vh solid transparent;
-  border-bottom: 60vh solid transparent;
-  position: absolute;
-  top: 210vh;
-  right: 0;
+section.sponsor .triangle-contrast {
+  border-top: 0;
+  border-bottom: 40vh solid transparent;
+  top: 200vh;
   border-left: 0;
-  border-right: 120vw solid #0a0a0a;
+  border-right: 100vw solid #32e682;
+  z-index: -1; }
+section.sponsor .triangle-dark {
+  border-top: 200vh solid transparent;
+  border-bottom: 0;
+  position: absolute;
+  top: 100vh;
+  border-left: 0;
+  border-right: 100vw solid #0a0a0a;
   overflow-x: hidden;
-  z-index: -4; }
+  z-index: -2; }
 section.sponsor .content {
   text-align: center;
   z-index: 9; }
 
-section.student .triangle-contrast {
-  width: 0;
-  height: 0;
-  border-top: 120vh solid transparent;
-  border-bottom: 110vh solid transparent;
-  position: absolute;
-  top: 310vh;
-  border-left: 120vw solid #32e682;
+section.student {
+  background-color: #0a0a0a; }
+
+section.info .triangle-dark {
+  border-top: 0;
+  border-bottom: 200vh solid transparent;
+  top: 400vh;
+  border-left: 100vw solid #0a0a0a;
+  border-right: 0;
+  z-index: -1; }
+section.info .triangle-contrast {
+  border-top: 200vh solid transparent;
+  border-bottom: 0;
+  top: 300vh;
+  border-left: 100vw solid #32e682;
   border-right: 0;
   overflow-x: hidden;
-  z-index: -3; }
+  z-index: -2; }
 
 /*# sourceMappingURL=style.css.map */

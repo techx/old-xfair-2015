@@ -38,27 +38,23 @@ section.main {
         z-index: 9;
     }
 
-    .triangle-contrast {
-        width: 0; 
-        height: 0; 
+    .triangle-dark {
         border-top: 0vh solid transparent;
-        border-bottom: 90vh solid transparent; 
+        border-bottom: 70vh solid transparent; 
         position: absolute;
         top: 0;
-        border-left: 90vw solid $contrast; 
+        border-left: 50vw solid $dark; 
         border-right: 0;
         overflow-x: hidden;
         z-index: -1;
     }
 
-    .triangle-dark {
-        width: 0; 
-        height: 0; 
-        border-top: 90vh solid transparent;
-        border-bottom: 60vh solid transparent; 
+    .triangle-contrast { 
+        border-top: 150vh solid transparent;
+        border-bottom: 0; 
         position: absolute; 
-        top: 40vh;
-        border-left: 110vw solid $dark; 
+        top: -50vh;
+        border-left: 100vw solid $contrast; 
         border-right: 0;
         overflow-x: hidden; 
         z-index: -2;
@@ -68,36 +64,30 @@ section.main {
 section.about {
     @extend section.main;
 
-    .triangle-contrast {
-        width: 0; 
-        height: 0; 
-        border-top: 0vh solid transparent;
-        border-bottom: 110vh solid transparent; 
-        position: absolute;
-        top: 130vh;
-        right: 0;
-        border-left: 0;
-        border-right: 80vw solid $contrast; 
-        overflow-x: hidden;
-        z-index: -3;
-    }
+    background-color: $contrast
 }
 
 section.sponsor {
     @extend section.main;
 
+    .triangle-contrast {
+        border-top: 0;
+        border-bottom: 40vh solid transparent; 
+        top: 200vh;
+        border-left: 0; 
+        border-right: 100vw solid $contrast;
+        z-index: -1;
+    }
+
     .triangle-dark {
-        width: 0; 
-        height: 0; 
-        border-top: 150vh solid transparent;
-        border-bottom: 60vh solid transparent; 
-        position: absolute; 
-        top: 210vh;
-        right: 0;
-        border-left: 0;
-        border-right: 120vw solid $dark;
-        overflow-x: hidden; 
-        z-index: -4;
+        border-top: 200vh solid transparent;
+        border-bottom: 0; 
+        position: absolute;
+        top: 100vh;
+        border-left: 0; 
+        border-right: 100vw solid $dark;
+        overflow-x: hidden;
+        z-index: -2;
     }
 
     .content {
@@ -109,16 +99,28 @@ section.sponsor {
 section.student {
     @extend section.main;
 
+    background-color: $dark
+}
+
+section.info {
+    @extend section.main;
+
+    .triangle-dark {
+        border-top: 0;
+        border-bottom: 200vh solid transparent; 
+        top: 400vh;
+        border-left: 100vw solid $dark; 
+        border-right: 0;
+        z-index: -1;
+    }
+
     .triangle-contrast {
-        width: 0; 
-        height: 0; 
-        border-top: 120vh solid transparent;
-        border-bottom: 110vh solid transparent; 
-        position: absolute;
-        top: 310vh;
-        border-left: 120vw solid $contrast;
-        border-right: 0; 
+        border-top: 200vh solid transparent;
+        border-bottom: 0; 
+        top: 300vh;
+        border-left: 100vw solid $contrast; 
+        border-right: 0;
         overflow-x: hidden;
-        z-index: -3;
+        z-index: -2;
     }
 }
