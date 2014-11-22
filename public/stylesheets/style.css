@@ -35,20 +35,20 @@ section.main .triangle-contrast, section.about .triangle-contrast, section.spons
   border-bottom: 0;
   position: absolute;
   top: -50vh;
-  border-left: 100vw solid #32e682;
+  border-left: 100vw solid #3b8dbc;
   border-right: 0;
   overflow-x: hidden;
   z-index: -2; }
 
 section.about {
-  background-color: #32e682; }
+  background-color: #3b8dbc; }
 
 section.sponsor .triangle-contrast {
   border-top: 0;
-  border-bottom: 40vh solid transparent;
+  border-bottom: 80vh solid transparent;
   top: 200vh;
   border-left: 0;
-  border-right: 100vw solid #32e682;
+  border-right: 100vw solid #3b8dbc;
   z-index: -1; }
 section.sponsor .triangle-dark {
   border-top: 200vh solid transparent;
@@ -74,10 +74,10 @@ section.info .triangle-dark {
   border-right: 0;
   z-index: -1; }
 section.info .triangle-contrast {
-  border-top: 200vh solid transparent;
+  border-top: 150vh solid transparent;
   border-bottom: 0;
-  top: 300vh;
-  border-left: 100vw solid #32e682;
+  top: 350vh;
+  border-left: 100vw solid #3b8dbc;
   border-right: 0;
   overflow-x: hidden;
   z-index: -2; }

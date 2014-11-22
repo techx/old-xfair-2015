@@ -72,7 +72,7 @@ section.sponsor {
 
     .triangle-contrast {
         border-top: 0;
-        border-bottom: 40vh solid transparent; 
+        border-bottom: 80vh solid transparent; 
         top: 200vh;
         border-left: 0; 
         border-right: 100vw solid $contrast;
@@ -115,9 +115,9 @@ section.info {
     }
 
     .triangle-contrast {
-        border-top: 200vh solid transparent;
+        border-top: 150vh solid transparent;
         border-bottom: 0; 
-        top: 300vh;
+        top: 350vh;
         border-left: 100vw solid $contrast; 
         border-right: 0;
         overflow-x: hidden;
