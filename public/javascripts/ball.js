@@ -19,12 +19,12 @@ $(document).ready(function ($) {
             $(".ball").css({
                 "display": "none",
             });
-            
-        } else if (position > 480) {
+
+        } else if (position >= 480) {
 
                 $(".ball").css({
 
-                    "top":(56.5 + .1*position + "vh")
+                    "top":(56.5 + .08*position + "vh")
                 
                 });    
             }        
