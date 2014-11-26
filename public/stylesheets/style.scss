@@ -1,7 +1,10 @@
 @import '_constants';
 
-@mixin button ($height, $width, $color, $opacity) {
+#bold {
+    font-weight: 900;
+}
 
+@mixin button ($height, $width, $color, $opacity) {
     display: block;
     height: $height;
     width: $width;
@@ -16,13 +19,10 @@
     opacity: $opacity;
 
     color:rgba(255,255,255,1);
-
 }
 
 button {
-
     @include button(50px, 120px, black, 1);
-
 }
 
 
@@ -50,39 +50,52 @@ section.main {
     }
     
     .title {
-        color: $black;
-        text-align: center;
+        color: black;
+        text-align: right;
+        position: relative;
+        top: 35vh;
+        left: 15px;
         z-index: 9;
 
         h1 {
             font-family: $avenir;
+            font-size: 500%;
+            letter-spacing: 10px;
         }
     }
 
-    .subtitle{
-        text-align: center;
+    .subtitle {
+        color: black;
+        text-align: right;
+        position: relative;
+        top: 35vh;
         z-index: 9;
-    }
 
-    .triangle-dark {
-        border-top: 0vh solid transparent;
-        border-bottom: 70vh solid transparent; 
-        position: absolute;
-        top: 0;
-        border-left: 50vw solid $dark; 
-        border-right: 0;
-        overflow-x: hidden;
-        z-index: -1;
+        h3 {
+            font-family: $opensans;
+            line-height: 90%;
+        }
     }
 
     .triangle-contrast { 
-        border-top: 150vh solid transparent;
-        border-bottom: 0; 
+        border-top: 0;
+        border-bottom: 130vh solid transparent; 
         position: absolute; 
-        top: -50vh;
-        border-left: 100vw solid $contrast; 
+        top: 0vh;
+        border-left: 70vw solid $contrast; 
         border-right: 0;
         overflow-x: hidden; 
+        z-index: -1;
+    }
+
+    .triangle-dark {
+        border-top: 80vh solid transparent;
+        border-bottom: 0; 
+        position: absolute;
+        top: 40vh;
+        border-left: 100vw solid $dark; 
+        border-right: 0;
+        overflow-x: hidden;
         z-index: -2;
     }
 }
@@ -90,7 +103,7 @@ section.main {
 section.about {
     @extend section.main;
 
-    background-color: $contrast
+    // background-color: $dark
 }
 
 section.sponsor {
@@ -98,7 +111,7 @@ section.sponsor {
 
     .triangle-contrast {
         border-top: 0;
-        border-bottom: 80vh solid transparent; 
+        border-bottom: 100vh solid transparent; 
         top: 200vh;
         border-left: 0; 
         border-right: 100vw solid $contrast;
@@ -120,17 +133,17 @@ section.sponsor {
         text-align: center;
         z-index: 9;
     }
-
 }
 
 section.info {
     .col-md-4 { 
         padding: 20px;
     }
-
 }
+
 section.student {
     @extend section.main;
+
     background-color: $dark
 }
 
@@ -138,11 +151,12 @@ section.info {
     @extend section.main;
 
     .triangle-dark {
-        border-top: 0;
-        border-bottom: 200vh solid transparent; 
+        width: 100vw;
+        border-top: 100vh solid $dark;
+        border-bottom: 0;
         top: 400vh;
-        border-left: 100vw solid $dark; 
-        border-right: 0;
+        border-left: 0;
+        border-right: 40vw solid transparent;
         z-index: -1;
     }
 
@@ -152,7 +166,6 @@ section.info {
         top: 350vh;
         border-left: 100vw solid $contrast; 
         border-right: 0;
-        overflow-x: hidden;
         z-index: -2;
     }
 }
