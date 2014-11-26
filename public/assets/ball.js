@@ -17,13 +17,12 @@ $(document).ready(function ($) {
             if ($(this).scrollTop() > 480) {
 
                 $(".ball").css({
-                    
+
                     "top":(56.5 + .08*480 + .1*position + "vh"),
                 
                 });    
             }        
 
-            
 
         } else if(position <= 0) {
 
