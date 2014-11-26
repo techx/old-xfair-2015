@@ -20,7 +20,6 @@
     top: 55.55vh;
     left: 30vw;
     z-index: 9;
-
 }
 
 @mixin button ($height, $width, $color, $opacity) {
@@ -50,6 +49,7 @@
     top: 25%;
 }
 
+// BUTTONS
 #button1 {
     @include button(65px, 150px, $dark, 1);
     @include text($dark, 18pt, 400);
@@ -60,7 +60,7 @@
     display: block;
     float: right;
     position: relative;
-    top: 2vh;
+    margin-top: 2%;
 }
 
 #button1:hover{
@@ -72,6 +72,53 @@
     transition: all 600ms ease;
 }
 
+#button2 {
+    @include button(65px, 200px, $dark, 1);
+    @include text($dark, 18pt, 400);
+
+    text-align: center;
+    text-decoration: none;
+
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    top: 5vh;
+}
+
+#button2:hover{
+    @include text($light, 18pt, 400);
+    
+    text-decoration: none;
+    background: $dark;
+
+    transition: all 600ms ease;
+}
+
+#button3 {
+    @include button(65px, 200px, $light, 1);
+    @include text($light, 18pt, 400);
+
+    text-align: center;
+    text-decoration: none;
+
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    top: 5vh;
+}
+
+#button3:hover{
+    @include text($contrast, 18pt, 400);
+    
+    text-decoration: none;
+    background: $light;
+
+    transition: all 600ms ease;
+}
+
+// DEFAULTS
 h1 {
     font-family: $avenir;
     font-size: 500%;
@@ -91,6 +138,10 @@ h3 {
     #bold {
         font-weight: 700;
     }
+}
+
+.wrapper {
+
 }
 
 .title {
@@ -118,6 +169,7 @@ section {
     width: 100vw;
 }
 
+// SECTIONS
 section.main {
 
     .animated {
@@ -131,10 +183,6 @@ section.main {
         position: relative;
         top: 35vh;
         z-index: 9;
-    }
-
-    .wrapper {
-
     }
     
     .subtitle {
@@ -175,10 +223,6 @@ section.about {
         top: 30vh;
         z-index: 9;
     }
-
-    .wrapper {
-
-    }
 }
 
 section.student_sponsor {
@@ -187,10 +231,6 @@ section.student_sponsor {
         position: relative;
         top: 10vh;
         z-index: 9;
-    }
-
-    .wrapper {
-
     }
 
     .student_title {
