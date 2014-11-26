@@ -5,7 +5,7 @@
   font-weight: 900; }
 
 .center-button-text {
-  top: 33%;
+  top: 28%;
   position: relative; }
 
 #button1 {
@@ -14,33 +14,28 @@
   width: 200px;
   padding: 0;
   border: 3px solid;
-  border-color: black;
+  border-color: #122845;
   border-radius: 6px;
   background: none;
   opacity: 1;
-  color: black;
-  font-weight: 300;
-  font-size: 11pt;
+  color: #122845;
+  font-size: 15pt;
+  font-weight: 400;
   text-align: center;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  text-decoration: none;
   display: block;
-  text-decoration: none; }
+  float: right;
+  margin-right: 10vw;
+  margin-top: 37vh; }
 
 #button1:hover {
-  text-decoration: none;
-  background: #5cac9f;
-  transition: all 600ms ease;
   color: #e9e3dd;
-  font-weight: 300;
-  font-size: 11pt; }
-
-a:hover {
-  text-decoration: none; }
-
-.text {
-  color: black; }
+  font-size: 15pt;
+  font-weight: 400;
+  text-decoration: none;
+  background: #122845;
+  border-color: #e9e3dd;
+  transition: all 600ms ease; }
 
 body {
   width: 100%;
@@ -54,7 +49,7 @@ section {
   width: 100vw; }
 
 section.main .title, section.about .title, section.sponsor .title, section.student .title, section.info .title {
-  color: black;
+  color: #122845;
   text-align: right;
   position: relative;
   top: 35vh;
@@ -65,7 +60,7 @@ section.main .title, section.about .title, section.sponsor .title, section.stude
     font-size: 500%;
     letter-spacing: 10px; }
 section.main .subtitle, section.about .subtitle, section.sponsor .subtitle, section.student .subtitle, section.info .subtitle {
-  color: black;
+  color: #122845;
   text-align: right;
   position: relative;
   top: 35vh;

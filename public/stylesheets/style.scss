@@ -21,39 +21,36 @@
 
 @mixin text ($color, $fontsize, $fontweight){
     color: $color;
-    font-weight: $fontweight;
     font-size: $fontsize;
+    font-weight: $fontweight;
 }
 
 .center-button-text {
-    top: 33%;
+    top: 28%;
     position: relative;
 }
 
 #button1 {
-    @include button(65px, 200px, black, 1);
-    @include text(black, 11pt, 300);
+    @include button(65px, 200px, $dark, 1);
+    @include text($dark, 15pt, 400);
+
     text-align: center;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     text-decoration: none;
-}   
+
+    display: block;
+    float: right;
+    margin-right: 10vw;
+    margin-top: 37vh;
+}
 
 #button1:hover{
+    @include text($light, 15pt, 400);
+    
     text-decoration: none;
-    background: $contrast;
+    background: $dark;
+    border-color: $light;
+
     transition: all 600ms ease;
-    @include text($light, 11pt, 300);
-}
-
-a:hover{
-    text-decoration: none;
-}
-
-.text{
-    color: black;
 }
 
 body {
@@ -79,7 +76,7 @@ section.main {
     }
     
     .title {
-        color: black;
+        color: $dark;
         text-align: right;
         position: relative;
         top: 35vh;
@@ -94,7 +91,7 @@ section.main {
     }
 
     .subtitle {
-        color: black;
+        color: $dark;
         text-align: right;
         position: relative;
         top: 35vh;
