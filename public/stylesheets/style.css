@@ -52,7 +52,11 @@ section {
 
 section.main .container, section.about .container, section.sponsor .container, section.student .container, section.info .container {
   position: relative;
-  top: 35vh; }
+  top: 35vh;
+  -webkit-animation: fade_up 1.5s;
+  -moz-animation: fade_up 1.5s;
+  -o-animation: fade_up 1.5s;
+  animation: fade_up 1.5s; }
 section.main .title, section.about .title, section.sponsor .title, section.student .title, section.info .title {
   color: #122845;
   text-align: right;
@@ -89,6 +93,34 @@ section.main .triangle-dark, section.about .triangle-dark, section.sponsor .tria
   overflow-x: hidden;
   z-index: 1; }
 
+@-webkit-keyframes fade_up {
+  from {
+    top: 33vh;
+    opacity: 0; }
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@-moz-keyframes fade_up {
+  from {
+    top: 33vh;
+    opacity: 0; }
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@-o-keyframes fade_up {
+  from {
+    top: 33vh;
+    opacity: 0; }
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@keyframes fade_up {
+  from {
+    top: 33vh;
+    opacity: 0; }
+  to {
+    top: 35vh;
+    opacity: 1; } }
 section.about {
   background-color: #e9e3dd; }
 
