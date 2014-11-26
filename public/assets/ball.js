@@ -1,27 +1,16 @@
-$(window).scroll(function () {
+$(document).ready(function ($) {
 
-    var windowtop = $(this).scrollTop();
+    $(window).scroll(function () {
 
-    if (windowtop > 0) {
+        if ($(this).scrollTop() > 0) {
+            $(".ball").css({
+                "display":"inline",
+            });
 
-        $('.ball').css({
-	 		'color': 'black';
-	 		'float': 'left'
-	        'font-size': '50pt';
-	        'font-weight': 'bold';
-	        'text-align': 'right';
-	        'position': 'relative';
-            'z-index':'9'
-        });
-    } else {
-      //else revert '#move' position back to fixed
-        $('.ball').css({
-            'display': 'none';
-	        'float':'left';
-	        'font-size': '0pt';
-	        'text-align': 'right';
-	        'position': 'relative';
-            'z-index': '-9'
-        });
-    }
+        } else if($(this).scrollTop() <= 0) {
+            $(".ball").css({
+                "display": "none",
+            });
+        }
+    });
 });

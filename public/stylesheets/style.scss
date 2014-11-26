@@ -9,8 +9,18 @@
 }
 
 .ball{
+    font-family: $avenir;
+    color:black;
+    font-size: 500%;
 
-    
+    display:none;
+
+    float:left;
+    position: relative;
+    top: 55.55vh;
+    left: 30vw;
+    z-index: 9;
+
 }
 
 @mixin button ($height, $width, $color, $opacity) {

@@ -7,6 +7,17 @@
 ::-moz-selection {
   background: #5cac9f; }
 
+.ball {
+  font-family: "Avenir" sans-serif;
+  color: black;
+  font-size: 500%;
+  display: none;
+  float: left;
+  position: relative;
+  top: 55.55vh;
+  left: 30vw;
+  z-index: 9; }
+
 .center-button-text {
   position: relative;
   top: 29%; }
