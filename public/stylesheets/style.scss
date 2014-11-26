@@ -21,13 +21,14 @@
 
 @mixin text ($color, $fontsize, $fontweight){
     color: $color;
+    font-family: $avenir;
     font-size: $fontsize;
     font-weight: $fontweight;
 }
 
 .center-button-text {
     position: relative;
-    top: 28%;
+    top: 29%;
 }
 
 #button1 {
@@ -40,7 +41,7 @@
     display: block;
     float: right;
     position: relative;
-    top: 37vh;
+    top: 2vh;
 }
 
 #button1:hover{
@@ -68,7 +69,8 @@ section {
 
 section.main {
     .container {
-
+        position: relative;
+        top: 35vh;
     }
 
     .wrapper {
@@ -79,7 +81,6 @@ section.main {
         color: $dark;
         text-align: right;
         position: relative;
-        top: 35vh;
         left: 15px;
         z-index: 9;
 
@@ -93,8 +94,6 @@ section.main {
     .subtitle {
         color: $dark;
         text-align: right;
-        position: relative;
-        top: 35vh;
         z-index: 9;
 
         h3 {
