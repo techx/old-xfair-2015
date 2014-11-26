@@ -10,21 +10,51 @@
     width: $width;
     padding: 0;
 
-    border: 2px solid;
+    border: 3px solid;
     border-color: $color;
-    border-radius: 5px;
+    border-radius: 6px;
 
-    background: $color;
+    background: none;
 
     opacity: $opacity;
-
-    color:rgba(255,255,255,1);
 }
 
-button {
-    @include button(50px, 120px, black, 1);
+@mixin text ($color, $fontsize, $fontweight){
+    color: $color;
+    font-weight: $fontweight;
+    font-size: $fontsize;
 }
 
+.center-button-text {
+    top: 33%;
+    position: relative;
+}
+
+#button1 {
+    @include button(65px, 200px, black, 1);
+    @include text(black, 11pt, 300);
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-decoration: none;
+}   
+
+#button1:hover{
+    text-decoration: none;
+    background: $contrast;
+    transition: all 600ms ease;
+    @include text($light, 11pt, 300);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.text{
+    color: black;
+}
 
 body {
     width:100%;
@@ -33,7 +63,6 @@ body {
     left: 0;
     background-color: $light;
 }
-
 
 section {
     height: 100vh;
