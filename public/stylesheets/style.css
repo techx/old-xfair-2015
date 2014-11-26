@@ -5,13 +5,13 @@
   font-weight: 900; }
 
 .center-button-text {
-  top: 28%;
-  position: relative; }
+  position: relative;
+  top: 28%; }
 
 #button1 {
   display: block;
   height: 65px;
-  width: 200px;
+  width: 150px;
   padding: 0;
   border: 3px solid;
   border-color: #122845;
@@ -25,8 +25,8 @@
   text-decoration: none;
   display: block;
   float: right;
-  margin-right: 10vw;
-  margin-top: 37vh; }
+  position: relative;
+  top: 37vh; }
 
 #button1:hover {
   color: #e9e3dd;
@@ -76,16 +76,19 @@ section.main .triangle-contrast, section.about .triangle-contrast, section.spons
   border-left: 70vw solid #5cac9f;
   border-right: 0;
   overflow-x: hidden;
-  z-index: -1; }
+  z-index: 2; }
 section.main .triangle-dark, section.about .triangle-dark, section.sponsor .triangle-dark, section.student .triangle-dark, section.info .triangle-dark {
-  border-top: 80vh solid transparent;
-  border-bottom: 0;
+  border-top: 60vh solid transparent;
+  border-bottom: 60vh solid transparent;
   position: absolute;
   top: 40vh;
-  border-left: 100vw solid #122845;
+  border-left: 75vw solid #122845;
   border-right: 0;
   overflow-x: hidden;
-  z-index: -2; }
+  z-index: 1; }
+
+section.about {
+  background-color: #e9e3dd; }
 
 section.sponsor .triangle-contrast {
   border-top: 0;

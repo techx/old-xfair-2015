@@ -26,12 +26,12 @@
 }
 
 .center-button-text {
-    top: 28%;
     position: relative;
+    top: 28%;
 }
 
 #button1 {
-    @include button(65px, 200px, $dark, 1);
+    @include button(65px, 150px, $dark, 1);
     @include text($dark, 15pt, 400);
 
     text-align: center;
@@ -39,8 +39,8 @@
 
     display: block;
     float: right;
-    margin-right: 10vw;
-    margin-top: 37vh;
+    position: relative;
+    top: 37vh;
 }
 
 #button1:hover{
@@ -111,25 +111,25 @@ section.main {
         border-left: 70vw solid $contrast; 
         border-right: 0;
         overflow-x: hidden; 
-        z-index: -1;
+        z-index: 2;
     }
 
     .triangle-dark {
-        border-top: 80vh solid transparent;
-        border-bottom: 0; 
+        border-top: 60vh solid transparent;
+        border-bottom: 60vh solid transparent; 
         position: absolute;
         top: 40vh;
-        border-left: 100vw solid $dark; 
+        border-left: 75vw solid $dark; 
         border-right: 0;
         overflow-x: hidden;
-        z-index: -2;
+        z-index: 1;
     }
 }
 
 section.about {
     @extend section.main;
 
-    // background-color: $dark
+    background-color: $light
 }
 
 section.sponsor {
