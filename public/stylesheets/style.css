@@ -9,14 +9,15 @@
 
 .ball {
   font-family: "Avenir" sans-serif;
-  color: black;
+  color: #122845;
   font-size: 500%;
+  font-weight: 500;
   display: none;
   float: left;
   position: relative;
-  top: 55.55vh;
+  top: 54.5vh;
   left: 30vw;
-  z-index: 9; }
+  z-index: 1; }
 
 .center-button-text {
   position: relative;
