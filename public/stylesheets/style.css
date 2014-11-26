@@ -1,17 +1,43 @@
 @font-face {
   font-family: Avenir;
   src: url("/assets/Avenir.ttc"); }
-button {
+.center-button-text {
+  top: 33%;
+  position: relative; }
+
+#button1 {
   display: block;
-  height: 50px;
-  width: 120px;
+  height: 65px;
+  width: 200px;
   padding: 0;
-  border: 2px solid;
+  border: 3px solid;
   border-color: black;
-  border-radius: 5px;
-  background: black;
+  border-radius: 6px;
+  background: none;
   opacity: 1;
-  color: white; }
+  color: black;
+  font-weight: 300;
+  font-size: 11pt;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-decoration: none; }
+
+#button1:hover {
+  text-decoration: none;
+  background: #3b8dbc;
+  transition: all 600ms ease;
+  color: #e6e6e6;
+  font-weight: 300;
+  font-size: 11pt; }
+
+a:hover {
+  text-decoration: none; }
+
+.text {
+  color: black; }
 
 body {
   width: 100%;
