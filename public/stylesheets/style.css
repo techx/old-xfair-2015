@@ -9,9 +9,9 @@
 
 .ball {
   font-family: "Avenir" sans-serif;
-  color: #122845;
   font-size: 500%;
   font-weight: 500;
+  color: #122845;
   display: none;
   float: left;
   position: relative;
