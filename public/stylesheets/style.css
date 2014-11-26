@@ -1,6 +1,18 @@
 @font-face {
   font-family: Avenir;
   src: url("/assets/Avenir.ttc"); }
+button {
+  display: block;
+  height: 50px;
+  width: 120px;
+  padding: 0;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 5px;
+  background: black;
+  opacity: 1;
+  color: white; }
+
 body {
   width: 100%;
   height: auto;
@@ -18,3 +30,8 @@ section.main .title {
     font-family: "Avenir" "Helvetica" sans-serif; }
 section.main .subtitle {
   text-align: center; }
+
+section.info .col-md-4 {
+  padding: 20px; }
+
+/*# sourceMappingURL=style.css.map */

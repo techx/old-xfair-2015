@@ -1,5 +1,31 @@
 @import '_constants';
 
+@mixin button ($height, $width, $color, $opacity) {
+
+    display: block;
+    height: $height;
+    width: $width;
+    padding: 0;
+
+    border: 2px solid;
+    border-color: $color;
+    border-radius: 5px;
+
+    background: $color;
+
+    opacity: $opacity;
+
+    color:rgba(255,255,255,1);
+
+}
+
+button {
+
+    @include button(50px, 120px, black, 1);
+
+}
+
+
 body {
     width:100%;
     height: auto;
@@ -25,7 +51,7 @@ section.main {
     .title {
         color: $black;
         text-align: center;
-
+ 
         h1 {
             font-family: $avenir;
         }
@@ -34,6 +60,13 @@ section.main {
     .subtitle{
         text-align: center;
     }
+
 }
 
+section.info {
+    .col-md-4 { 
+        padding: 20px;
+    }
+
+}
 
