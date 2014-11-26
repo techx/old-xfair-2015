@@ -1,7 +1,11 @@
 @import '_constants';
 
-#bold {
-    font-weight: 900;
+::selection {
+    background: $contrast;
+}
+
+::-moz-selection {
+    background: $contrast;
 }
 
 @mixin button ($height, $width, $color, $opacity) {
@@ -15,7 +19,6 @@
     border-radius: 6px;
 
     background: none;
-
     opacity: $opacity;
 }
 
@@ -49,7 +52,6 @@
     
     text-decoration: none;
     background: $dark;
-    border-color: $light;
 
     transition: all 600ms ease;
 }
@@ -68,15 +70,16 @@ section {
 }
 
 section.main {
+    .animated {
+        -webkit-animation: fade_down 2s;
+        -moz-animation: fade_down 2s;
+        -o-animation: fade_down 2s;
+        animation: fade_down 2s;
+    }
+
     .container {
         position: relative;
         top: 35vh;
-
-        -webkit-animation: fade_up 1.5s;
-        -moz-animation: fade_up 1.5s;
-        -o-animation: fade_up 1.5s;
-        animation: fade_up 1.5s;
-        
     }
 
     .wrapper {
@@ -94,6 +97,9 @@ section.main {
             font-family: $avenir;
             font-size: 500%;
             letter-spacing: 10px;
+            #bold {
+                font-weight: 900;
+            }
         }
     }
 
@@ -105,12 +111,15 @@ section.main {
         h3 {
             font-family: $opensans;
             line-height: 90%;
+            #bold {
+                font-weight: 700;
+            }
         }
     }
 
     .triangle-contrast { 
         border-top: 0;
-        border-bottom: 130vh solid transparent; 
+        border-bottom: 125vh solid transparent; 
         position: absolute; 
         top: 0vh;
         border-left: 70vw solid $contrast; 
@@ -121,7 +130,7 @@ section.main {
 
     .triangle-dark {
         border-top: 60vh solid transparent;
-        border-bottom: 60vh solid transparent; 
+        border-bottom: 40vh solid transparent; 
         position: absolute;
         top: 40vh;
         border-left: 75vw solid $dark; 
@@ -131,27 +140,36 @@ section.main {
     }
 }
 
-@-webkit-keyframes fade_up { from { top: 33vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-   @-moz-keyframes fade_up { from { top: 33vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-     @-o-keyframes fade_up { from { top: 33vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-        @keyframes fade_up { from { top: 33vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@-webkit-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@-moz-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@-o-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
 
 section.about {
     @extend section.main;
 
-    background-color: $light
+    .container {
+        position: relative;
+        top: 30vh;
+    }
+
+    .subtitle {
+        h3 {
+            line-height: 175%;
+        }
+    }
 }
 
 section.sponsor {
     @extend section.main;
 
     .triangle-contrast {
-        border-top: 0;
+        border-top: 80vh solid transparent;
         border-bottom: 100vh solid transparent; 
-        top: 200vh;
+        top: 180vh;
         border-left: 0; 
-        border-right: 100vw solid $contrast;
-        z-index: -1;
+        border-right: 80vw solid $contrast;
+        z-index: 2;
     }
 
     .triangle-dark {
@@ -162,7 +180,7 @@ section.sponsor {
         border-left: 0; 
         border-right: 100vw solid $dark;
         overflow-x: hidden;
-        z-index: -2;
+        z-index: 1;
     }
 
     .content {
@@ -179,8 +197,6 @@ section.info {
 
 section.student {
     @extend section.main;
-
-    background-color: $dark
 }
 
 section.info {
@@ -193,7 +209,7 @@ section.info {
         top: 400vh;
         border-left: 0;
         border-right: 40vw solid transparent;
-        z-index: -1;
+        z-index: 2;
     }
 
     .triangle-contrast {
@@ -202,6 +218,6 @@ section.info {
         top: 350vh;
         border-left: 100vw solid $contrast; 
         border-right: 0;
-        z-index: -2;
+        z-index: 1;
     }
 }
