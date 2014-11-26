@@ -219,12 +219,12 @@ section.student_sponsor .container {
   z-index: 9; }
 section.student_sponsor .student_title {
   color: #e9e3dd;
-  text-align: right;
+  text-align: left;
   position: relative;
   left: 10px; }
 section.student_sponsor .student_subtitle {
   color: #e9e3dd;
-  text-align: right; }
+  text-align: left; }
 section.student_sponsor .sponsor_title {
   color: #122845;
   text-align: left; }
