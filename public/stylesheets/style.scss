@@ -47,12 +47,12 @@
 
 .center-button-text {
     position: relative;
-    top: 29%;
+    top: 25%;
 }
 
 #button1 {
     @include button(65px, 150px, $dark, 1);
-    @include text($dark, 15pt, 400);
+    @include text($dark, 18pt, 400);
 
     text-align: center;
     text-decoration: none;
@@ -64,12 +64,45 @@
 }
 
 #button1:hover{
-    @include text($light, 15pt, 400);
+    @include text($light, 18pt, 400);
     
     text-decoration: none;
     background: $dark;
 
     transition: all 600ms ease;
+}
+
+h1 {
+    font-family: $avenir;
+    font-size: 500%;
+    letter-spacing: 10px;
+    #kerning {
+        letter-spacing: 5px;
+        font-weight: 900;
+    }
+    #bold {
+        font-weight: 900;
+    }
+}
+
+h3 {
+    font-family: $opensans;
+    line-height: 175%;
+    #bold {
+        font-weight: 700;
+    }
+}
+
+.title {
+    color: $dark;
+    text-align: right;
+    position: relative;
+    left: 10px;
+}
+
+.subtitle {
+    color: $dark;
+    text-align: right;
 }
 
 body {
@@ -97,40 +130,16 @@ section.main {
     .container {
         position: relative;
         top: 35vh;
+        z-index: 9;
     }
 
     .wrapper {
 
     }
     
-    .title {
-        color: $dark;
-        text-align: right;
-        position: relative;
-        left: 15px;
-        z-index: 9;
-
-        h1 {
-            font-family: $avenir;
-            font-size: 500%;
-            letter-spacing: 10px;
-            #bold {
-                font-weight: 900;
-            }
-        }
-    }
-
     .subtitle {
-        color: $dark;
-        text-align: right;
-        z-index: 9;
-
         h3 {
-            font-family: $opensans;
             line-height: 90%;
-            #bold {
-                font-weight: 700;
-            }
         }
     }
 
@@ -141,7 +150,6 @@ section.main {
         top: 0vh;
         border-left: 70vw solid $contrast; 
         border-right: 0;
-        overflow-x: hidden; 
         z-index: 2;
     }
 
@@ -152,7 +160,6 @@ section.main {
         top: 40vh;
         border-left: 75vw solid $dark; 
         border-right: 0;
-        overflow-x: hidden;
         z-index: 1;
     }
 }
@@ -163,52 +170,60 @@ section.main {
 @keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
 
 section.about {
-    @extend section.main;
-
     .container {
         position: relative;
         top: 30vh;
-    }
-
-    .subtitle {
-        h3 {
-            line-height: 175%;
-        }
-    }
-}
-
-section.sponsor {
-    @extend section.main;
-
-    .triangle-contrast {
-        border-top: 80vh solid transparent;
-        border-bottom: 100vh solid transparent; 
-        top: 180vh;
-        border-left: 0; 
-        border-right: 80vw solid $contrast;
-        z-index: 2;
-    }
-
-    .triangle-dark {
-        border-top: 200vh solid transparent;
-        border-bottom: 0; 
-        position: absolute;
-        top: 100vh;
-        border-left: 0; 
-        border-right: 100vw solid $dark;
-        overflow-x: hidden;
-        z-index: 1;
-    }
-
-    .content {
-        text-align: center;
         z-index: 9;
     }
+
+    .wrapper {
+
+    }
 }
 
-section.info {
-    .col-md-4 { 
-        padding: 20px;
+section.student_sponsor {
+
+    .container {
+        position: relative;
+        top: 10vh;
+        z-index: 9;
+    }
+
+    .wrapper {
+
+    }
+
+    .student_title {
+        color: $light;
+        text-align: right;
+        position: relative;
+        left: 10px;
+    }
+
+    .student_subtitle {
+        color: $light;
+        text-align: right;
+    }
+
+    .sponsor_title {
+        color: $dark;
+        text-align: left;
+    }
+
+    .sponsor_subtitle {
+        color: $dark;
+        text-align: left;
+    }
+
+    .triangle-contrast {
+        border-top: 27.5vh solid transparent;
+        border-bottom: 550vh solid transparent; 
+        position: absolute;
+        top: 172.5vh;
+        right: 0;
+        border-left: 0; 
+        border-right: 55vw solid $contrast;
+        z-index: 1;
     }
 }
 
@@ -218,6 +233,10 @@ section.student {
 
 section.info {
     @extend section.main;
+    
+    .col-md-4 { 
+        padding: 20px;
+    }
 
     .triangle-dark {
         width: 100vw;

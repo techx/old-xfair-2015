@@ -20,7 +20,7 @@
 
 .center-button-text {
   position: relative;
-  top: 29%; }
+  top: 25%; }
 
 #button1 {
   display: block;
@@ -34,7 +34,7 @@
   opacity: 1;
   color: #122845;
   font-family: "Avenir" sans-serif;
-  font-size: 15pt;
+  font-size: 18pt;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -46,11 +46,37 @@
 #button1:hover {
   color: #e9e3dd;
   font-family: "Avenir" sans-serif;
-  font-size: 15pt;
+  font-size: 18pt;
   font-weight: 400;
   text-decoration: none;
   background: #122845;
   transition: all 600ms ease; }
+
+h1 {
+  font-family: "Avenir" sans-serif;
+  font-size: 500%;
+  letter-spacing: 10px; }
+  h1 #kerning {
+    letter-spacing: 5px;
+    font-weight: 900; }
+  h1 #bold {
+    font-weight: 900; }
+
+h3 {
+  font-family: "Open Sans" sans-serif;
+  line-height: 175%; }
+  h3 #bold {
+    font-weight: 700; }
+
+.title {
+  color: #122845;
+  text-align: right;
+  position: relative;
+  left: 10px; }
+
+.subtitle {
+  color: #122845;
+  text-align: right; }
 
 body {
   width: 100%;
@@ -63,52 +89,32 @@ section {
   height: 100vh;
   width: 100vw; }
 
-section.main .animated, section.about .animated, section.sponsor .animated, section.student .animated, section.info .animated {
+section.main .animated, section.student .animated, section.info .animated {
   -webkit-animation: fade_down 2s;
   -moz-animation: fade_down 2s;
   -o-animation: fade_down 2s;
   animation: fade_down 2s; }
-section.main .container, section.about .container, section.sponsor .container, section.student .container, section.info .container {
+section.main .container, section.student .container, section.info .container {
   position: relative;
-  top: 35vh; }
-section.main .title, section.about .title, section.sponsor .title, section.student .title, section.info .title {
-  color: #122845;
-  text-align: right;
-  position: relative;
-  left: 15px;
+  top: 35vh;
   z-index: 9; }
-  section.main .title h1, section.about .title h1, section.sponsor .title h1, section.student .title h1, section.info .title h1 {
-    font-family: "Avenir" sans-serif;
-    font-size: 500%;
-    letter-spacing: 10px; }
-    section.main .title h1 #bold, section.about .title h1 #bold, section.sponsor .title h1 #bold, section.student .title h1 #bold, section.info .title h1 #bold {
-      font-weight: 900; }
-section.main .subtitle, section.about .subtitle, section.sponsor .subtitle, section.student .subtitle, section.info .subtitle {
-  color: #122845;
-  text-align: right;
-  z-index: 9; }
-  section.main .subtitle h3, section.about .subtitle h3, section.sponsor .subtitle h3, section.student .subtitle h3, section.info .subtitle h3 {
-    font-family: "Open Sans" sans-serif;
-    line-height: 90%; }
-    section.main .subtitle h3 #bold, section.about .subtitle h3 #bold, section.sponsor .subtitle h3 #bold, section.student .subtitle h3 #bold, section.info .subtitle h3 #bold {
-      font-weight: 700; }
-section.main .triangle-contrast, section.about .triangle-contrast, section.sponsor .triangle-contrast, section.student .triangle-contrast, section.info .triangle-contrast {
+section.main .subtitle h3, section.student .subtitle h3, section.info .subtitle h3 {
+  line-height: 90%; }
+section.main .triangle-contrast, section.student .triangle-contrast, section.info .triangle-contrast {
   border-top: 0;
   border-bottom: 125vh solid transparent;
   position: absolute;
   top: 0vh;
   border-left: 70vw solid #5cac9f;
   border-right: 0;
-  overflow-x: hidden;
   z-index: 2; }
-section.main .triangle-dark, section.about .triangle-dark, section.sponsor .triangle-dark, section.student .triangle-dark, section.info .triangle-dark {
+section.main .triangle-dark, section.student .triangle-dark, section.info .triangle-dark {
   border-top: 60vh solid transparent;
   border-bottom: 40vh solid transparent;
   position: absolute;
   top: 40vh;
   border-left: 75vw solid #122845;
   border-right: 0;
-  overflow-x: hidden;
   z-index: 1; }
 
 @-webkit-keyframes fade_down {
@@ -141,33 +147,39 @@ section.main .triangle-dark, section.about .triangle-dark, section.sponsor .tria
     opacity: 1; } }
 section.about .container {
   position: relative;
-  top: 30vh; }
-section.about .subtitle h3 {
-  line-height: 175%; }
-
-section.sponsor .triangle-contrast {
-  border-top: 80vh solid transparent;
-  border-bottom: 100vh solid transparent;
-  top: 180vh;
-  border-left: 0;
-  border-right: 80vw solid #5cac9f;
-  z-index: 2; }
-section.sponsor .triangle-dark {
-  border-top: 200vh solid transparent;
-  border-bottom: 0;
-  position: absolute;
-  top: 100vh;
-  border-left: 0;
-  border-right: 100vw solid #122845;
-  overflow-x: hidden;
-  z-index: 1; }
-section.sponsor .content {
-  text-align: center;
+  top: 30vh;
   z-index: 9; }
+
+section.student_sponsor .container {
+  position: relative;
+  top: 10vh;
+  z-index: 9; }
+section.student_sponsor .student_title {
+  color: #e9e3dd;
+  text-align: right;
+  position: relative;
+  left: 10px; }
+section.student_sponsor .student_subtitle {
+  color: #e9e3dd;
+  text-align: right; }
+section.student_sponsor .sponsor_title {
+  color: #122845;
+  text-align: left; }
+section.student_sponsor .sponsor_subtitle {
+  color: #122845;
+  text-align: left; }
+section.student_sponsor .triangle-contrast {
+  border-top: 27.5vh solid transparent;
+  border-bottom: 550vh solid transparent;
+  position: absolute;
+  top: 172.5vh;
+  right: 0;
+  border-left: 0;
+  border-right: 55vw solid #5cac9f;
+  z-index: 1; }
 
 section.info .col-md-4 {
   padding: 20px; }
-
 section.info .triangle-dark {
   width: 100vw;
   border-top: 100vh solid #122845;
