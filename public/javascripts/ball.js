@@ -2,7 +2,11 @@ $(document).ready(function ($) {
 
     $(window).scroll(function () {
 
-        position = $(this).scrollTop()
+        position = $(window).scrollTop();
+
+        console.log(position);
+
+        ballpos = $(".ball").position();
 
         if (position > 0 && position < 480) {
 
@@ -10,7 +14,7 @@ $(document).ready(function ($) {
 
                 "display":"inline",
                 "top":(56.5 + .08*position +"vh"),
-                "left":(30 + .1*position + "vw")
+                "left":(30 + .100*position + "vw")
             
             });
             
@@ -24,7 +28,8 @@ $(document).ready(function ($) {
 
                 $(".ball").css({
 
-                    "top":(56.5 + .08*position + "vh")
+                    "top":(56.5 + .08*position + "vh"),
+                    "left": (ballpos.left*100/$(window).width() + "vw")
                 
                 });    
             }        
