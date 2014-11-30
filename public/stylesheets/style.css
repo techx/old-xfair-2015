@@ -164,12 +164,12 @@ section.about {
       width: 100%; }
 
 section.employer {
-  color: #6b6b6b; }
+  color: #656565; }
   section.employer .triangle-dark {
     border-top: 0vw solid #102036;
     border-bottom: 27.5vh solid transparent;
     position: absolute;
-    top: -3.5vh;
+    top: -3.6vh;
     border-right: 0;
     border-left: 57vw solid #102036;
     z-index: 5; }
@@ -183,7 +183,7 @@ section.employer {
     border-right: 55vw solid #f4f3f0;
     z-index: 1; }
   section.employer .employercontent {
-    margin-left: 50px;
+    margin-left: 80px;
     opacity: 0; }
   section.employer .wrapper {
     padding-top: 12vh;
@@ -233,6 +233,7 @@ section.employer {
       margin-left: 20px;
       text-align: left;
       margin-top: 6vh;
+      margin-left: 50px;
       border: 2px solid #559f93; }
       section.employer #contrast .apply h4 {
         letter-spacing: 2px;
@@ -260,6 +261,67 @@ section.employer {
         width: 8px;
         height: 8px;
         opacity: .3; }
+      section.employer #contrast .flexslider .flex-control-paging li a.flex-active {
+        background-color: #559f93;
+        opacity: .6; }
+
+section.student {
+  padding-top: 20vh;
+  background-color: #102036;
+  color: #f4f3f0;
+  top: -4.7vh;
+  z-index: 10; }
+  section.student .triangle-dark {
+    border-top: 10vw solid transparent;
+    border-bottom: 20vw solid transparent;
+    position: absolute;
+    top: 8.5vh;
+    left: -19vw;
+    margin-top: -35vh;
+    border-right: 120vw solid #102036;
+    border-left: 0;
+    z-index: 1; }
+  section.student .triangle-dark2 {
+    background-color: #102036;
+    height: 20vh;
+    position: relative;
+    z-index: 0;
+    top: -9vh; }
+  section.student .wrapper {
+    position: absolute; }
+  section.student .content .fadein {
+    opacity: 0; }
+  section.student .content .title {
+    z-index: 50;
+    margin-top: -10vh; }
+    section.student .content .title h1 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+      font-weight: 800; }
+  section.student .content #studentcontent {
+    padding: 40px 80px; }
+  section.student .content .subtitle h4 {
+    font-family: "Open Sans" sans-serif;
+    font-weight: 300;
+    line-height: 1.8em;
+    font-size: 1.2em;
+    margin-bottom: 5px; }
+  section.student .content .flexslider {
+    max-width: 500px;
+    border: none;
+    border-radius: 0;
+    margin-top: -10vh; }
+    section.student .content .flexslider .flex-control-paging li a {
+      width: 8px;
+      height: 8px;
+      opacity: .4;
+      background-color: #fff; }
+    section.student .content .flexslider .flex-control-paging li a.flex-active {
+      background-color: #559f93;
+      opacity: .7; }
 
 section.exhibitor {
   background-color: #fff;
@@ -347,7 +409,8 @@ section.exhibitor {
 
 section.info {
   height: 85vh;
-  padding: 3vh 30px 50px 30px; }
+  padding: 3vh 30px 50px 30px;
+  color: #656565; }
   section.info .container {
     position: relative;
     top: 5vh;
@@ -387,16 +450,33 @@ section.info {
     opacity: 0; }
 
 section.footer {
-  height: 10vh;
-  overflow-x: none;
-  color: #f4f3f0; }
+  height: 25vh;
+  color: #f4f3f0;
+  z-index: 40;
+  position: relative; }
+  section.footer .container {
+    padding-top: 16vh;
+    position: relative; }
   section.footer .row {
-    bottom: 0px;
-    height: auto; }
+    border-top: 1px solid #f4f3f0;
+    height: auto;
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    position: absolute;
+    width: 90vw;
+    margin-left: -5vw; }
     section.footer .row #left {
-      text-align: left; }
+      text-align: left;
+      font-weight: 900; }
+      section.footer .row #left #light {
+        font-weight: 400; }
     section.footer .row #right {
       text-align: right; }
+      section.footer .row #right a {
+        font-weight: 600;
+        color: #559f93; }
   section.footer .triangle-contrast {
     border-top: 40vh solid transparent;
     border-bottom: 0;
@@ -411,17 +491,31 @@ section.footer {
     border-bottom: 0;
     position: absolute;
     margin-bottom: 0;
-    margin-top: -5vh;
-    border-left: 0;
+    margin-top: -18vh;
     border-right: 100vw solid #102036;
-    z-index: 0; }
+    border-left: 0; }
+  section.footer .rectangle-dark {
+    width: 100vw;
+    background-color: #102036;
+    height: 13vh;
+    margin-top: 12vh;
+    position: absolute; }
+  section.footer #icons {
+    margin: 0 1px; }
+    section.footer #icons a {
+      color: #559f93; }
+    section.footer #icons .fa {
+      margin: 0 4px; }
 
 @media screen and (max-width: 860px) {
-  .triangle-contrast, .triangle-dark, .triangle-light {
+  .triangle-contrast, .triangle-dark, .triangle-light, .rectangle-dark {
     opacity: 0; } }
 @media screen and (max-width: 1000px) {
   section.employer #contrast .flexslider {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+
+  section.student .triangle-contrast, section.student .triangle-dark, section.student .rectangle-dark {
+    opacity: 0; } }
 @-webkit-keyframes fade_down {
   from {
     top: 32vh;

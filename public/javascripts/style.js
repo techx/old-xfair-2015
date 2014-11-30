@@ -26,3 +26,4 @@ loadIn("section.exhibitor .exhibitorcontent", 100);
 loadIn("section.exhibitor .exhibits", 100);
 loadIn("section.info .title", 100);
 loadIn("section.info .faq", 100);
+loadIn("section.student .fadein", 100);

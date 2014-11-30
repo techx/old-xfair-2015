@@ -75,11 +75,32 @@ block content
                         li
                           img(src='/images/employer/pic5.png')
     section.student#student
+        div.relative
+            div.triangle-dark
+        div.relative
+            div.triangle-dark2
         div.container
             div.wrapper
-                div.title
-                    h1 Students
-                
+                div.content
+                    div.row
+                        div.fadein
+                            div.col-md-6#studentcontent
+                                div.title
+                                    h1 Students
+                                div.subtitle
+                                    h4 Lorem ipsum student text here. Students experience lots of things at xFair not limited to companies, student projects, and more. Resume drop and company list will be available during IAP in January. Check back soon.
+                            div.col-md-6
+                                div.flexslider
+                                  ul.slides
+                                    li
+                                      img(src='/images/student/pic11.png')
+                                    li
+                                      img(src='/images/student/pic21.png')
+                                    li
+                                      img(src='/images/student/pic31.png')
+                                    li
+                                      img(src='/images/student/pic41.png') 
+
     section.exhibitor#exhibitor
         div.container
             div.wrapper
@@ -97,19 +118,20 @@ block content
                         div.row
                             div.col-lg-4
                                 div.exhibit-img
-                                        img(src="/images/exhibitor/pic2.png")
-                                h3 Bottle Jet Turbine
-                                h5 One of last year's student relations funded projects was a jet turbine modeled by a glass Coke bottle. The goal was to make a working model of a complete cycle where one could see the object completely working and each part of the engine functioning at the same time.<span id="script"><a href=""> Read more here.</a></span>
-                            div.col-lg-4
-                                div.exhibit-img
-                                    img(src="/images/exhibitor/pic1.png")
-                                h3 Project 1 title
-                                h5 Lorem ipsum project 1 description here it was so cool they did this and this and lorem ipsum here is some more filler text. They built a space ship rocket out of glass bottles and displayed it at xFair 2015. <span id="script"><a href="">Read more here.</a></span>
-                            div.col-lg-4
-                                div.exhibit-img
                                     img(src="/images/exhibitor/pic3.png")
                                 h3 MIT TechX SR Project Fund
                                 h5 Every year, MIT TechX's student relations (SR) committee sponsors over 30 student projects with up to $500 in funding. Over the past few years, we've seen projects ranging from quadcopters to light-up dance floors to bartending robots. Applications open every October - stay updated on MIT TechX's site. <span id="script"><a href="http://techx.mit.edu/sr.html">More info here.</a></span>
+                            div.col-lg-4
+                                div.exhibit-img
+                                    img(src="/images/exhibitor/pic1.png")
+                                h3 Student Exhibits
+                                h5 Last year, TechFair had over 30 student exhibitor booths. Students from all over campus displayed all kinds of awesome technology that they built on their own. Take a look at their incredible work and displays. <span id="script"><a href="">Photo gallery coming soon.</a></span>
+                            div.col-lg-4
+                                div.exhibit-img
+                                        img(src="/images/exhibitor/pic2.png")
+                                h3 Bottle Jet Turbine
+                                h5 One of last year's student relations funded projects was a jet turbine modeled by a glass Coke bottle. The goal was to make a working model of a complete cycle where one could see the object completely working and each part of the engine functioning at the same time.<span id="script"><a href=""> Read more here.</a></span>
+                            
 
     section.info#info
         div.container
@@ -137,17 +159,37 @@ block content
                             h5 Many companies at xFair will be displaying cool demos, so you can check out the products that you'll help build at your future job. In addition to company demos, we'll also be displaying cool projects made by MIT students like you! Check out your friends' and classmates' projects at the fair.
                         div.col-md-4
                             h3 When will more info be released?
-                            h5 A company list, student resume drop, and more fair info will be available closer to the date. Expect updates during IAP in January! You can follow MIT xFair on Facebook or Twitter to stay updated.
+                            h5 
+                                | A company list, student resume drop, and more fair info will be available closer to the date. Expect updates during IAP in January! You can follow MIT xFair on 
+                                a(href='https://www.facebook.com/MITTechX') Facebook 
+                                | or  
+                                a(href='https://twitter.com/mittechx') Twitter 
+                                | to stay updated.
                         div.col-md-4
                             h3 I'm not course 6! Why should I even go?
                             h5 xFair has a lot more to offer than just companies looking for course 6s. We try to bring companies from all different industries so that there's something there for everyone. At xFair, you could find a job, a first hand look at what the latest industry-leading companies are doing, cool demos, swag, and maybe even... true love?
     section.footer#footer
         div.triangle-contrast
         div.triangle-dark
+        div.rectangle-dark
         div.container
             div.row
-                div.col-lg-2#left
-                    h5 MIT xFair
-                div.col-lg-2#right
-                    h5 link1 / link2 / link3
+                div.col-lg-6#left
+                    h5 
+                        span#light MIT x
+                        | Fair 2015 
+                        span#light /
+                        span#icons
+                            a(href='https://www.facebook.com/MITTechX')
+                                i.fa.fa-facebook 
+                            a(href='https://twitter.com/mittechx')
+                                i.fa.fa-twitter 
+                            a(href='mailto:xfair-cr@mit.edu')
+                                i.fa.fa-envelope 
+                div.col-lg-6#right
+                    h5 
+                    | Powered by 
+                    a(href='http://techx.mit.edu/') MIT TechX 
+                    | and 
+                    a(href='http://web.mit.edu/tbp/www/') MIT Tau Beta Pi
 

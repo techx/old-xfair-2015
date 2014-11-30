@@ -218,7 +218,7 @@ section.employer {
         border-top: 0vw solid $dark; 
         border-bottom: 27.5vh solid transparent; 
         position: absolute; 
-        top: -3.5vh;
+        top: -3.6vh;
         border-right: 0; 
         border-left: 57vw solid $dark;
         z-index: 5;
@@ -237,7 +237,7 @@ section.employer {
 
 
     .employercontent {
-        margin-left: 50px;
+        margin-left: 80px;
         opacity: 0;
     }
 
@@ -299,6 +299,7 @@ section.employer {
             @include button();
             text-align: left;
             margin-top:6vh;
+            margin-left: 50px;
             border: 2px solid $contrast;
 
             h4 {
@@ -325,9 +326,98 @@ section.employer {
                 height: 8px;
                 opacity: .3;
             }
+
+            .flex-control-paging li a.flex-active {
+                background-color: $contrast;
+                opacity: .6;
+            }
         }
     }
+}
 
+section.student {
+    padding-top: 20vh;
+    background-color: $dark;
+    color: $light;
+    top: -4.7vh;
+    z-index:10;
+
+    .triangle-dark {
+        border-top: 10vw solid transparent; 
+        border-bottom: 20vw solid transparent; 
+        position: absolute; 
+        top: 8.5vh;
+        left: -19vw;
+        margin-top:-35vh;
+        border-right: 120vw solid $dark; 
+        border-left: 0;
+        z-index: 1;
+    }
+
+    .triangle-dark2 {
+        background-color:$dark;
+        height: 20vh;
+        position: relative;
+        z-index: 0;
+        top: -9vh;
+    }
+
+    .wrapper {
+        position: absolute;
+    }
+
+    .content {
+        .fadein {
+            opacity: 0;
+        }
+
+        .title {
+            z-index: 50;
+            margin-top:-10vh;
+
+            h1 {
+                font-family: $avenir;
+                text-transform: uppercase;
+                font-size:2.5em;
+                letter-spacing:4px;
+                margin-bottom:10px;
+                font-weight:800;
+            }
+        }
+
+        #studentcontent {
+            padding: 40px 80px;
+        }
+
+        .subtitle {
+            h4 {
+                font-family:$opensans;
+                font-weight:300;
+                line-height:1.8em;
+                font-size:1.2em;
+                margin-bottom:5px;
+            }
+        }
+
+        .flexslider {
+            max-width: 500px;
+            border: none;
+            border-radius: 0;
+            margin-top:-10vh;
+
+            .flex-control-paging li a {
+                width: 8px;
+                height: 8px;
+                opacity: .4;
+                background-color: #fff;
+            }
+
+            .flex-control-paging li a.flex-active {
+                background-color: $contrast;
+                opacity: .7;
+            }
+        }
+    }
 }
 
 section.exhibitor {
@@ -436,6 +526,7 @@ section.exhibitor {
 section.info {
     height: 85vh;
     padding: 3vh 30px 50px 30px;
+    color: $grey;
 
     .container {
         position: relative;
@@ -491,23 +582,46 @@ section.info {
 }
 
 section.footer {
-    height: 10vh;
-    overflow-x: none;
+    height: 25vh;
     color: $light;
+    z-index:40;
+    position: relative;
+
+    .container {
+        padding-top: 16vh;
+        position: relative;
+    }
 
     .row {
-        bottom: 0px;
+        border-top: 1px solid $light;
         height: auto;
+        font-family: $avenir;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1em;
+        position: absolute;
+        width:90vw;
+        margin-left: -5vw;
 
         #left {
             text-align: left;
+            font-weight:900;
+
+            #light {
+                font-weight: 400;
+            }
+
         }
 
         #right {
             text-align: right;
+
+            a {
+                font-weight: 600;
+                color: $contrast;
+            }
         }
     }
-    
 
     .triangle-contrast {
         border-top: 40vh solid transparent;
@@ -525,15 +639,34 @@ section.footer {
         border-bottom: 0; 
         position: absolute; 
         margin-bottom: 0;
-        margin-top:-5vh;
-        border-left: 0; 
+        margin-top:-18vh;
         border-right: 100vw solid $dark;
-        z-index: 0;
+        border-left: 0;
+    }
+
+    .rectangle-dark {
+        width: 100vw;
+        background-color: $dark;
+        height: 13vh;
+        margin-top:12vh;
+        position: absolute;
+    }
+
+    #icons {
+        margin: 0 1px;
+
+        a {
+            color: $contrast;
+        }
+
+        .fa {
+            margin: 0 4px;
+        }
     }
 }
 
 @media screen and (max-width: 860px) {
-    .triangle-contrast, .triangle-dark, .triangle-light {
+    .triangle-contrast, .triangle-dark, .triangle-light, .rectangle-dark {
         opacity: 0;
     }
 }
@@ -542,6 +675,13 @@ section.footer {
     section.employer #contrast .flexslider {
         margin-top: 30px;
     }
+
+    section.student {
+        .triangle-contrast, .triangle-dark, .rectangle-dark {
+            opacity: 0;
+        }
+    }
+    
 }
 
 
