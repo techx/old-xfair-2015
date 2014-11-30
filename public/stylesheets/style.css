@@ -308,7 +308,8 @@ section.student {
     font-weight: 300;
     line-height: 1.8em;
     font-size: 1.2em;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    margin-top: 20px; }
   section.student .content .flexslider {
     max-width: 500px;
     border: none;
