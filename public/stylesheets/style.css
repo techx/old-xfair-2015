@@ -2,16 +2,16 @@
   font-family: Avenir;
   src: url("/assets/Avenir.ttc"); }
 ::selection {
-  background: #5cac9f; }
+  background: #559f93; }
 
 ::-moz-selection {
-  background: #5cac9f; }
+  background: #559f93; }
 
 .ball {
   font-family: "Avenir" sans-serif;
   font-size: 500%;
   font-weight: 500;
-  color: #122845;
+  color: #102036;
   display: none;
   float: left;
   position: relative;
@@ -19,138 +19,16 @@
   left: 30vw;
   z-index: 1; }
 
-.center-button-text {
-  position: relative;
-  top: 25%; }
-
-#button1 {
-  display: block;
-  height: 65px;
-  width: 150px;
-  padding: 0;
-  border: 3px solid;
-  border-color: #122845;
-  border-radius: 6px;
-  background: none;
-  opacity: 1;
-  color: #122845;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  float: right;
-  position: relative;
-  margin-top: 2%; }
-
-#button1:hover {
-  color: #e9e3dd;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-decoration: none;
-  background: #122845;
-  transition: all 600ms ease; }
-
-#button2 {
-  display: block;
-  height: 65px;
-  width: 200px;
-  padding: 0;
-  border: 3px solid;
-  border-color: #122845;
-  border-radius: 6px;
-  background: none;
-  opacity: 1;
-  color: #122845;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  margin: auto;
-  margin-top: 5%;
-  top: 5vh; }
-
-#button2:hover {
-  color: #e9e3dd;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-decoration: none;
-  background: #122845;
-  transition: all 600ms ease; }
-
-#button3 {
-  display: block;
-  height: 65px;
-  width: 200px;
-  padding: 0;
-  border: 3px solid;
-  border-color: #e9e3dd;
-  border-radius: 6px;
-  background: none;
-  opacity: 1;
-  color: #e9e3dd;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  margin: auto;
-  margin-top: 5%;
-  top: 5vh; }
-
-#button3:hover {
-  color: #5cac9f;
-  font-family: "Avenir" sans-serif;
-  font-size: 18pt;
-  font-weight: 400;
-  text-decoration: none;
-  background: #e9e3dd;
-  transition: all 600ms ease; }
-
-h1 {
-  font-family: "Avenir" sans-serif;
-  font-size: 500%;
-  letter-spacing: 10px; }
-  h1 #kerning {
-    letter-spacing: 5px;
-    font-weight: 900; }
-  h1 #bold {
-    font-weight: 900; }
-
-h3 {
-  font-family: "Open Sans" sans-serif;
-  line-height: 175%; }
-  h3 #bold {
-    font-weight: 700; }
-
-.title {
-  color: #122845;
-  text-align: right;
-  position: relative;
-  left: 10px; }
-
-.subtitle {
-  color: #122845;
-  text-align: right; }
-
-body {
-  width: 100%;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
   height: auto;
   top: 0;
   left: 0;
-  background-color: #e9e3dd; }
-
-section {
-  height: 100vh;
-  width: 100vw; }
+  background-color: #f4f3f0; }
+  html section, body section {
+    height: 100vh;
+    width: 100vw; }
 
 section.main .animated {
   -webkit-animation: fade_down 2s;
@@ -161,14 +39,65 @@ section.main .container {
   position: relative;
   top: 35vh;
   z-index: 9; }
-section.main .subtitle h3 {
-  line-height: 90%; }
+  section.main .container .title {
+    color: #102036;
+    text-align: right;
+    position: relative;
+    left: 10px; }
+  section.main .container .subtitle {
+    color: #102036;
+    text-align: right; }
+  section.main .container .align {
+    border-top: 3px solid #102036;
+    width: 30vw;
+    margin-left: auto;
+    margin-top: 15px;
+    padding-top: 10px; }
+  section.main .container .register {
+    font-family: "Avenir" sans-serif;
+    padding: 5px 40px 5px 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #102036;
+    margin-top: 2%;
+    border-radius: 0;
+    margin-left: 20px;
+    float: right; }
+    section.main .container .register h4 {
+      letter-spacing: 2px;
+      font-size: .9em;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: #102036; }
+  section.main .container .register:hover {
+    text-decoration: none;
+    background: #102036;
+    transition: all 600ms ease; }
+    section.main .container .register:hover h4 {
+      color: #f4f3f0; }
+  section.main .container h1 {
+    font-family: "Avenir" sans-serif;
+    font-size: 3.5em;
+    letter-spacing: 10px; }
+    section.main .container h1 #kerning {
+      letter-spacing: 5px;
+      font-weight: 900; }
+    section.main .container h1 #bold {
+      font-weight: 900; }
+  section.main .container h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Avenir" sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    line-height: .8em; }
+    section.main .container h3 #bold {
+      font-weight: 700; }
 section.main .triangle-contrast {
   border-top: 0;
   border-bottom: 125vh solid transparent;
   position: absolute;
   top: 0vh;
-  border-left: 70vw solid #5cac9f;
+  border-left: 70vw solid #559f93;
   border-right: 0;
   z-index: 2; }
 section.main .triangle-dark {
@@ -176,70 +105,133 @@ section.main .triangle-dark {
   border-bottom: 40vh solid transparent;
   position: absolute;
   top: 40vh;
-  border-left: 75vw solid #122845;
+  border-left: 75vw solid #102036;
   border-right: 0;
   z-index: 1; }
 
-@-webkit-keyframes fade_down {
-  from {
-    top: 32vh;
-    opacity: 0; }
-  to {
-    top: 35vh;
-    opacity: 1; } }
-@-moz-keyframes fade_down {
-  from {
-    top: 32vh;
-    opacity: 0; }
-  to {
-    top: 35vh;
-    opacity: 1; } }
-@-o-keyframes fade_down {
-  from {
-    top: 32vh;
-    opacity: 0; }
-  to {
-    top: 35vh;
-    opacity: 1; } }
-@keyframes fade_down {
-  from {
-    top: 32vh;
-    opacity: 0; }
-  to {
-    top: 35vh;
-    opacity: 1; } }
-section.about .container {
-  position: relative;
-  top: 30vh;
-  z-index: 9; }
+section.about {
+  background-color: #102036;
+  color: #f4f3f0;
+  text-align: center; }
+  section.about .triangle-light {
+    border-top: 0vw solid #f4f3f0;
+    border-bottom: 30vh solid transparent;
+    position: absolute;
+    top: 100vh;
+    left: 75vw;
+    border-left: 0;
+    border-right: 40vw solid #f4f3f0;
+    z-index: 5; }
+  section.about .container {
+    position: relative;
+    top: 30vh;
+    z-index: 9; }
+    section.about .container .wrapper {
+      width: 60vw;
+      margin-left: auto;
+      margin-right: auto; }
+    section.about .container h1 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2em;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      margin-top: -10vh; }
+    section.about .container h5 {
+      font-family: "Open Sans" sans-serif;
+      line-height: 2em;
+      font-size: 1.2em;
+      font-weight: 300; }
+    section.about .container #bold {
+      font-weight: 600; }
+  section.about .img img {
+    margin-top: 40vh;
+    width: 100vw; }
 
-section.student_sponsor .container {
-  position: relative;
-  top: 10vh;
-  z-index: 9; }
-section.student_sponsor .student_title {
-  color: #e9e3dd;
-  text-align: left;
-  position: relative;
-  left: 10px; }
-section.student_sponsor .student_subtitle {
-  color: #e9e3dd;
-  text-align: left; }
-section.student_sponsor .sponsor_title {
-  color: #122845;
-  text-align: left; }
-section.student_sponsor .sponsor_subtitle {
-  color: #122845;
-  text-align: left; }
-section.student_sponsor .triangle-contrast {
-  border-top: 27.5vh solid transparent;
-  border-bottom: 550vh solid transparent;
-  position: absolute;
-  top: 172.5vh;
-  right: 0;
-  border-left: 0;
-  border-right: 55vw solid #5cac9f;
-  z-index: 1; }
+section.employer {
+  color: #6b6b6b; }
+  section.employer .triangle-dark {
+    border-top: 0vw solid #102036;
+    border-bottom: 27.5vh solid transparent;
+    position: absolute;
+    top: 200vh;
+    left: 0;
+    border-right: 0;
+    border-left: 55vw solid #102036;
+    z-index: 5; }
+  section.employer .triangle-contrast {
+    border-top: 27.5vh solid transparent;
+    border-bottom: 55vh solid transparent;
+    position: absolute;
+    top: 178.1vh;
+    right: 0;
+    border-left: 0;
+    border-right: 55vw solid #f4f3f0;
+    z-index: 1; }
+  section.employer .container {
+    position: relative;
+    top: 10vh;
+    z-index: 9; }
+    section.employer .container .wrapper {
+      padding-top: 30vh;
+      margin: 20px; }
+    section.employer .container .sponsor_subtitle {
+      max-width: 85%; }
+    section.employer .container h1 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+      margin-top: -11vh;
+      font-weight: 800; }
+    section.employer .container h4 {
+      font-family: "Open Sans" sans-serif;
+      font-weight: light;
+      line-height: 1.4em;
+      font-size: 1.2em; }
+    section.employer .container #bold {
+      font-weight: 600; }
+    section.employer .container .sponsor_subtitle {
+      text-align: left; }
+    section.employer .container .flexslider {
+      border: none;
+      max-width: 500px;
+      margin-top: -10vh; }
+      section.employer .container .flexslider .flex-control-paging li a {
+        width: 8px;
+        height: 8px;
+        opacity: .3; }
+    section.employer .container .apply {
+      font-family: "Avenir" sans-serif;
+      padding: 5px 40px 5px 40px;
+      background-color: rgba(255, 255, 255, 0);
+      border: 2px solid #102036;
+      margin-top: 2%;
+      border-radius: 0;
+      margin-left: 20px;
+      text-align: left;
+      margin-top: 8vh;
+      margin-left: 0px; }
+      section.employer .container .apply h4 {
+        letter-spacing: 2px;
+        font-size: .9em;
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: #102036; }
+    section.employer .container .apply:hover {
+      text-decoration: none;
+      background: #102036;
+      transition: all 600ms ease;
+      text-align: left; }
+      section.employer .container .apply:hover h4 {
+        color: #f4f3f0; }
+
+section.white {
+  background-color: #fff;
+  height: 50vh;
+  z-index: 2;
+  margin-top: -35vh; }
 
 section.exhibitor .container {
   position: relative;
@@ -255,4 +247,35 @@ section.info .container {
 section.info .col-md-4 {
   padding: 20px; }
 
-/*# sourceMappingURL=style.css.map */
+@-webkit-keyframes fade_down {
+  from {
+    top: 32vh;
+    opacity: 0; }
+
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@-moz-keyframes fade_down {
+  from {
+    top: 32vh;
+    opacity: 0; }
+
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@-o-keyframes fade_down {
+  from {
+    top: 32vh;
+    opacity: 0; }
+
+  to {
+    top: 35vh;
+    opacity: 1; } }
+@keyframes fade_down {
+  from {
+    top: 32vh;
+    opacity: 0; }
+
+  to {
+    top: 35vh;
+    opacity: 1; } }

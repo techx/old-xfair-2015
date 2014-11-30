@@ -23,156 +23,22 @@
     z-index: 1;
 }
 
-@mixin button ($height, $width, $color, $opacity) {
-    display: block;
-    height: $height;
-    width: $width;
-    padding: 0;
-
-    border: 3px solid;
-    border-color: $color;
-    border-radius: 6px;
-
-    background: none;
-    opacity: $opacity;
-}
-
-@mixin text ($color, $fontsize, $fontweight){
-    color: $color;
-    font-family: $avenir;
-    font-size: $fontsize;
-    font-weight: $fontweight;
-}
-
-
-.center-button-text {
-    position: relative;
-    top: 25%;
-}
-
-// BUTTONS
-#button1 {
-    @include button(65px, 150px, $dark, 1);
-    @include text($dark, 18pt, 400);
-
-    text-align: center;
-    text-decoration: none;
-
-    display: block;
-    float: right;
-    position: relative;
-    margin-top: 2%;
-}
-
-#button1:hover{
-    @include text($light, 18pt, 400);
-    
-    text-decoration: none;
-    background: $dark;
-
-    transition: all 600ms ease;
-}
-
-#button2 {
-    @include button(65px, 200px, $dark, 1);
-    @include text($dark, 18pt, 400);
-
-    text-align: center;
-    text-decoration: none;
-
-    display: block;
-    position: relative;
-    margin: auto;
-    margin-top: 5%;
-    top: 5vh;
-}
-
-#button2:hover{
-    @include text($light, 18pt, 400);
-    
-    text-decoration: none;
-    background: $dark;
-
-    transition: all 600ms ease;
-}
-
-#button3 {
-    @include button(65px, 200px, $light, 1);
-    @include text($light, 18pt, 400);
-
-    text-align: center;
-    text-decoration: none;
-
-    display: block;
-    position: relative;
-    margin: auto;
-    margin-top: 5%;
-    top: 5vh;
-}
-
-#button3:hover{
-    @include text($contrast, 18pt, 400);
-    
-    text-decoration: none;
-    background: $light;
-
-    transition: all 600ms ease;
-}
-
-// DEFAULTS
-h1 {
-    font-family: $avenir;
-    font-size: 500%;
-    letter-spacing: 10px;
-    #kerning {
-        letter-spacing: 5px;
-        font-weight: 900;
-    }
-    #bold {
-        font-weight: 900;
-    }
-}
-
-h3 {
-    font-family: $opensans;
-    line-height: 175%;
-    #bold {
-        font-weight: 700;
-    }
-}
-
-.wrapper {
-
-}
-
-.title {
-    color: $dark;
-    text-align: right;
-    position: relative;
-    left: 10px;
-}
-
-.subtitle {
-    color: $dark;
-    text-align: right;
-}
-
-body {
-    width:100%;
+html, body {
+    max-width:100%;
+    overflow-x: hidden;
     height: auto;
     top: 0;
     left: 0;
     background-color: $light;
-}
 
-section {
-    height: 100vh;
-    width: 100vw;
+    section {
+        height: 100vh;
+        width: 100vw;
+    }
 }
 
 // SECTIONS
 section.main {
-
     .animated {
         -webkit-animation: fade_down 2s;
         -moz-animation: fade_down 2s;
@@ -184,11 +50,59 @@ section.main {
         position: relative;
         top: 35vh;
         z-index: 9;
-    }
-    
-    .subtitle {
+
+        .title {
+            color: $dark;
+            text-align: right;
+            position: relative;
+            left: 10px;
+        }
+
+        .subtitle {
+            color: $dark;
+            text-align: right;
+        }
+
+        .align {
+            border-top: 3px solid $dark;
+            width: 30vw;
+            margin-left:auto;
+            margin-top:15px;
+            padding-top:10px;
+        }
+
+        .register {
+            @include button();
+            float: right;
+        }
+
+        .register:hover{
+            @include button_hover();
+        }
+
+        h1 {
+            font-family: $avenir;
+            font-size: 3.5em;
+            letter-spacing: 10px;
+            #kerning {
+                letter-spacing: 5px;
+                font-weight: 900;
+            }
+            #bold {
+                font-weight: 900;
+            }
+        }
+
         h3 {
-            line-height: 90%;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $avenir;
+            letter-spacing: 2px;
+            font-size: 1.4em;
+            line-height:.8em;
+            #bold {
+                font-weight: 700;
+            }
         }
     }
 
@@ -213,59 +127,156 @@ section.main {
     }
 }
 
-@-webkit-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-@-moz-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-@-o-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-@keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
-
 section.about {
+    background-color: $dark;
+    color: $light;
+    text-align: center;
+
+    .triangle-light {
+        border-top: 0vw solid $light; 
+        border-bottom: 30vh solid transparent; 
+        position: absolute; 
+        top: 100vh;
+        left:75vw;
+        border-left: 0; 
+        border-right: 40vw solid $light;
+        z-index: 5;
+    }
+
     .container {
         position: relative;
         top: 30vh;
         z-index: 9;
+
+        .wrapper {
+            width: 60vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-family: $avenir;
+            text-transform: uppercase;
+            font-size:2em;
+            letter-spacing:3px;
+            margin-bottom:20px;
+            margin-top:-10vh;
+        }
+
+        h5 {
+            font-family: $opensans;
+            line-height: 2em;
+            font-size:1.2em;
+            font-weight:300;
+        }
+
+        #bold {
+            font-weight:600;
+        }
+    }
+
+    .img img {
+        margin-top: 40vh;
+        width: 100vw;
     }
 }
 
-section.student_sponsor {
+section.employer {
+    color: $grey;
+
+    .triangle-dark {
+        border-top: 0vw solid $dark; 
+        border-bottom: 27.5vh solid transparent; 
+        position: absolute; 
+        top: 200vh;
+        left:0;
+        border-right: 0; 
+        border-left: 55vw solid $dark;
+        z-index: 5;
+    }
+
+    .triangle-contrast {
+        border-top: 27.5vh solid transparent;
+        border-bottom: 55vh solid transparent; 
+        position: absolute;
+        top: 178.1vh;
+        right: 0;
+        border-left: 0; 
+        border-right: 55vw solid $light;
+        z-index: 1;
+    }
 
     .container {
         position: relative;
         top: 10vh;
         z-index: 9;
+
+        .wrapper {
+            padding-top:30vh;
+            margin: 20px;
+        }
+
+        .sponsor_subtitle {
+            max-width: 85%;
+        }
+
+        h1 {
+            font-family: $avenir;
+            text-transform: uppercase;
+            font-size:2.5em;
+            letter-spacing:4px;
+            margin-bottom:10px;
+            margin-top:-11vh;
+            font-weight:800;
+        }
+
+        h4 {
+            font-family:$opensans;
+            font-weight:light;
+            line-height:1.4em;
+            font-size:1.2em;
+        }
+
+        #bold {
+            font-weight: 600;
+        }
+
+        .sponsor_subtitle {
+            text-align: left;
+        }
+
+        .flexslider {
+            border: none;
+            max-width:500px;
+            margin-top:-10vh;
+
+            .flex-control-paging li a {
+                width: 8px;
+                height: 8px;
+                opacity: .3;
+            }
+        }
+
+        .apply {
+            @include button();
+            text-align: left;
+            margin-top:8vh;
+            margin-left: 0px;
+        }
+
+        .apply:hover {
+            @include button_hover();
+            text-align: left;
+        }
     }
 
-    .student_title {
-        color: $light;
-        text-align: left;
-        position: relative;
-        left: 10px;
-    }
+}
 
-    .student_subtitle {
-        color: $light;
-        text-align: left;
-    }
-
-    .sponsor_title {
-        color: $dark;
-        text-align: left;
-    }
-
-    .sponsor_subtitle {
-        color: $dark;
-        text-align: left;
-    }
-
-    .triangle-contrast {
-        border-top: 27.5vh solid transparent;
-        border-bottom: 550vh solid transparent; 
-        position: absolute;
-        top: 172.5vh;
-        right: 0;
-        border-left: 0; 
-        border-right: 55vw solid $contrast;
-        z-index: 1;
-    }
+section.white {
+    background-color: #fff;
+    height:50vh;
+    z-index:2;
+    margin-top:-35vh;
 }
 
 section.exhibitor {
@@ -291,3 +302,9 @@ section.info {
         padding: 20px;
     }
 }
+
+
+@-webkit-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@-moz-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@-o-keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }
+@keyframes fade_down { from { top: 32vh; opacity: 0; } to { top: 35vh; opacity: 1; }  }

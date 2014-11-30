@@ -2,8 +2,7 @@ extends layout
 
 block content
 
-    div.ball(id = "ball") O
-    section.main
+    section.main#main
         div.triangle-dark
         div.triangle-contrast
         div.animated.container
@@ -11,46 +10,60 @@ block content
                 div.title
                     h1 X<span id = "bold">FAIR 2</span><span id = "kerning">015</span>
                 div.subtitle
-                    h3 February 2, 2015
-                    h3 Rockwell Cage
-                a(id = 'button1' href = "#")
-                    span.center-button-text REGISTER
+                    div.align
+                        h3 February 2, 2015
+                        h3 Rockwell Cage
+                a(id = 'button1' href = "#about")
+                    button.btn.register.employers
+                        h4 EMPLOYERS
+                a(id = 'button1' href = "#employer")       
+                    button.btn.register.students
+                        h4 STUDENTS
 
-    section.about
+    section.about#about
+        div.triangle-light
         div.container
             div.wrapper
                 div.title
-                    h1 ABOUT
+                    h1 xFair is more than your average career fair
                 div.subtitle
-                    h3 xFair is more than just booths, name tags and blazers — it's both a career fair and an expo, a showcase of raw talent, raw ideas, and raw passion. With 2000+ undergraduate and graduate students in attendence, xFair is <span id = "bold">MIT's largest spring career fair</span>.
+                    h5 xFair is more than just booths, name tags and blazers — it's both a career fair and an expo, a showcase of raw talent, raw ideas, and raw passion. With 2000+ undergraduate and graduate students in attendence, xFair is <span id = "bold">MIT's largest spring career fair</span>.
+        div.img
+            img(src="/images/fairbanner1.png")
 
-    section.student_sponsor
+    section.employer#employer
         div.triangle-contrast
+        div.triangle-dark
         div.container
             div.wrapper
                 div.row
-                    div.col-md-5
+                    div.col-md-6
                         div.sponsor_title
-                            h1 SPONSORS
+                            h1 Employers
                         div.sponsor_subtitle
-                            h3 Recruit the brightest young minds to make <span id = "bold">your company's</span> vision come true.
-                            h3 Please note that the deadline to apply to be a sponsor for xFair 2015 is <span id = "bold">November 28, 2014</span>.
-                        a(id = 'button2' href = "mailto:xfair-cr@mit.edu")
-                            span.center-button-text Apply
-                    div.col-md-2
-                    div.col-md-5
-                        div.student_title
-                            h1 STUDENTS
-                        div.student_subtitle
-                            h3 The first steps towards you future start here. For more information, check out our information section below.
-                        //- a(id = 'button3' href = "#")
-                        //-     span.center-button-text Resume Drop
-                        //- a(id = 'button3' href = "#")
-                        //-     span.center-button-text Company List
-                        a(id = 'button3' href = "#info")
-                            span.center-button-text FAQ
+                            h4 <span id = "bold">Recruit the brightest young minds to make your company's vision come true.</span>
+                            h4 Showcase your company and brand to thousands of attendees and inspire the next generation of talent.
+                            h4 Please note that the deadline to apply to be a sponsor for xFair 2015 is <span id = "bold">November 28, 2014</span>.
+                        div.apply-btn
+                            a(id = 'employer-apply-btn' href = "mailto:xfair-cr@mit.edu")
+                                button.btn.apply 
+                                    h4 Contact xFair
+                    div.col-md-6
+                        div.flexslider
+                          ul.slides
+                            li
+                              img(src='/images/employer/pic1.png')
+                            li
+                              img(src='/images/employer/pic2.png')
+                            li
+                              img(src='/images/employer/pic3.png')
+                            li
+                              img(src='/images/employer/pic4.png') 
+                            li
+                              img(src='/images/employer/pic5.png')
+    section.white 
                 
-    section.exhibitor
+    section.exhibitor#exhibitor
         div.container
             div.wrapper
                 div.title
@@ -61,7 +74,7 @@ block content
                 a(id = 'button2' href = "https://bit.ly/xfair-exhibitor")
                     span.center-button-text Apply
 
-    section.info(id = "info")
+    section.info#info
         div.container
             div.wrapper
                 div.title
