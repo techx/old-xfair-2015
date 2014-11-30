@@ -3,6 +3,8 @@ $(window).load(function() {
     $('.flexslider').flexslider();
 });
 
+
+// This function lags the page, look into more efficient ways
 function loadIn(DOMobj, off) {
     $(document).ready(function(){
         var offset = $(DOMobj).offset().top;
