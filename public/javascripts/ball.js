@@ -4,34 +4,40 @@ $(document).ready(function ($) {
 
         position = $(window).scrollTop();
 
-        console.log(position);
-
         ballpos = $(".ball").position();
+
+        console.log(position);
 
         if (position > 0 && position < 480) {
 
             $(".ball").css({
 
-                "display":"inline",
-                "top":(56.5 + .08*position +"vh"),
-                "left":(30 + .100*position + "vw")
+                "display":"block",
+                "top":(56.6 + .08*position +"vh"),
+                "left":(30.1 + .100*position + "vw")
             
             });
-            
-        } else if(position <= 0) {
 
-            $(".ball").css({
-                "display": "none",
-            });
-
-        } else if (position >= 480) {
+        } else if (position >= 480 && position < 928) {
 
                 $(".ball").css({
 
-                    "top":(56.5 + .08*position + "vh"),
-                    "left": (ballpos.left*100/$(window).width() + "vw")
+                    "top":(56.6 + .08*position + "vh"),
+                    "left":"77.95vw"
                 
-                });    
-            }        
+                });      
+
+        } else if (position >= 928) {
+
+                $(".ball").css({
+
+                    "top":"130.84vh",
+                    "left":"77.95vw"
+                
+                });            
+
+        } 
+
     });
+
 });
