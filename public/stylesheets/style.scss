@@ -8,6 +8,10 @@
     background: $contrast;
 }
 
+.relative {
+    position: relative;
+}
+
 .ball{
     font-family: $avenir;
     font-size: 500%;
@@ -51,6 +55,10 @@ section.main {
         top: 35vh;
         z-index: 9;
 
+        .wrapper {
+            padding-right: 50px;
+        }
+
         .title {
             color: $dark;
             text-align: right;
@@ -65,10 +73,10 @@ section.main {
 
         .align {
             border-top: 3px solid $dark;
-            width: 30vw;
+            max-width: 450px;
             margin-left:auto;
             margin-top:15px;
-            padding-top:10px;
+            padding-top:5px;
         }
 
         .register {
@@ -95,13 +103,22 @@ section.main {
 
         h3 {
             text-transform: uppercase;
-            font-weight: 600;
             font-family: $avenir;
             letter-spacing: 2px;
             font-size: 1.4em;
-            line-height:.8em;
             #bold {
-                font-weight: 700;
+                font-weight: 900;
+            }
+        }
+
+        .tagline {
+            text-align: right;
+            font-family: $avenir;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            a {
+                color: $contrast;
             }
         }
     }
@@ -132,16 +149,25 @@ section.about {
     color: $light;
     text-align: center;
 
-    .triangle-light {
-        border-top: 0vw solid $light; 
-        border-bottom: 30vh solid transparent; 
-        position: absolute; 
-        top: 100vh;
-        left:75vw;
-        border-left: 0; 
-        border-right: 40vw solid $light;
-        z-index: 5;
+    #aboutcontent {
+        opacity:0;
     }
+
+    .relative {
+        position: relative;
+
+        .triangle-light {
+            border-top: 0vw solid $light; 
+            border-bottom: 30vh solid transparent; 
+            position: absolute;
+            left:75vw;
+            border-left: 0; 
+            border-right: 40vw solid $light;
+            z-index: 5;
+        }
+    }
+
+    
 
     .container {
         position: relative;
@@ -175,9 +201,13 @@ section.about {
         }
     }
 
-    .img img {
-        margin-top: 40vh;
-        width: 100vw;
+    .img {
+        opacity: 0;
+
+        img {
+            margin-top: 40vh;
+            width: 100%;
+        }
     }
 }
 
@@ -188,10 +218,9 @@ section.employer {
         border-top: 0vw solid $dark; 
         border-bottom: 27.5vh solid transparent; 
         position: absolute; 
-        top: 200vh;
-        left:0;
+        top: -3.5vh;
         border-right: 0; 
-        border-left: 55vw solid $dark;
+        border-left: 57vw solid $dark;
         z-index: 5;
     }
 
@@ -199,56 +228,97 @@ section.employer {
         border-top: 27.5vh solid transparent;
         border-bottom: 55vh solid transparent; 
         position: absolute;
-        top: 178.1vh;
+        top:-25.1vh;
         right: 0;
         border-left: 0; 
         border-right: 55vw solid $light;
         z-index: 1;
     }
 
-    .container {
-        position: relative;
-        top: 10vh;
-        z-index: 9;
 
-        .wrapper {
-            padding-top:30vh;
-            margin: 20px;
+    .employercontent {
+        margin-left: 50px;
+        opacity: 0;
+    }
+
+    .wrapper {
+        padding-top:12vh;
+        margin: 20px;
+
+        #content {
+            margin: 30px;
+            margin-top:80px;
+            margin-left: 50px;
+            z-index: 2;
+            .sponsor_subtitle {
+                max-width: 85%;
+            }
+
+            h1 {
+                font-family: $avenir;
+                text-transform: uppercase;
+                font-size:2.5em;
+                letter-spacing:4px;
+                margin-bottom:10px;
+                font-weight:800;
+            }
+
+            h4 {
+                font-family:$opensans;
+                font-weight:300;
+                line-height:1.8em;
+                font-size:1.2em;
+                margin-bottom:5px;
+            }
+
+            #bold {
+                font-weight: 600;
+            }
+
+            .sponsor_subtitle {
+                text-align: left;
+            }
         }
+    }
 
-        .sponsor_subtitle {
-            max-width: 85%;
-        }
+    
 
-        h1 {
-            font-family: $avenir;
-            text-transform: uppercase;
-            font-size:2.5em;
-            letter-spacing:4px;
-            margin-bottom:10px;
-            margin-top:-11vh;
-            font-weight:800;
-        }
+    #contrast {
+        position: absolute;
+        background-color: #fff;
+        width:100vw;
+        margin-top: 0vh;
+        margin-left: -20px;
+        height: 45vh;
+        z-index:1;
+        padding: 100px;
+        padding-top: 0;
+        border-top: 1px solid $light1;
 
-        h4 {
-            font-family:$opensans;
-            font-weight:light;
-            line-height:1.4em;
-            font-size:1.2em;
-        }
-
-        #bold {
-            font-weight: 600;
-        }
-
-        .sponsor_subtitle {
+        .apply {
+            @include button();
             text-align: left;
+            margin-top:6vh;
+            border: 2px solid $contrast;
+
+            h4 {
+                margin-bottom: 10px;
+                color: $contrast;
+            }
+        }
+
+        .apply:hover {
+            @include button_hover();
+            text-align: left;
+
+            background: $contrast;
         }
 
         .flexslider {
             border: none;
             max-width:500px;
-            margin-top:-10vh;
+            margin-top: -250px;
+            opacity: 0;
 
             .flex-control-paging li a {
                 width: 8px;
@@ -256,50 +326,221 @@ section.employer {
                 opacity: .3;
             }
         }
+    }
+
+}
+
+section.exhibitor {
+    background-color: #fff;
+    height: auto;
+    display: table;
+    padding: 50px;
+    padding-bottom: 40px;
+
+    .container {
+        display: table-row;
+        position: relative;
+        top: 6vh;
+        z-index: 9;
+        text-align: center;
+
+        .exhibitorcontent {
+            opacity: 0;
+        }
+
+        .title {
+            h1 {
+                font-family: $avenir;
+                text-transform: uppercase;
+                font-size:2.5em;
+                letter-spacing:4px;
+                margin-top:5vh;
+                margin-bottom:10px;
+                font-weight:600;
+            }
+        }
+
+        .subtitle {
+            width: 60vw;
+            margin-left: auto;
+            margin-right: auto;
+
+            #bold {
+                font-weight: 600;
+            }
+
+            h4 {
+                font-family:$opensans;
+                font-weight:300;
+                line-height:1.8em;
+                font-size:1.2em;
+            }
+        }
 
         .apply {
             @include button();
-            text-align: left;
-            margin-top:8vh;
-            margin-left: 0px;
+            margin-top:10px;
+            width: 200px;
         }
 
         .apply:hover {
             @include button_hover();
-            text-align: left;
         }
-    }
 
-}
+        .exhibit-img img {
+            max-width: 350px;
+        }
 
-section.white {
-    background-color: #fff;
-    height:50vh;
-    z-index:2;
-    margin-top:-35vh;
-}
+        .exhibits {
+            display: table;
+            width: 80vw;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:10vh;
+            opacity: 0;
 
-section.exhibitor {
-    .container {
-        position: relative;
-        top: 10vh;
-        z-index: 9;
-    }
+            h3 {
+                font-family: $avenir;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1.2em;
+                font-weight: 800;
+            }
 
-    .subtitle {
-        text-align: left;
+            h5 {
+                font-family: $opensans;
+                font-weight: light;
+                font-size: .9em;
+                line-height: 1.6em;
+
+                a {
+                    color: $contrast;
+                }
+            }
+
+            #script {
+                font-style: italic;
+            }
+
+            .container {
+                display: table-row;
+            }
+
+            .col-lg-4 {
+                margin-bottom: 50px;
+            }
+        }
     }
 }
 
 section.info {
+    height: 85vh;
+    padding: 3vh 30px 50px 30px;
+
     .container {
         position: relative;
         top: 5vh;
         z-index: 9;
     }
+
+    .title {
+        opacity: 0;
+
+        h1 {
+            font-family: $avenir;
+            text-transform: uppercase;
+            font-size:2em;
+            letter-spacing:4px;
+            margin-top:5vh;
+            margin-bottom: 25px;
+            font-weight:600;
+            text-align: center;
+        }
+    }
+
+    h3 {
+        font-family: $avenir;
+        text-transform: uppercase;
+        font-size:1.2em;
+        letter-spacing:1px;
+        margin-top:5vh;
+        margin-bottom:10px;
+        font-weight:800;
+        line-height: 1.5em;
+    }
     
+    h5 {
+        font-family: $opensans;
+        font-weight: light;
+        line-height: 1.5em;
+        font-size: .9em;
+
+        a {
+            color: $contrast;
+        }
+    }
     .col-md-4 { 
         padding: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .faq {
+        opacity: 0;
+    }
+}
+
+section.footer {
+    height: 10vh;
+    overflow-x: none;
+    color: $light;
+
+    .row {
+        bottom: 0px;
+        height: auto;
+
+        #left {
+            text-align: left;
+        }
+
+        #right {
+            text-align: right;
+        }
+    }
+    
+
+    .triangle-contrast {
+        border-top: 40vh solid transparent;
+        border-bottom: 0; 
+        position: absolute; 
+        margin-bottom: 0;
+        margin-top:-15vh;
+        border-left: 100vw solid $contrast; 
+        border-right: 0;
+        z-index: 0;
+    }
+
+    .triangle-dark {
+        border-top: 30vh solid transparent;
+        border-bottom: 0; 
+        position: absolute; 
+        margin-bottom: 0;
+        margin-top:-5vh;
+        border-left: 0; 
+        border-right: 100vw solid $dark;
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .triangle-contrast, .triangle-dark, .triangle-light {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    section.employer #contrast .flexslider {
+        margin-top: 30px;
     }
 }
 

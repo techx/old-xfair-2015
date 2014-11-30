@@ -1,4 +1,5 @@
 $light: rgba(244,243,240,1);
+$light1: rgba(232,233,230,1);
 $grey: rgba(107,107,107,1);
 $dark: rgba(16,32,54,1);
 $contrast: rgba(85,159,147,1);
@@ -34,7 +35,7 @@ $opensans: 'Open Sans' sans-serif;
 
 @mixin button () {
         font-family: $avenir;
-        padding: 5px 40px 5px 40px;
+        padding: 3px 40px 3px 40px;
         background-color: rgba(255,255,255,0);
         border: 2px solid $dark;
         margin-top: 2%;

@@ -7,6 +7,9 @@
 ::-moz-selection {
   background: #559f93; }
 
+.relative {
+  position: relative; }
+
 .ball {
   font-family: "Avenir" sans-serif;
   font-size: 500%;
@@ -39,6 +42,8 @@ section.main .container {
   position: relative;
   top: 35vh;
   z-index: 9; }
+  section.main .container .wrapper {
+    padding-right: 50px; }
   section.main .container .title {
     color: #102036;
     text-align: right;
@@ -49,13 +54,13 @@ section.main .container {
     text-align: right; }
   section.main .container .align {
     border-top: 3px solid #102036;
-    width: 30vw;
+    max-width: 450px;
     margin-left: auto;
     margin-top: 15px;
-    padding-top: 10px; }
+    padding-top: 5px; }
   section.main .container .register {
     font-family: "Avenir" sans-serif;
-    padding: 5px 40px 5px 40px;
+    padding: 3px 40px 3px 40px;
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid #102036;
     margin-top: 2%;
@@ -85,13 +90,18 @@ section.main .container {
       font-weight: 900; }
   section.main .container h3 {
     text-transform: uppercase;
-    font-weight: 600;
     font-family: "Avenir" sans-serif;
     letter-spacing: 2px;
-    font-size: 1.4em;
-    line-height: .8em; }
+    font-size: 1.4em; }
     section.main .container h3 #bold {
-      font-weight: 700; }
+      font-weight: 900; }
+  section.main .container .tagline {
+    text-align: right;
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    section.main .container .tagline a {
+      color: #559f93; }
 section.main .triangle-contrast {
   border-top: 0;
   border-bottom: 125vh solid transparent;
@@ -113,15 +123,18 @@ section.about {
   background-color: #102036;
   color: #f4f3f0;
   text-align: center; }
-  section.about .triangle-light {
-    border-top: 0vw solid #f4f3f0;
-    border-bottom: 30vh solid transparent;
-    position: absolute;
-    top: 100vh;
-    left: 75vw;
-    border-left: 0;
-    border-right: 40vw solid #f4f3f0;
-    z-index: 5; }
+  section.about #aboutcontent {
+    opacity: 0; }
+  section.about .relative {
+    position: relative; }
+    section.about .relative .triangle-light {
+      border-top: 0vw solid #f4f3f0;
+      border-bottom: 30vh solid transparent;
+      position: absolute;
+      left: 75vw;
+      border-left: 0;
+      border-right: 40vw solid #f4f3f0;
+      z-index: 5; }
   section.about .container {
     position: relative;
     top: 30vh;
@@ -144,9 +157,11 @@ section.about {
       font-weight: 300; }
     section.about .container #bold {
       font-weight: 600; }
-  section.about .img img {
-    margin-top: 40vh;
-    width: 100vw; }
+  section.about .img {
+    opacity: 0; }
+    section.about .img img {
+      margin-top: 40vh;
+      width: 100%; }
 
 section.employer {
   color: #6b6b6b; }
@@ -154,99 +169,259 @@ section.employer {
     border-top: 0vw solid #102036;
     border-bottom: 27.5vh solid transparent;
     position: absolute;
-    top: 200vh;
-    left: 0;
+    top: -3.5vh;
     border-right: 0;
-    border-left: 55vw solid #102036;
+    border-left: 57vw solid #102036;
     z-index: 5; }
   section.employer .triangle-contrast {
     border-top: 27.5vh solid transparent;
     border-bottom: 55vh solid transparent;
     position: absolute;
-    top: 178.1vh;
+    top: -25.1vh;
     right: 0;
     border-left: 0;
     border-right: 55vw solid #f4f3f0;
     z-index: 1; }
-  section.employer .container {
-    position: relative;
-    top: 10vh;
-    z-index: 9; }
-    section.employer .container .wrapper {
-      padding-top: 30vh;
-      margin: 20px; }
-    section.employer .container .sponsor_subtitle {
-      max-width: 85%; }
-    section.employer .container h1 {
+  section.employer .employercontent {
+    margin-left: 50px;
+    opacity: 0; }
+  section.employer .wrapper {
+    padding-top: 12vh;
+    margin: 20px; }
+    section.employer .wrapper #content {
+      margin: 30px;
+      margin-top: 80px;
+      margin-left: 50px;
+      z-index: 2; }
+      section.employer .wrapper #content .sponsor_subtitle {
+        max-width: 85%; }
+      section.employer .wrapper #content h1 {
+        font-family: "Avenir" sans-serif;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+        font-weight: 800; }
+      section.employer .wrapper #content h4 {
+        font-family: "Open Sans" sans-serif;
+        font-weight: 300;
+        line-height: 1.8em;
+        font-size: 1.2em;
+        margin-bottom: 5px; }
+      section.employer .wrapper #content #bold {
+        font-weight: 600; }
+      section.employer .wrapper #content .sponsor_subtitle {
+        text-align: left; }
+  section.employer #contrast {
+    position: absolute;
+    background-color: #fff;
+    width: 100vw;
+    margin-top: 0vh;
+    margin-left: -20px;
+    height: 45vh;
+    z-index: 1;
+    padding: 100px;
+    padding-top: 0;
+    border-top: 1px solid #e8e9e6; }
+    section.employer #contrast .apply {
       font-family: "Avenir" sans-serif;
-      text-transform: uppercase;
-      font-size: 2.5em;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
-      margin-top: -11vh;
-      font-weight: 800; }
-    section.employer .container h4 {
-      font-family: "Open Sans" sans-serif;
-      font-weight: light;
-      line-height: 1.4em;
-      font-size: 1.2em; }
-    section.employer .container #bold {
-      font-weight: 600; }
-    section.employer .container .sponsor_subtitle {
-      text-align: left; }
-    section.employer .container .flexslider {
-      border: none;
-      max-width: 500px;
-      margin-top: -10vh; }
-      section.employer .container .flexslider .flex-control-paging li a {
-        width: 8px;
-        height: 8px;
-        opacity: .3; }
-    section.employer .container .apply {
-      font-family: "Avenir" sans-serif;
-      padding: 5px 40px 5px 40px;
+      padding: 3px 40px 3px 40px;
       background-color: rgba(255, 255, 255, 0);
       border: 2px solid #102036;
       margin-top: 2%;
       border-radius: 0;
       margin-left: 20px;
       text-align: left;
-      margin-top: 8vh;
-      margin-left: 0px; }
-      section.employer .container .apply h4 {
+      margin-top: 6vh;
+      border: 2px solid #559f93; }
+      section.employer #contrast .apply h4 {
         letter-spacing: 2px;
         font-size: .9em;
         font-weight: bolder;
         text-transform: uppercase;
         color: #102036; }
-    section.employer .container .apply:hover {
+      section.employer #contrast .apply h4 {
+        margin-bottom: 10px;
+        color: #559f93; }
+    section.employer #contrast .apply:hover {
       text-decoration: none;
       background: #102036;
       transition: all 600ms ease;
-      text-align: left; }
-      section.employer .container .apply:hover h4 {
+      text-align: left;
+      background: #559f93; }
+      section.employer #contrast .apply:hover h4 {
         color: #f4f3f0; }
+    section.employer #contrast .flexslider {
+      border: none;
+      max-width: 500px;
+      margin-top: -250px;
+      opacity: 0; }
+      section.employer #contrast .flexslider .flex-control-paging li a {
+        width: 8px;
+        height: 8px;
+        opacity: .3; }
 
-section.white {
+section.exhibitor {
   background-color: #fff;
-  height: 50vh;
-  z-index: 2;
-  margin-top: -35vh; }
+  height: auto;
+  display: table;
+  padding: 50px;
+  padding-bottom: 40px; }
+  section.exhibitor .container {
+    display: table-row;
+    position: relative;
+    top: 6vh;
+    z-index: 9;
+    text-align: center; }
+    section.exhibitor .container .exhibitorcontent {
+      opacity: 0; }
+    section.exhibitor .container .title h1 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      margin-top: 5vh;
+      margin-bottom: 10px;
+      font-weight: 600; }
+    section.exhibitor .container .subtitle {
+      width: 60vw;
+      margin-left: auto;
+      margin-right: auto; }
+      section.exhibitor .container .subtitle #bold {
+        font-weight: 600; }
+      section.exhibitor .container .subtitle h4 {
+        font-family: "Open Sans" sans-serif;
+        font-weight: 300;
+        line-height: 1.8em;
+        font-size: 1.2em; }
+    section.exhibitor .container .apply {
+      font-family: "Avenir" sans-serif;
+      padding: 3px 40px 3px 40px;
+      background-color: rgba(255, 255, 255, 0);
+      border: 2px solid #102036;
+      margin-top: 2%;
+      border-radius: 0;
+      margin-left: 20px;
+      margin-top: 10px;
+      width: 200px; }
+      section.exhibitor .container .apply h4 {
+        letter-spacing: 2px;
+        font-size: .9em;
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: #102036; }
+    section.exhibitor .container .apply:hover {
+      text-decoration: none;
+      background: #102036;
+      transition: all 600ms ease; }
+      section.exhibitor .container .apply:hover h4 {
+        color: #f4f3f0; }
+    section.exhibitor .container .exhibit-img img {
+      max-width: 350px; }
+    section.exhibitor .container .exhibits {
+      display: table;
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10vh;
+      opacity: 0; }
+      section.exhibitor .container .exhibits h3 {
+        font-family: "Avenir" sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.2em;
+        font-weight: 800; }
+      section.exhibitor .container .exhibits h5 {
+        font-family: "Open Sans" sans-serif;
+        font-weight: light;
+        font-size: .9em;
+        line-height: 1.6em; }
+        section.exhibitor .container .exhibits h5 a {
+          color: #559f93; }
+      section.exhibitor .container .exhibits #script {
+        font-style: italic; }
+      section.exhibitor .container .exhibits .container {
+        display: table-row; }
+      section.exhibitor .container .exhibits .col-lg-4 {
+        margin-bottom: 50px; }
 
-section.exhibitor .container {
-  position: relative;
-  top: 10vh;
-  z-index: 9; }
-section.exhibitor .subtitle {
-  text-align: left; }
+section.info {
+  height: 85vh;
+  padding: 3vh 30px 50px 30px; }
+  section.info .container {
+    position: relative;
+    top: 5vh;
+    z-index: 9; }
+  section.info .title {
+    opacity: 0; }
+    section.info .title h1 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2em;
+      letter-spacing: 4px;
+      margin-top: 5vh;
+      margin-bottom: 25px;
+      font-weight: 600;
+      text-align: center; }
+  section.info h3 {
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-top: 5vh;
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 1.5em; }
+  section.info h5 {
+    font-family: "Open Sans" sans-serif;
+    font-weight: light;
+    line-height: 1.5em;
+    font-size: .9em; }
+    section.info h5 a {
+      color: #559f93; }
+  section.info .col-md-4 {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0; }
+  section.info .faq {
+    opacity: 0; }
 
-section.info .container {
-  position: relative;
-  top: 5vh;
-  z-index: 9; }
-section.info .col-md-4 {
-  padding: 20px; }
+section.footer {
+  height: 10vh;
+  overflow-x: none;
+  color: #f4f3f0; }
+  section.footer .row {
+    bottom: 0px;
+    height: auto; }
+    section.footer .row #left {
+      text-align: left; }
+    section.footer .row #right {
+      text-align: right; }
+  section.footer .triangle-contrast {
+    border-top: 40vh solid transparent;
+    border-bottom: 0;
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: -15vh;
+    border-left: 100vw solid #559f93;
+    border-right: 0;
+    z-index: 0; }
+  section.footer .triangle-dark {
+    border-top: 30vh solid transparent;
+    border-bottom: 0;
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: -5vh;
+    border-left: 0;
+    border-right: 100vw solid #102036;
+    z-index: 0; }
 
+@media screen and (max-width: 860px) {
+  .triangle-contrast, .triangle-dark, .triangle-light {
+    opacity: 0; } }
+@media screen and (max-width: 1000px) {
+  section.employer #contrast .flexslider {
+    margin-top: 30px; } }
 @-webkit-keyframes fade_down {
   from {
     top: 32vh;
