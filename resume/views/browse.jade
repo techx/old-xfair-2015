@@ -1,0 +1,79 @@
+doctype html
+html(ng-app="xfair")
+  head
+    title Resume
+  
+    link(rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css")
+    link(rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="style.css")
+
+    script(src="//api.filepicker.io/v1/filepicker.js")
+    script.
+      filepicker.setKey("AepJy2ggR3Cuw2h5oGztxz");      
+    
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.min.js")
+    script(src="saveAs.min.js")
+    script(src="script.js")
+    
+      
+  body(ng-cloak,ng-controller="ResumeBrowseController")
+    .container-fluid
+      .col-xs-12
+        h1 Browse Resume
+      .col-xs-12(ng-class='{"col-sm-8":showFilter}')
+        .panel.panel-default(infinite-scroll='myPagingFunction()', infinite-scroll-disabled='pagingBusy')
+          .panel-heading.search-note
+            input.form-control.search-input(type='text', ng-model='searchText',ng-change="changeFilter()")
+          .panel-heading(ng-init='btn={text:"Download"}')
+            span {{allItems.length || '0'}} out of {{items.length}} student(s)
+            div.pull-right
+              a.btn.btn-default.btn-sm(style='margin-right: 10px', ng-click='downloadAll(allItems,btn)')
+                span {{btn.text}}
+              a.btn.btn-default.btn-sm(ng-click='showFilter=!showFilter', ng-class='{"btn-primary":showFilter}')
+                i.glyphicon.glyphicon-filter
+          .panel-body
+            table.table.tablesaw-stack(ng-show='items && items.length > 0')
+              thead
+                tr
+                  th Name
+                  th Email
+                  th Resume
+              tbody
+                tr.pointer(ng-repeat='item in (allItems = (items | filter:filterObj))', ng-init='initStar(item)', ng-click='selectItem(item)')
+                  td
+                    | {{item.name || 'N/A'}}
+                  td
+                    | {{item.email || 'N/A'}}
+                  td
+                    a(ng-if='item.resume && item.resume.url', ng-href='{{item.resume.url}}', download='resume', onclick='event.stopPropagation()\
+                    ')
+                      span Download
+                    span(ng-if='! (item.resume && item.resume.url)') N/A
+            span(ng-show='!(items && items.length > 0)')
+              | There's nothing here yet.
+              span(ng-show='loading')  We're loading, please wait... This may take a few minutes.
+      .col-xs-12.col-sm-4(ng-show='showFilter')
+        .panel.panel-default
+          .panel-heading
+            | Filter
+            button.btn.btn-link.pull-right(ng-click='clearFilter()') Clear
+          .panel-body
+            p "ctrl" or "apple" key for multiple choices
+            .filter-item
+              h4 Department:
+              select(ng-change='changeFilter()', ng-model='selectedMajors', multiple='multiple', size='4', ng-options='major.label as major.label for major in majors')
+            .filter-item
+              h4 Degrees:
+              select.degree(ng-change='changeFilter()', ng-model='selectedDegrees', multiple='multiple', size='4', ng-options='degree.label as degree.label for degree in degrees')
+              select.classyear(ng-change='changeFilter()', ng-model='selectedClassyears', multiple='multiple', size='4', ng-options='classyear.label as classyear.label for classyear in classyears')
+            .filter-item
+              h4 Industries:
+              select.industry(ng-change='changeFilter()', ng-model='selectedIndustries', multiple='multiple', size='4', ng-options='industry.label as industry.label for industry in industries')
+            .filter-item
+              h4 Job types:
+              select.worktype(ng-change='changeFilter()', ng-model='selectedWorktypes', multiple='multiple', size='4', ng-options='worktype.label as worktype.label for worktype in worktypes')
+            .filter-item
+              h4 Citizenship:
+              select.citizenship(ng-change='changeFilter()', ng-model='selectedCitizenships', multiple='multiple', size='4', ng-options='citizenship.label as citizenship.label for citizenship in citizenships')
+            // <button class="btn btn-primary">Search</button>
