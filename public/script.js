@@ -34,7 +34,7 @@ module.exports = [
     "value": "2018",
     "label": "2018",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 9,
+    "order": 5,
     "updatedAt": "2014-03-06T05:34:48.616Z",
     "createdAt": "2014-03-06T05:34:48.615Z"
   }, {
@@ -50,63 +50,23 @@ module.exports = [
     "value": "2014",
     "label": "2014",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 5,
+    "order": 10,
     "updatedAt": "2014-03-06T05:34:48.664Z",
     "createdAt": "2014-03-06T05:34:48.664Z"
-  }, {
-    "_id": "531808f861c50002003365fe",
-    "value": "2009",
-    "label": "2009",
-    "fair": "5317fe8d1c41090200a113a7",
-    "order": 0,
-    "updatedAt": "2014-03-06T05:34:48.668Z",
-    "createdAt": "2014-03-06T05:34:48.668Z"
   }, {
     "_id": "531808f861c50002003365ff",
     "value": "2017",
     "label": "2017",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 8,
+    "order": 6,
     "updatedAt": "2014-03-06T05:34:48.688Z",
     "createdAt": "2014-03-06T05:34:48.688Z"
-  }, {
-    "_id": "531808f861c5000200336600",
-    "value": "2013",
-    "label": "2013",
-    "fair": "5317fe8d1c41090200a113a7",
-    "order": 4,
-    "updatedAt": "2014-03-06T05:34:48.699Z",
-    "createdAt": "2014-03-06T05:34:48.699Z"
-  }, {
-    "_id": "531808f861c5000200336601",
-    "value": "2011",
-    "label": "2011",
-    "fair": "5317fe8d1c41090200a113a7",
-    "order": 2,
-    "updatedAt": "2014-03-06T05:34:48.711Z",
-    "createdAt": "2014-03-06T05:34:48.711Z"
-  }, {
-    "_id": "531808f861c5000200336602",
-    "value": "2010",
-    "label": "2010",
-    "fair": "5317fe8d1c41090200a113a7",
-    "order": 1,
-    "updatedAt": "2014-03-06T05:34:48.750Z",
-    "createdAt": "2014-03-06T05:34:48.750Z"
-  }, {
-    "_id": "531808f891b88a020079d7fa",
-    "value": "2012",
-    "label": "2012",
-    "fair": "5317fe8d1c41090200a113a7",
-    "order": 3,
-    "updatedAt": "2014-03-06T05:34:48.715Z",
-    "createdAt": "2014-03-06T05:34:48.709Z"
   }, {
     "_id": "531808f891b88a020079d7fb",
     "value": "2015",
     "label": "2015",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 6,
+    "order": 8,
     "updatedAt": "2014-03-06T05:34:48.724Z",
     "createdAt": "2014-03-06T05:34:48.724Z"
   }, {
@@ -705,7 +665,7 @@ module.exports = [
     "label": "CDO - Computation for Design and Optimization",
     "value": "CDO - Computation for Design and Optimization",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 0,
+    "order": 37,
     "updatedAt": "2014-03-06T05:34:47.706Z",
     "createdAt": "2014-03-06T05:34:47.705Z"
   }, {
@@ -769,7 +729,7 @@ module.exports = [
     "label": "OR - Operations Research",
     "value": "OR - Operations Research",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 1,
+    "order": 36,
     "updatedAt": "2014-03-06T05:34:48.273Z",
     "createdAt": "2014-03-06T05:34:48.273Z"
   }, {

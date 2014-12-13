@@ -49,7 +49,7 @@ module.exports = [
     "label": "CDO - Computation for Design and Optimization",
     "value": "CDO - Computation for Design and Optimization",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 0,
+    "order": 37,
     "updatedAt": "2014-03-06T05:34:47.706Z",
     "createdAt": "2014-03-06T05:34:47.705Z"
   },
@@ -121,7 +121,7 @@ module.exports = [
     "label": "OR - Operations Research",
     "value": "OR - Operations Research",
     "fair": "5317fe8d1c41090200a113a7",
-    "order": 1,
+    "order": 36,
     "updatedAt": "2014-03-06T05:34:48.273Z",
     "createdAt": "2014-03-06T05:34:48.273Z"
   },

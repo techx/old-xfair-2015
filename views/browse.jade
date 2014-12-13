@@ -1,12 +1,6 @@
-doctype html
-html(ng-app="xfair")
-  head
-    title Resume
-  
-    link(rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css")
-    link(rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
-    link(rel="stylesheet" type="text/css" href="style.css")
+extends layout
 
+block header
     script(src="//api.filepicker.io/v1/filepicker.js")
     script.
       filepicker.setKey("AepJy2ggR3Cuw2h5oGztxz");      
@@ -16,11 +10,11 @@ html(ng-app="xfair")
     script(src="saveAs.min.js")
     script(src="script.js")
     
-      
-  body(ng-cloak,ng-controller="ResumeBrowseController")
+block content
+  body#resume(ng-cloak,ng-controller="ResumeBrowseController")
     .container-fluid
-      .col-xs-12
-        h1 Browse Resume
+      .col-xs-12#title
+        h1 xFair Resume Portal
       .col-xs-12(ng-class='{"col-sm-8":showFilter}')
         .panel.panel-default(infinite-scroll='myPagingFunction()', infinite-scroll-disabled='pagingBusy')
           .panel-heading.search-note
@@ -62,18 +56,18 @@ html(ng-app="xfair")
             p "ctrl" or "apple" key for multiple choices
             .filter-item
               h4 Department:
-              select(ng-change='changeFilter()', ng-model='selectedMajors', multiple='multiple', size='4', ng-options='major.label as major.label for major in majors')
+              select(ng-change='changeFilter()', ng-model='selectedMajors', multiple='multiple', size='4', ng-options='major.label as major.label for major in majors | orderBy: "order"')
             .filter-item
               h4 Degrees:
-              select.degree(ng-change='changeFilter()', ng-model='selectedDegrees', multiple='multiple', size='4', ng-options='degree.label as degree.label for degree in degrees')
-              select.classyear(ng-change='changeFilter()', ng-model='selectedClassyears', multiple='multiple', size='4', ng-options='classyear.label as classyear.label for classyear in classyears')
+              select.degree(ng-change='changeFilter()', ng-model='selectedDegrees', multiple='multiple', size='4', ng-options='degree.label as degree.label for degree in degrees | orderBy: "order"')
+              select.classyear(ng-change='changeFilter()', ng-model='selectedClassyears', multiple='multiple', size='4', ng-options='classyear.label as classyear.label for classyear in classyears | orderBy: "order"')
             .filter-item
               h4 Industries:
-              select.industry(ng-change='changeFilter()', ng-model='selectedIndustries', multiple='multiple', size='4', ng-options='industry.label as industry.label for industry in industries')
+              select.industry(ng-change='changeFilter()', ng-model='selectedIndustries', multiple='multiple', size='4', ng-options='industry.label as industry.label for industry in industries | orderBy: "order"')
             .filter-item
               h4 Job types:
-              select.worktype(ng-change='changeFilter()', ng-model='selectedWorktypes', multiple='multiple', size='4', ng-options='worktype.label as worktype.label for worktype in worktypes')
+              select.worktype(ng-change='changeFilter()', ng-model='selectedWorktypes', multiple='multiple', size='4', ng-options='worktype.label as worktype.label for worktype in worktypes | orderBy: "order"')
             .filter-item
               h4 Citizenship:
-              select.citizenship(ng-change='changeFilter()', ng-model='selectedCitizenships', multiple='multiple', size='4', ng-options='citizenship.label as citizenship.label for citizenship in citizenships')
+              select.citizenship(ng-change='changeFilter()', ng-model='selectedCitizenships', multiple='multiple', size='4', ng-options='citizenship.label as citizenship.label for citizenship in citizenships | orderBy: "order"')
             // <button class="btn btn-primary">Search</button>
