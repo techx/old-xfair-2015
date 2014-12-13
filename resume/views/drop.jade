@@ -1,0 +1,83 @@
+doctype html
+html(ng-app="xfair")
+  head
+    title Resume
+  
+    link(rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css")
+    link(rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="style.css")
+
+    script(src="//api.filepicker.io/v1/filepicker.js")
+    script.
+      filepicker.setKey("AepJy2ggR3Cuw2h5oGztxz");      
+    
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js")
+    script(src="script.js")
+
+      
+  body(ng-cloak,ng-controller="ResumeDropController")
+    form.container-fluid(name="dropForm", ng-submit="submit()")
+      .col-xs-12
+        h1 Drop Resume
+      .col-xs-12.col-sm-8
+        .panel.panel-default
+          .panel-heading Personal
+          .panel-body
+            .form-group
+              label(for='name') Name
+              input.form-control(type='text', name='name', placeholder='Name', ng-model='student.name', ng-change='update(student,"name")')
+            .form-group
+              label(for='email') Email
+              input.form-control(type='email', name='email', placeholder='Email', ng-model='student.email')
+            //- .form-group
+            //-   label(for='university') University/College
+            //-   select.form-control.selectpicker(multiple='', fs-select='', name='universities', ng-model='student.universities', ng-change='update(student,"universities")', ng-options='university.label as university.label for university in universities')
+            //-     option(value='') Nothing selected
+            .form-group
+              label(for='citizenship') Citizenship
+              select.form-control.selectpicker(multiple='', fs-select='', name='citizenships', ng-model='student.citizenships', ng-change='update(student,"citizenships")', ng-options='citizenship.label as citizenship.label for citizenship in citizenships')
+                option(value='') Nothing selected
+        .panel.panel-default
+          .panel-heading
+            | Degree Information
+          .panel-body
+            .form-group
+              label(for='major') Major
+              select.form-control.selectpicker(multiple='', fs-select='', name='majors', ng-model='student.majors', ng-change='update(student,"majors")', ng-options='major.label as major.label for major in majors')
+                option(value='') Nothing selected
+            .form-group
+              label(for='classyear') Classyear
+              select.form-control.selectpicker(multiple='', fs-select='', name='classyears', ng-model='student.classyears', ng-change='update(student,"classyears")', ng-options='classyear.label as classyear.label for classyear in classyears')
+                option(value='') Nothing selected
+            .form-group
+              label(for='degree') Degree
+              select.form-control.selectpicker(multiple='', fs-select='', name='degrees', ng-model='student.degrees', ng-change='update(student,"degrees")', ng-options='degree.label as degree.label for degree in degrees')
+                option(value='') Nothing selected
+            
+        .panel.panel-default
+          .panel-heading Interests
+          .panel-body
+            .form-group
+              label(for='worktypes') What type of work are you looking for?
+              select.form-control.selectpicker(multiple='', fs-select='', name='worktypes', ng-model='student.worktypes', ng-change='update(student,"worktypes")', ng-options='worktype.label as worktype.label for worktype in worktypes')
+                option(value='') Nothing selected
+                
+            .form-group
+              label(for='industries') Which industries?
+              select.form-control.selectpicker(multiple='', fs-select='', name='industries', ng-model='student.industries', ng-change='update(student,"industries")', ng-options='industry.label as industry.label for industry in industries')
+                option(value='') Nothing selected
+            
+      .col-xs-12.col-sm-4
+        .panel.panel-default
+          .panel-heading Resume
+          .panel-body
+            h4
+              span(ng-if='!student.resume')
+                | No file uploaded
+              span.complete(ng-if='student.resume')
+                | Uploaded
+            #upload-panel
+              a.btn-c.btn-link.btn-save(ng-href='{{student.resume.url}}', ng-show='student.resume') Download  ({{student.resume.filename}})
+              .clearfix
+              a.btn-c.btn-edit.btn-link.btn-upload-resume(ng-click='uploadResume()') Choose file
+        button.btn.btn-default(type="submit") Submit
