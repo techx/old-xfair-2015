@@ -56,19 +56,31 @@ h3 {
     }
 }
 
-// SECTIONS
-section.main {
+.flexslider {
+    border: none;
+    max-width: 500px;
+    opacity: 1;
+    z-index: 99;
 
-    .animated {
-        -webkit-animation: fade_down 2s;
-        -moz-animation: fade_down 2s;
-        -o-animation: fade_down 2s;
-        animation: fade_down 2s;
+    .flex-control-paging li a {
+        width: 8px;
+        height: 8px;
+        opacity: .3;
     }
 
+    .flex-control-paging li a.flex-active {
+        background-color: $contrast;
+        opacity: .6;
+    }
+}
+
+// SECTIONS
+section.main {
     .container {
+        opacity: 0;
         position: relative;
-        top: 30vh;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 9;
 
         .wrapper {
@@ -135,7 +147,7 @@ section.main {
         border-width: 110vh*2 0 0 400vw;
         border-color: transparent transparent transparent $dark;
         position: absolute;
-        top: 60vh;
+        top: 45vh;
         z-index: 0;
     }
 }
@@ -196,7 +208,7 @@ section.about {
 section.employer {
     color: $grey;
     background-color: #fff;
-    height: 150vh;
+    height: 100%;
 
     .triangle-light {
         margin-top: -35vh;
@@ -213,16 +225,16 @@ section.employer {
     .wrapper {
         position: relative;
         padding-top:12vh;
-        margin: 20px;
         z-index: 6;
 
         #content {
             margin: 30px;
             margin-top:80px;
-            margin-left: 100px;
 
-            .sponsor_subtitle {
-                max-width: 85%;
+            .employercontent {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             h1 {
@@ -253,15 +265,13 @@ section.employer {
     }
 
     #contrast {
-        position: absolute;
         background-color: #fff;
         width:100vw;
         margin-top: 0vh;
         margin-left: -20px;
-        height: 60vh;
-        z-index:1;
-        padding: 100px;
-        padding-top: 0;
+        min-height: 50vh;
+        z-index: 5;
+        padding: 0 100px 0px 100px;
         border-top: 1px solid $light1;
 
         .apply {
@@ -282,52 +292,44 @@ section.employer {
 
             background: $contrast;
         }
-
-        .flexslider {
-            border: none;
-            max-width: 500px;
-            margin-top: -240px;
-            opacity: 1;
-            z-index: 99;
-
-            .flex-control-paging li a {
-                width: 8px;
-                height: 8px;
-                opacity: .3;
-            }
-
-            .flex-control-paging li a.flex-active {
-                background-color: $contrast;
-                opacity: .6;
-            }
-        }
     }
 
-    .triangle-dark {
-        margin-top: 45vh;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 135vh 400vw 0 0;
-        border-color: transparent $dark transparent transparent;
-        right: 0;
-        position: absolute;
-        z-index: 6;
+    .flexslider {
+        margin-top: -240px;
     }
 }
 
 section.student {
-    margin-top: 20vh;
+    height: 115vh;
     background-color: #fff;
     color: $light;
-    z-index:10;
+    z-index: 50;
+    margin-left: auto;
+    margin-right: auto;
+        
+    .triangle-dark {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 115vh 400vw 0 0;
+        border-color: transparent $dark transparent transparent;
+        right: 0;
+        position: absolute;
+        z-index: 6;
+        margin-top: -10vh;
+    }
 
     .wrapper {
-        position: absolute;
+        position: relative;
         z-index: 15;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .content {
+        position: relative;
+        margin-top: -10vh;
+
         .fadein {
             opacity: 1;
         }
@@ -346,7 +348,7 @@ section.student {
         }
 
         #studentcontent {
-            padding: 40px 80px 40px 10px;
+            padding: 50px 80px 50px 130px;
         }
 
         .subtitle {
@@ -359,24 +361,23 @@ section.student {
                 margin-top:20px;
             }
         }
+    }
 
-        .flexslider {
-            max-width: 500px;
-            border: none;
-            border-radius: 0;
+    .flexslider {
+        margin-top: 50px;
+        width: 50vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-            .flex-control-paging li a {
-                width: 8px;
-                height: 8px;
-                opacity: .4;
-                background-color: #fff;
-            }
+    .flex-control-paging li a {
+        background-color: $light;
+        opacity: .1;
+    }
 
-            .flex-control-paging li a.flex-active {
-                background-color: $contrast;
-                opacity: .7;
-            }
-        }
+    .flex-control-paging li a.flex-active {
+        background-color: $light;
+        opacity: .6;
     }
 }
 
@@ -384,9 +385,7 @@ section.exhibitor {
     background-color: #fff;
     height: auto;
     display: table;
-    padding: 50px;
-    padding-bottom: 40px;
-    margin-top: -15vh;
+    padding: 0 0 50px 0;
 
     .container {
         display: table-row;
@@ -440,6 +439,7 @@ section.exhibitor {
 
         .exhibit-img img {
             max-width: 350px;
+            width: 100%;
         }
 
         .exhibits {
@@ -485,14 +485,16 @@ section.exhibitor {
 }
 
 section.info {
-    height: 125vh;
+    height: 100%;
+    min-height: 90vh;
     padding: 3vh 30px 50px 30px;
     color: $grey;
 
     .container {
+        padding-top: 5vh;
         position: relative;
-        top: 10vh;
         z-index: 9;
+        bottom: 0;
     }
 
     .title {
@@ -543,26 +545,27 @@ section.info {
 }
 
 section.footer {
-    height: 25vh;
+    min-height: 50px;
+    height: 100%;
+    background-color: $contrast;
     color: $light;
-    z-index:40;
-    position: relative;
+    z-index: 40;
+    padding: 10px;
 
-    .container {
-        padding-top: 16vh;
-        position: relative;
+    .wrapper {
+        width: 100%;
     }
 
     .row {
-        border-top: 1px solid $light;
         height: auto;
         font-family: $avenir;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 1em;
-        position: absolute;
+        position: relative;
         width:90vw;
-        margin-left: -5vw;
+        margin-left: auto;
+        margin-right: auto;
 
         #left {
             text-align: left;
@@ -579,45 +582,26 @@ section.footer {
 
             a {
                 font-weight: 600;
-                color: $contrast;
+                color: $dark;
+            }
+
+            a:hover {
+                color: $light;
+                transition: all 600ms ease;
             }
         }
-    }
-
-    .triangle-contrast {
-        border-top: 40vh solid transparent;
-        border-bottom: 0; 
-        position: absolute; 
-        margin-bottom: 0;
-        margin-top:-15vh;
-        border-left: 100vw solid $contrast; 
-        border-right: 0;
-        z-index: 0;
-    }
-
-    .triangle-dark {
-        border-top: 30vh solid transparent;
-        border-bottom: 0; 
-        position: absolute; 
-        margin-bottom: 0;
-        margin-top:-18vh;
-        border-right: 100vw solid $dark;
-        border-left: 0;
-    }
-
-    .rectangle-dark {
-        width: 100vw;
-        background-color: $dark;
-        height: 13vh;
-        margin-top:12vh;
-        position: absolute;
     }
 
     #icons {
         margin: 0 1px;
 
         a {
-            color: $contrast;
+            color: $dark;
+        }
+
+        a:hover {
+            color: $light;
+            transition: all 600ms ease;
         }
 
         .fa {
@@ -627,6 +611,34 @@ section.footer {
 }
 
 @media screen and (max-width: 860px) {
+    section.footer .row #right {
+        text-align: left;
+    }
+
+    section.main {
+        .container {
+            .register {
+                color: $contrast;
+                border-color: $contrast;
+
+                h4 {
+                    color: $contrast;
+                }
+            }
+
+            .register:hover {
+                background-color: $contrast;
+            }
+
+            .tagline a {
+                color: $dark;
+            }
+        }
+
+    }
+
+
+
 
 }
 

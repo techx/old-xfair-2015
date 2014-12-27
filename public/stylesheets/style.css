@@ -44,14 +44,24 @@ h3 {
   h3 #bold {
     font-weight: 900; }
 
-section.main .animated {
-  -webkit-animation: fade_down 2s;
-  -moz-animation: fade_down 2s;
-  -o-animation: fade_down 2s;
-  animation: fade_down 2s; }
+.flexslider {
+  border: none;
+  max-width: 500px;
+  opacity: 1;
+  z-index: 99; }
+  .flexslider .flex-control-paging li a {
+    width: 8px;
+    height: 8px;
+    opacity: .3; }
+  .flexslider .flex-control-paging li a.flex-active {
+    background-color: #559f93;
+    opacity: .6; }
+
 section.main .container {
+  opacity: 0;
   position: relative;
-  top: 30vh;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 9; }
   section.main .container .wrapper {
     padding-right: 50px; }
@@ -114,7 +124,7 @@ section.main .triangle-dark {
   border-width: 220vh 0 0 400vw;
   border-color: transparent transparent transparent #102036;
   position: absolute;
-  top: 60vh;
+  top: 45vh;
   z-index: 0; }
 
 section.about {
@@ -156,7 +166,7 @@ section.about {
 section.employer {
   color: #656565;
   background-color: #fff;
-  height: 150vh; }
+  height: 100%; }
   section.employer .triangle-light {
     margin-top: -35vh;
     width: 0;
@@ -170,14 +180,14 @@ section.employer {
   section.employer .wrapper {
     position: relative;
     padding-top: 12vh;
-    margin: 20px;
     z-index: 6; }
     section.employer .wrapper #content {
       margin: 30px;
-      margin-top: 80px;
-      margin-left: 100px; }
-      section.employer .wrapper #content .sponsor_subtitle {
-        max-width: 85%; }
+      margin-top: 80px; }
+      section.employer .wrapper #content .employercontent {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto; }
       section.employer .wrapper #content h1, section.employer .wrapper #content h2 {
         font-family: "Avenir" sans-serif;
         text-transform: uppercase;
@@ -196,15 +206,13 @@ section.employer {
       section.employer .wrapper #content .sponsor_subtitle {
         text-align: left; }
   section.employer #contrast {
-    position: absolute;
     background-color: #fff;
     width: 100vw;
     margin-top: 0vh;
     margin-left: -20px;
-    height: 60vh;
-    z-index: 1;
-    padding: 100px;
-    padding-top: 0;
+    min-height: 50vh;
+    z-index: 5;
+    padding: 0 100px 0px 100px;
     border-top: 1px solid #e8e9e6; }
     section.employer #contrast .apply {
       font-family: "Avenir" sans-serif;
@@ -234,78 +242,71 @@ section.employer {
       background: #559f93; }
       section.employer #contrast .apply:hover h4 {
         color: #f4f3f0; }
-    section.employer #contrast .flexslider {
-      border: none;
-      max-width: 500px;
-      margin-top: -240px;
-      opacity: 1;
-      z-index: 99; }
-      section.employer #contrast .flexslider .flex-control-paging li a {
-        width: 8px;
-        height: 8px;
-        opacity: .3; }
-      section.employer #contrast .flexslider .flex-control-paging li a.flex-active {
-        background-color: #559f93;
-        opacity: .6; }
-  section.employer .triangle-dark {
-    margin-top: 45vh;
+  section.employer .flexslider {
+    margin-top: -240px; }
+
+section.student {
+  height: 115vh;
+  background-color: #fff;
+  color: #f4f3f0;
+  z-index: 50;
+  margin-left: auto;
+  margin-right: auto; }
+  section.student .triangle-dark {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 135vh 400vw 0 0;
+    border-width: 115vh 400vw 0 0;
     border-color: transparent #102036 transparent transparent;
     right: 0;
     position: absolute;
-    z-index: 6; }
-
-section.student {
-  margin-top: 20vh;
-  background-color: #fff;
-  color: #f4f3f0;
-  z-index: 10; }
+    z-index: 6;
+    margin-top: -10vh; }
   section.student .wrapper {
-    position: absolute;
-    z-index: 15; }
-  section.student .content .fadein {
-    opacity: 1; }
-  section.student .content .title {
-    z-index: 50; }
-    section.student .content .title h1, section.student .content .title h2 {
-      font-family: "Avenir" sans-serif;
-      text-transform: uppercase;
-      font-size: 2.5em;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
-      font-weight: 800; }
-  section.student .content #studentcontent {
-    padding: 40px 80px 40px 10px; }
-  section.student .content .subtitle h4 {
-    font-family: "Open Sans" sans-serif;
-    font-weight: 300;
-    line-height: 1.8em;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    margin-top: 20px; }
-  section.student .content .flexslider {
-    max-width: 500px;
-    border: none;
-    border-radius: 0; }
-    section.student .content .flexslider .flex-control-paging li a {
-      width: 8px;
-      height: 8px;
-      opacity: .4;
-      background-color: #fff; }
-    section.student .content .flexslider .flex-control-paging li a.flex-active {
-      background-color: #559f93;
-      opacity: .7; }
+    position: relative;
+    z-index: 15;
+    top: 50%;
+    transform: translateY(-50%); }
+  section.student .content {
+    position: relative;
+    margin-top: -10vh; }
+    section.student .content .fadein {
+      opacity: 1; }
+    section.student .content .title {
+      z-index: 50; }
+      section.student .content .title h1, section.student .content .title h2 {
+        font-family: "Avenir" sans-serif;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+        font-weight: 800; }
+    section.student .content #studentcontent {
+      padding: 50px 80px 50px 130px; }
+    section.student .content .subtitle h4 {
+      font-family: "Open Sans" sans-serif;
+      font-weight: 300;
+      line-height: 1.8em;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      margin-top: 20px; }
+  section.student .flexslider {
+    margin-top: 50px;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto; }
+  section.student .flex-control-paging li a {
+    background-color: #f4f3f0;
+    opacity: .1; }
+  section.student .flex-control-paging li a.flex-active {
+    background-color: #f4f3f0;
+    opacity: .6; }
 
 section.exhibitor {
   background-color: #fff;
   height: auto;
   display: table;
-  padding: 50px;
-  padding-bottom: 40px;
-  margin-top: -15vh; }
+  padding: 0 0 50px 0; }
   section.exhibitor .container {
     display: table-row;
     position: relative;
@@ -356,7 +357,8 @@ section.exhibitor {
       section.exhibitor .container .apply:hover h4 {
         color: #f4f3f0; }
     section.exhibitor .container .exhibit-img img {
-      max-width: 350px; }
+      max-width: 350px;
+      width: 100%; }
     section.exhibitor .container .exhibits {
       display: table;
       width: 85vw;
@@ -385,13 +387,15 @@ section.exhibitor {
         margin-bottom: 50px; }
 
 section.info {
-  height: 125vh;
+  height: 100%;
+  min-height: 90vh;
   padding: 3vh 30px 50px 30px;
   color: #656565; }
   section.info .container {
+    padding-top: 5vh;
     position: relative;
-    top: 10vh;
-    z-index: 9; }
+    z-index: 9;
+    bottom: 0; }
   section.info .title {
     opacity: 1; }
     section.info .title h1, section.info .title h2 {
@@ -427,23 +431,24 @@ section.info {
     opacity: 1; }
 
 section.footer {
-  height: 25vh;
+  min-height: 50px;
+  height: 100%;
+  background-color: #559f93;
   color: #f4f3f0;
   z-index: 40;
-  position: relative; }
-  section.footer .container {
-    padding-top: 16vh;
-    position: relative; }
+  padding: 10px; }
+  section.footer .wrapper {
+    width: 100%; }
   section.footer .row {
-    border-top: 1px solid #f4f3f0;
     height: auto;
     font-family: "Avenir" sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1em;
-    position: absolute;
+    position: relative;
     width: 90vw;
-    margin-left: -5vw; }
+    margin-left: auto;
+    margin-right: auto; }
     section.footer .row #left {
       text-align: left;
       font-weight: 900; }
@@ -453,37 +458,33 @@ section.footer {
       text-align: right; }
       section.footer .row #right a {
         font-weight: 600;
-        color: #559f93; }
-  section.footer .triangle-contrast {
-    border-top: 40vh solid transparent;
-    border-bottom: 0;
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: -15vh;
-    border-left: 100vw solid #559f93;
-    border-right: 0;
-    z-index: 0; }
-  section.footer .triangle-dark {
-    border-top: 30vh solid transparent;
-    border-bottom: 0;
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: -18vh;
-    border-right: 100vw solid #102036;
-    border-left: 0; }
-  section.footer .rectangle-dark {
-    width: 100vw;
-    background-color: #102036;
-    height: 13vh;
-    margin-top: 12vh;
-    position: absolute; }
+        color: #102036; }
+      section.footer .row #right a:hover {
+        color: #f4f3f0;
+        transition: all 600ms ease; }
   section.footer #icons {
     margin: 0 1px; }
     section.footer #icons a {
-      color: #559f93; }
+      color: #102036; }
+    section.footer #icons a:hover {
+      color: #f4f3f0;
+      transition: all 600ms ease; }
     section.footer #icons .fa {
       margin: 0 4px; }
 
+@media screen and (max-width: 860px) {
+  section.footer .row #right {
+    text-align: left; }
+
+  section.main .container .register {
+    color: #559f93;
+    border-color: #559f93; }
+    section.main .container .register h4 {
+      color: #559f93; }
+  section.main .container .register:hover {
+    background-color: #559f93; }
+  section.main .container .tagline a {
+    color: #102036; } }
 @media screen and (max-width: 1000px) {
   section.employer #contrast .flexslider {
     margin-top: 30px; } }

@@ -3,6 +3,14 @@ $(window).load(function() {
     $('.flexslider').flexslider();
 });
 
+$(document).ready(function(){
+
+    $('#main .animated').animate({
+        top: "+=20",
+        opacity: 1
+    }, 1500);
+});
+
 
 // // This function lags the page, look into more efficient ways
 // function loadIn(DOMobj, off) {
