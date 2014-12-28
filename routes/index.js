@@ -7,7 +7,11 @@ router.get('/', function(req, res) {
 });
 
 router.get('/booths', function(req, res) {
-  res.render('booths', { title: 'xFair 2015' });
+  res.render('booths', { title: 'xFair 2015 / Booth Layout' });
 });
+
+router.get('/banquet', function(req, res) {
+    res.render('banquet', { title: 'xFair 2015 / Banquet' })
+})
 
 module.exports = router;

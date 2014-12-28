@@ -476,6 +476,10 @@ section.footer {
     section.footer #icons .fa {
       margin: 0 4px; }
 
+.banquet h4 {
+  text-align: center;
+  margin-top: 10vh; }
+
 @media screen and (max-width: 860px) {
   section.footer .row #right {
     text-align: left; }

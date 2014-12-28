@@ -614,6 +614,13 @@ section.footer {
     }
 }
 
+.banquet {
+    h4 {
+        text-align: center;
+        margin-top: 10vh;
+    }
+}
+
 @media screen and (max-width: 860px) {
     section.footer .row #right {
         text-align: left;
