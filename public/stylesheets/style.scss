@@ -78,9 +78,10 @@ h3 {
 section.main {
     .container {
         opacity: 0;
-        position: relative;
+        position: fixed;
         top: 50%;
-        transform: translateY(-50%);
+        margin-top: -150px;
+        right: 0;
         z-index: 9;
 
         .wrapper {
@@ -132,11 +133,11 @@ section.main {
     .triangle-contrast { 
         border-top: 0;
         border-bottom: 125vh solid transparent; 
-        position: absolute; 
         top: 0vh;
         border-left: 70vw solid $contrast; 
         border-right: 0;
-        z-index: 2;
+        z-index: 3;
+        position: fixed;
     }
 
     .triangle-dark {
@@ -144,11 +145,11 @@ section.main {
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 110vh*2 0 0 400vw;
+        border-width: 1700px 0 0 400vw;
         border-color: transparent transparent transparent $dark;
         position: absolute;
         top: 45vh;
-        z-index: 0;
+        z-index: 1;
     }
 }
 
@@ -163,17 +164,20 @@ section.about {
     }
 
     .container {
-        position: relative;
+        position: fixed;
         top: 40vh;
         z-index: 2;
 
         .wrapper {
-            width: 60vw;
-            margin-left: auto;
-            margin-right: auto;
+            top: 50%;
+            transform: translateY(-50%);
 
             #aboutcontent {
                 opacity: 1;
+                text-align: right;
+                width: 40vw;
+                right: 0;
+                position: absolute;
             }
         }
 
@@ -219,7 +223,7 @@ section.employer {
         border-color: transparent $light transparent transparent;
         right: 0;
         position: absolute;
-        z-index: 2;
+        z-index: 3;
     }
 
     .wrapper {

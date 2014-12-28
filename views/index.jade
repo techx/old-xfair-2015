@@ -6,8 +6,8 @@ block content
         div.relative
             div.triangle-dark
         div.relative
-            div.triangle-contrast
-        div.animated.container
+            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1200="transform:translate(0,-900px)" data-1700="position:absolute")
+        div.animated.container(data-200="z-index: 9" data-300="z-index: 0; position: fixed;" data-600="position: absolute;")
             div.wrapper
                 div.title
                     h1 X<span id = "bold">FAIR 2</span><span id = "kerning">015</span>
@@ -28,15 +28,13 @@ block content
 
 
     section.about#about
-        div.container
+        div.container(data-500="opacity: 0" data-700="opacity: 1;")
             div.wrapper
                 div#aboutcontent
                     div.title
                         h2 more than your average career fair
                     div.subtitle
                         h5 xFair is more than just booths, name tags and blazers — it's both a career fair and an expo, a showcase of raw talent, raw ideas, and raw passion. With 2000+ undergraduate and graduate students in attendence, xFair is <span id = "bold">MIT's largest spring career fair</span>.
-                div.img
-                    img(src="/images/fairbanner1.png")
 
 
     section.employer#employer

@@ -59,9 +59,10 @@ h3 {
 
 section.main .container {
   opacity: 0;
-  position: relative;
+  position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  margin-top: -150px;
+  right: 0;
   z-index: 9; }
   section.main .container .wrapper {
     padding-right: 50px; }
@@ -111,21 +112,21 @@ section.main .container {
 section.main .triangle-contrast {
   border-top: 0;
   border-bottom: 125vh solid transparent;
-  position: absolute;
   top: 0vh;
   border-left: 70vw solid #559f93;
   border-right: 0;
-  z-index: 2; }
+  z-index: 3;
+  position: fixed; }
 section.main .triangle-dark {
   position: relative;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 220vh 0 0 400vw;
+  border-width: 1700px 0 0 400vw;
   border-color: transparent transparent transparent #102036;
   position: absolute;
   top: 45vh;
-  z-index: 0; }
+  z-index: 1; }
 
 section.about {
   background-color: #f4f3f0;
@@ -135,15 +136,18 @@ section.about {
   section.about .relative {
     position: relative; }
   section.about .container {
-    position: relative;
+    position: fixed;
     top: 40vh;
     z-index: 2; }
     section.about .container .wrapper {
-      width: 60vw;
-      margin-left: auto;
-      margin-right: auto; }
+      top: 50%;
+      transform: translateY(-50%); }
       section.about .container .wrapper #aboutcontent {
-        opacity: 1; }
+        opacity: 1;
+        text-align: right;
+        width: 40vw;
+        right: 0;
+        position: absolute; }
     section.about .container h5 {
       font-family: "Open Sans" sans-serif;
       line-height: 2em;
@@ -176,7 +180,7 @@ section.employer {
     border-color: transparent #f4f3f0 transparent transparent;
     right: 0;
     position: absolute;
-    z-index: 2; }
+    z-index: 3; }
   section.employer .wrapper {
     position: relative;
     padding-top: 12vh;
