@@ -25,11 +25,9 @@ var mongoURI = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGOHQ_URL |
 var mongoose = require("mongoose");
 mongoose.connect(mongoURI);
 
-app.use('/', routes);
-app.use('/users', users);
-app.use('/companies', require('./routes/companies'))
 app.use('/', require('./routes/index'));
 app.use('/', require('./routes/resumes'));
+app.use('/companies', require('./routes/companies'))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
