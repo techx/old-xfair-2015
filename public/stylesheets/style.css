@@ -1,6 +1,42 @@
 @font-face {
   font-family: Avenir;
   src: url("/assets/Avenir.ttc"); }
+#resume {
+  font-family: "Open Sans" sans-serif; }
+  #resume #title {
+    margin: 20px auto; }
+  #resume h1 {
+    font-family: "Avenir" sans-serif;
+    font-size: 3.5em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #102036;
+    line-height: 10px; }
+  #resume h3 {
+    text-transform: uppercase;
+    font-family: "Avenir" sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4em; }
+    #resume h3 #bold {
+      font-weight: 900; }
+  #resume form .panel-heading {
+    background-image: none;
+    background-color: #102036;
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color: #f4f3f0; }
+  #resume form .btn-dark {
+    background-color: #102036;
+    color: #f4f3f0;
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .1em; }
+  #resume form .btn-upload-resume {
+    cursor: pointer; }
+
 ::selection {
   background: #559f93; }
 
@@ -500,7 +536,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -508,7 +543,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -516,7 +550,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -524,7 +557,8 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */

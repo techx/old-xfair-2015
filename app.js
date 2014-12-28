@@ -5,9 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-
 var app = express();
 
 var mongoose = require('mongoose');
@@ -24,9 +21,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var mongoURI = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || "mongodb://localhost/xfair";
+var mongoose = require("mongoose");
+mongoose.connect(mongoURI);
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/companies', require('./routes/companies'))
+app.use('/', require('./routes/index'));
+app.use('/', require('./routes/resumes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -59,6 +62,11 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000);
+app.set('ipaddress', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
+
+// start the server
+var server = app.listen(app.get('port'), app.get('ipaddress'));
 
 app.set('port', process.env.PORT || 3000);
 

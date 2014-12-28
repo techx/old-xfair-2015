@@ -1,7 +1,12 @@
 extends layout
 
-block content
+block header
+    script(src='/javascripts/ball.js')
+    script(src='/javascripts/jquery.flexslider.js')
+    script(src='/javascripts/style.js')
+    link(rel='stylesheet' href='/stylesheets/flexslider.css' type='text/css')
 
+block content
     section.main#main
         div.relative
             div.triangle-dark
