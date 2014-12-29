@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var mongoURI = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || "mongodb://localhost/xfair";
+var mongoURI = process.env.MONGOHQ_URL || "mongodb://localhost/xfair";
 var mongoose = require("mongoose");
 mongoose.connect(mongoURI);
 
