@@ -5,7 +5,7 @@
   font-family: "Open Sans" sans-serif; }
   #resume #title {
     margin: 20px auto; }
-  #resume h1 {
+  #resume h1, #resume h2 {
     font-family: "Avenir" sans-serif;
     font-size: 3.5em;
     letter-spacing: 10px;
@@ -174,7 +174,7 @@ section.about {
   section.about .container {
     position: fixed;
     top: 40vh;
-    z-index: 2; }
+    z-index: 5; }
     section.about .container .wrapper {
       top: 50%;
       transform: translateY(-50%); }
@@ -536,6 +536,7 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
+
   to {
     top: 35vh;
     opacity: 1; } }
@@ -543,6 +544,7 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
+
   to {
     top: 35vh;
     opacity: 1; } }
@@ -550,6 +552,7 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
+
   to {
     top: 35vh;
     opacity: 1; } }
@@ -557,8 +560,7 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
+
   to {
     top: 35vh;
     opacity: 1; } }
-
-/*# sourceMappingURL=style.css.map */
