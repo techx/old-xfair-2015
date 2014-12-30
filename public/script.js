@@ -1033,13 +1033,27 @@ app.controller("ResumeDropController", [
       };
     })(this);
     return $scope.submit = function() {
-      var r;
+      var r, _ref;
+      $scope.error = "";
+      $scope.success = "";
+      if (!((_ref = $scope.student.email) != null ? _ref.match(/mit.edu/) : void 0)) {
+        $scope.error = "Only mit.edu email is allowed.";
+        return;
+      }
+      if (!$scope.student.name) {
+        $scope.error = "Please tell us your name.";
+        return;
+      }
+      if (!$scope.student.resume) {
+        $scope.error = "Please upload your resume.";
+        return;
+      }
       r = $http.post('/drop', $scope.student);
       r.success(function() {
-        return $scope.success = 'dropped';
+        return $scope.success = 'You have successfully dropped your resume.';
       });
       return r.error(function() {
-        return $scope.error = 'error';
+        return $scope.error = "There's an error.";
       });
     };
   }
