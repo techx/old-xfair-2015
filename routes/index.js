@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-console.log(router);
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -13,11 +12,11 @@ router.get('/booths', function(req, res) {
 
 router.get('/banquet', function(req, res) {
     res.render('banquet', { title: 'xFair 2015 / Banquet' })
-})
+});
 
 router.get('/portal', function(req, res) {
     res.redirect('http://portal.mit-xfair.org');
-})
+});
 
 router.get('/sponsor', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/sponsor.pdf');
