@@ -30,11 +30,6 @@ text {
 
 .layout {
   margin-top: -50px;
-  margin-left: 50px;
-  float: left; }
-
-.companies {
-  float: right;
-  padding: 50px;
-  margin-right: 50px;
-  max-height: 800px; }
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px; }

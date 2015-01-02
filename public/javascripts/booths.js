@@ -7,6 +7,9 @@ $(document).ready(function(){
 
     var svgContainer = d3.select(".layout").append("svg").attr("width", 820).attr("height", 720);
 
+    svgContainer.append("text").text("Entrance").attr("x", 45).attr("y", 645);
+    svgContainer.append("text").text("Exit").attr("x", 750).attr("y", 645);
+
     for (var i=1; i<=12; i++) {
         var circle = svgContainer.append("rect")
                                 .attr("x", 30)
