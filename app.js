@@ -12,6 +12,20 @@ app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 var mongoose = require('mongoose');
 
+var passport = require('passport');
+var config = require('./config');
+var BasicStrategy = require('passport-http').BasicStrategy;
+
+passport.use(new BasicStrategy(
+  function(username, password, done) {
+    if (username.valueOf() === config.USERNAME &&
+      password.valueOf() === config.PASSWORD)
+      return done(null, true);
+    else
+      return done(null, false);
+  }
+));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -23,6 +37,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
 
 var mongoURI = process.env.MONGOHQ_URL || "mongodb://localhost/xfair";
 var mongoose = require("mongoose");
