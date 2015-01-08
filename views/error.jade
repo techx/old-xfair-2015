@@ -1,29 +1,6 @@
 extends layout
 
-//- block content
-//-   h1= message
-//-   h2= error.status
-//-   pre #{error.stack}
-
-block header
-    script(src='/javascripts/style.js')
-    link(rel='stylesheet' href='/stylesheets/flexslider.css' type='text/css')
-
 block content
-    section.main#main
-        div.relative
-            div.triangle-dark
-        div.relative
-            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1200="transform:translate(0,-900px)" data-1700="position:absolute")
-        div.animated.container(data-200="z-index: 9" data-300="z-index: 0; position: fixed;" data-600="position: absolute;")
-            div.wrapper
-                div.title
-                    h1 Oops!
-                div.tagline
-                    h5 The page your were looking for does not exist.
-                div.subtitle
-                    div.align
-                //-         h3 Contact xfair-exec@mit.edu for help.
-                a(id = 'button1' href = "/")
-                    button.btn.register.employers
-                        h4 HOMEPAGE
+  h1= message
+  h2= error.status
+  pre #{error.stack}

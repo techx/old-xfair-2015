@@ -1,9 +1,10 @@
 extends layout
 
 block header
-    script(src='/javascripts/ball.js')
+    script(src='/javascripts/skrollr.menu.min.js')
     script(src='/javascripts/jquery.flexslider.js')
     script(src='/javascripts/style.js')
+    
     link(rel='stylesheet' href='/stylesheets/flexslider.css' type='text/css')
 
 block content
@@ -11,7 +12,7 @@ block content
         div.relative
             div.triangle-dark
         div.relative
-            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1200="transform:translate(0,-900px)" data-1700="position:absolute")
+            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1400="transform:translate(0,-1200px)" data-1900="position:absolute")
         div.animated.container(data-200="z-index: 9" data-300="z-index: 0; position: fixed;" data-600="position: absolute;")
             div.wrapper
                 div.title
@@ -24,10 +25,10 @@ block content
                 div.subtitle
                     div.align
                         h3 <span id="bold">February 2, 2015, 10AM - 4PM</span> / Rockwell Cage
-                a(id = 'button1' href = "#employer")
+                a(id = 'btn-employer' href="#employers")
                     button.btn.register.employers
                         h4 EMPLOYERS
-                a(id = 'button1' href = "#student")       
+                a(id = 'btn-student' href="#student")       
                     button.btn.register.students
                         h4 STUDENTS
 
@@ -45,7 +46,7 @@ block content
     section.employer#employer
         div.relative
             div.triangle-light
-        div.wrapper
+        div.wrapper#employers
             div.row#content
                 div.col-md-6
                     div.employercontent
@@ -54,13 +55,14 @@ block content
                         div.sponsor_subtitle
                             h4 <span id = "bold">Recruit the brightest young minds to make your company's vision come true.</span>
                             h4 Showcase your company and brand to thousands of attendees and inspire the next generation of talent.
-                            h4 We have filled all our spots for xFair 2015 and will be releasing the company list shortly. If you missed the company application deadline, we hope you keep us in mind for next year!
+                            h4 The deadline to apply to be a sponsor for xFair 2015 was <span id = "bold">November 28, 2014</span>. Interested in keeping in touch for 2016? <a id='employer-apply-btn' href="mailto:xfair-cr@mit.edu">Contact us</a>.
+                            h4 Already accepted as an xFair 2015 sponsor? Access the logistics portal <a href="portal.xfair-mit.org">here</a>.
             div.row#contrast
                 div.col-md-6
                     div.apply-btn
-                            a(id = 'employer-apply-btn' href = "mailto:xfair-cr@mit.edu")
+                            a(id = 'employer-apply-btn' href = "portal.mit-xfair.org")
                                 button.btn.apply 
-                                    h4 Contact xFair
+                                    h4 Access employer logistics portal
                 div.col-md-6
                     div.flexslider
                       ul.slides
@@ -124,12 +126,12 @@ block content
                                 div.exhibit-img
                                     img(src="http://i.imgur.com/WTDoDRx.png")
                                 h3 Student Exhibits
-                                h5 In addition to company displays and booths, xFair will showcase over 30 student exhibits. Students from all over campus will display all kinds of awesome technology that they built on their own. Take a look at last year's incredible work and displays. <span id="script">Photo gallery coming soon.</span>
+                                h5 Last year, TechFair had over 30 student exhibitor booths. Students from all over campus displayed all kinds of awesome technology that they built on their own. Take a look at their incredible work and displays. <span id="script">Photo gallery coming soon.</span>
                             div.col-lg-4
                                 div.exhibit-img
                                         img(src="http://i.imgur.com/kPq55zP.png")
                                 h3 Bottle Jet Turbine
-                                h5 One of last year's student relations funded projects was a jet turbine modeled by a glass Coke bottle. The goal was to make a working model of a complete cycle where one could see the object completely working and each part of the engine functioning at the same time.<span id="script"><a href="http://techfair.mit.edu/sr-blog/archives/category/student-projects/2013-2014/bottle-jet-turbine"> Read more here.</a></span>
+                                h5 One of last year's student relations funded projects was a jet turbine modeled by a glass Coke bottle. The goal was to make a working model of a complete cycle where one could see the object completely working and each part of the engine functioning at the same time.<span id="script"><a href=""> Read more here.</a></span>
                             
 
     section.info#info
