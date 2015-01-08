@@ -1,9 +1,10 @@
 extends layout
 
 block header
-    script(src='/javascripts/ball.js')
+    script(src='/javascripts/skrollr.menu.min.js')
     script(src='/javascripts/jquery.flexslider.js')
     script(src='/javascripts/style.js')
+    
     link(rel='stylesheet' href='/stylesheets/flexslider.css' type='text/css')
 
 block content
@@ -11,7 +12,7 @@ block content
         div.relative
             div.triangle-dark
         div.relative
-            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1200="transform:translate(0,-900px)" data-1700="position:absolute")
+            div.triangle-contrast(data-700=" transform:translate(0px,0px)" data-900="position:fixed;" data-1400="transform:translate(0,-1200px)" data-1900="position:absolute")
         div.animated.container(data-200="z-index: 9" data-300="z-index: 0; position: fixed;" data-600="position: absolute;")
             div.wrapper
                 div.title
@@ -24,10 +25,10 @@ block content
                 div.subtitle
                     div.align
                         h3 <span id="bold">February 2, 2015, 10AM - 4PM</span> / Rockwell Cage
-                a(id = 'button1' href = "#employer")
+                a(id = 'btn-employer' href="#employers")
                     button.btn.register.employers
                         h4 EMPLOYERS
-                a(id = 'button1' href = "#student")       
+                a(id = 'btn-student' href="#student")       
                     button.btn.register.students
                         h4 STUDENTS
 
@@ -45,7 +46,7 @@ block content
     section.employer#employer
         div.relative
             div.triangle-light
-        div.wrapper
+        div.wrapper#employers
             div.row#content
                 div.col-md-6
                     div.employercontent
@@ -54,13 +55,14 @@ block content
                         div.sponsor_subtitle
                             h4 <span id = "bold">Recruit the brightest young minds to make your company's vision come true.</span>
                             h4 Showcase your company and brand to thousands of attendees and inspire the next generation of talent.
-                            h4 Please note that the deadline to apply to be a sponsor for xFair 2015 was <span id = "bold">November 28, 2014</span>. Haven't applied yet? Contact us.
+                            h4 The deadline to apply to be a sponsor for xFair 2015 was <span id = "bold">November 28, 2014</span>. Interested in keeping in touch for 2016? <a id='employer-apply-btn' href="mailto:xfair-cr@mit.edu">Contact us</a>.
+                            h4 Already accepted as an xFair 2015 sponsor? Access the logistics portal <a href="portal.xfair-mit.org">here</a>.
             div.row#contrast
                 div.col-md-6
                     div.apply-btn
-                            a(id = 'employer-apply-btn' href = "mailto:xfair-cr@mit.edu")
+                            a(id = 'employer-apply-btn' href = "portal.mit-xfair.org")
                                 button.btn.apply 
-                                    h4 Contact xFair
+                                    h4 Access employer logistics portal
                 div.col-md-6
                     div.flexslider
                       ul.slides
