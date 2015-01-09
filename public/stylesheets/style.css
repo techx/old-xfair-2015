@@ -207,6 +207,11 @@ section.employer {
   color: #656565;
   background-color: #fff;
   height: 100%; }
+  section.employer a {
+    color: #559f93;
+    font-weight: 600; }
+  section.employer .relative {
+    padding-bottom: 6vh; }
   section.employer .triangle-light {
     margin-top: -35vh;
     width: 0;
@@ -219,8 +224,8 @@ section.employer {
     z-index: 3; }
   section.employer .wrapper {
     position: relative;
-    padding-top: 12vh;
-    z-index: 6; }
+    z-index: 6;
+    padding-top: 6vh; }
     section.employer .wrapper #content {
       margin: 30px;
       margin-top: 80px; }
@@ -239,7 +244,7 @@ section.employer {
         font-family: "Open Sans" sans-serif;
         font-weight: 300;
         line-height: 1.8em;
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-bottom: 5px; }
       section.employer .wrapper #content #bold {
         font-weight: 600; }
