@@ -30,4 +30,8 @@ router.get('/packages', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/packages.pdf');
 });
 
+router.get('/banquet', function(req, res) {
+    res.status(200).sendFile(__dirname + '/pdf/banquet.pdf');
+});
+
 module.exports = router;
