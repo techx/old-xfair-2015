@@ -99,7 +99,8 @@ section.main .container {
   top: 50%;
   margin-top: -150px;
   right: 0;
-  z-index: 9; }
+  z-index: 9;
+  padding-right: 50px; }
   section.main .container .wrapper {
     padding-right: 50px; }
     section.main .container .wrapper .title {
