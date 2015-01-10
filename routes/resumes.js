@@ -15,7 +15,7 @@ var sendEmail = function(name,email){
     var message = {
         "html": emailHtml,
         // "text": text,
-        "subject": "Confirmation",
+        "subject": "[xFair] Resume Submission Confirmation",
         "from_email": "xfair@mit.edu",
         "from_name": "xFair Team",
         "to": [{
