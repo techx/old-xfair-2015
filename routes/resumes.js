@@ -8,9 +8,9 @@ var mandrill_client = new mandrill.Mandrill('G1_xZ9XmFMF6zvNazi7wUA');
 
 var sendEmail = function(name,email){
     var emailHtml = "<p>Hi " + name + ",</p>" +
-    "<p>Thanks for submitting your resume! Just a reminder, xFair is <b>February 2, 2015 from 10am - 4pm</b>. If you're looking for an opportunity, make sure to also bring hard copies of your resume. Even if you aren't, we'd still love to see you there -- companies and students alike will be showcasing cutting-edge demos and products!</p>" +
+    "<p>Thanks for submitting your resume! As a reminder, xFair is <b>Monday, February 2 from 10am - 4pm</b>. If you're looking for a job opportunity, make sure to also bring hard copies of your resume. Even if you aren't, we'd still love to see you there -- companies and students alike will be showcasing cutting-edge demos and products!</p>" +
     "<p>Check out our <a href='http://xfair.mit.edu'>website</a> and <a href='https://www.facebook.com/MITxFair'>Facebook page</a> for updates and more information!</p>" +
-    "<p>Cheers,<br>xFair Team 2015</p>"; 
+    "<p>Cheers,<br>xFair Team 2015</p>";
 
     var message = {
         "html": emailHtml,
