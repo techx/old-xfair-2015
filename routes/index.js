@@ -31,9 +31,7 @@ router.get('/packages', function(req, res) {
 });
 
 router.get('/banquet', function(req, res) {
-    res.status(200).sendFile(__dirname + '/pdf/BanquetOnePager.pdf');
+    res.status(200).sendFile(__dirname + '/pdf/banquet.pdf');
 });
-
-
 
 module.exports = router;

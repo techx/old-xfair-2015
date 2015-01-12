@@ -216,6 +216,15 @@ section.employer {
     background-color: #fff;
     height: 100%;
 
+    a {
+        color: $contrast;
+        font-weight: 600;
+    }
+
+    .relative {
+        padding-bottom: 6vh;
+    }
+
     .triangle-light {
         margin-top: -35vh;
         width: 0;
@@ -230,8 +239,8 @@ section.employer {
 
     .wrapper {
         position: relative;
-        padding-top:12vh;
         z-index: 6;
+        padding-top: 6vh;
 
         #content {
             margin: 30px;
@@ -256,7 +265,7 @@ section.employer {
                 font-family:$opensans;
                 font-weight:300;
                 line-height:1.8em;
-                font-size:1.2em;
+                font-size:1.1em;
                 margin-bottom:5px;
             }
 

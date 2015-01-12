@@ -40,11 +40,22 @@ app.controller "ResumeDropController",[
       $scope.student.industries.push {_id:s4()}
       return
     $scope.submit = ->
+      $scope.error = ""
+      $scope.success = ""
+      if not $scope.student.email?.match /mit.edu/
+        $scope.error = "Please use your @mit.edu email."
+        return
+      if not $scope.student.name
+        $scope.error = "Please tell us your name."
+        return
+      if not $scope.student.resume
+        $scope.error = "Please upload your resume."
+        return
       r = $http.post '/drop',$scope.student
       r.success ->
-        $scope.success = 'dropped'
+        $scope.success = 'You have successfully dropped your resume.'
       r.error ->
-        $scope.error = 'error'
+        $scope.error = "There's an error."
 ]
 
 
@@ -143,4 +154,3 @@ app.controller "ResumeBrowseController",[
         saveAs(content, "resume.zip");
 
 ]
-
