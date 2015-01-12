@@ -10,8 +10,8 @@ router.get('/booths', function(req, res) {
   res.render('booths', { title: 'xFair 2015 / Booth Layout' });
 });
 
-router.get('/banquet', function(req, res) {
-    res.render('banquet', { title: 'xFair 2015 / Banquet' })
+router.get('/student', function(req, res) {
+  res.render('student', { title: 'xFair 2015 / Booth Layout' });
 });
 
 router.get('/portal', function(req, res) {
@@ -29,5 +29,11 @@ router.get('/prefair', function(req, res) {
 router.get('/packages', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/packages.pdf');
 });
+
+router.get('/banquet', function(req, res) {
+    res.status(200).sendFile(__dirname + '/pdf/BanquetOnePager.pdf');
+});
+
+
 
 module.exports = router;

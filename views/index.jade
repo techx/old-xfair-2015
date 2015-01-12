@@ -60,7 +60,7 @@ block content
             div.row#contrast
                 div.col-md-6
                     div.apply-btn
-                            a(id = 'employer-apply-btn' href = "portal.mit-xfair.org")
+                            a(id = 'employer-apply-btn' href = "/portal")
                                 button.btn.apply 
                                     h4 Access employer logistics portal
                 div.col-md-6
@@ -89,7 +89,12 @@ block content
                                 h1 Students
                             div.subtitle
                                 h4 Network, explore, and be inspired. xFair companies feature cutting-edge technologies and industry leaders from a variety of fields. 
-                                h4 Resume drop and company list will be available during IAP in January. Check back soon.
+                            a(id = 'employer-apply-btn' href = "/drop")
+                                button.btn.resumedrop
+                                    h4 Resume Drop
+                            a(id = 'employer-apply-btn' href = "/portal")
+                                button.btn.studentinfo
+                                    h4 Student Information
                         div.col-md-6
                             div.flexslider
                               ul.slides

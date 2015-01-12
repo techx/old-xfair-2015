@@ -358,13 +358,13 @@ section.student {
         }
 
         .subtitle {
+            padding-bottom: 10px;
+
             h4 {
                 font-family:$opensans;
-                font-weight:300;
                 line-height:1.8em;
                 font-size:1.2em;
-                margin-bottom:5px;
-                margin-top:20px;
+                font-weight: 300;
             }
         }
     }
@@ -384,6 +384,35 @@ section.student {
     .flex-control-paging li a.flex-active {
         background-color: $light;
         opacity: .6;
+    }
+
+    button, .btn {
+        border-radius: 0;
+        border: 2px solid $light;
+        background-color: $dark;
+        font-size: 1em;
+        color: $light;
+        font-family: $avenir;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        padding: 0px 30px;
+        margin: 5px 0;
+
+        h4 {
+            font-weight: 500;
+            font-size: 1em;
+        }
+    }
+
+    button:hover, .btn:hover {
+        background-color: $light;
+        color: $dark;
+        transition: all 600ms ease;
+
+        h4 {
+            font-weight: 500;
+            font-size: 1em;
+        }
     }
 }
 

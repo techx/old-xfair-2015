@@ -1,0 +1,121 @@
+@import '_constants';
+
+body {
+    color: #3d3c42;
+    font-family: $opensans;
+}
+
+nav, .navbar {
+   background-color: $dark; 
+   border-radius: 0;
+   border: none;
+   margin-bottom: 0;
+   font-size: 1.1em;
+   padding: 0 20px;
+
+   a {
+    color: $light;
+   }
+
+   a:hover {
+    color: $contrast;
+    background-color: $dark;
+    transition: all 600ms ease;
+   }
+
+   li:hover, .nav, .navbar-nav, .navbar-right, a:focus, a:active {
+    background-color: $dark !important;
+   }
+}
+    
+.student {
+    .content {
+        max-width: 55vw;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        height: 100%;
+        padding: 30px 50px;
+    }
+    
+    h1 {
+        letter-spacing: 2px;
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    h3 {
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-top: 40px;
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+
+    a {
+        color: $contrast;
+    }
+
+    a:hover {
+        opacity: .6;
+        transition: all 600ms ease;
+    }
+
+    .button {
+        border: 2px solid $contrast;
+        color: $contrast;
+        font-family: $avenir;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 8px 20px;
+        display: inline-block;
+        font-weight: 500;  
+        margin-top: 10px; 
+    }
+
+    .button:hover {
+        background-color: $contrast;
+        color: $light;
+        transition: all 600ms ease;
+        cursor: pointer;
+    }
+
+    .schedule {
+        font-size: 1em;
+        padding-left: 50px;
+        margin-top: 20px;
+        border-left: 5px solid $contrast;
+        padding-bottom: 15px;
+        max-width: 60%;
+
+        h4 {
+            padding: 15px 0 0 0;
+            font-weight: 500;
+        }
+
+        .row {
+            border-bottom: 1px solid #bab9c1;
+
+            p {
+                margin-top: 10px;
+                font-weight: 400;
+            }
+
+            .col-lg-3 p {
+                color: $contrast;
+                
+            }
+
+            .col-lg-9 p {
+            }
+        }
+
+        .row:hover {
+            background-color: $light;
+        }
+    }
+}
