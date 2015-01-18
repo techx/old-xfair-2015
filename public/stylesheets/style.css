@@ -432,6 +432,53 @@ section.exhibitor {
       section.exhibitor .container .exhibits .col-lg-4 {
         margin-bottom: 50px; }
 
+section.sponsors {
+  height: auto;
+  background-color: #fff; }
+  section.sponsors .container {
+    position: relative;
+    top: 6vh;
+    z-index: 9;
+    text-align: center; }
+    section.sponsors .container .title h1, section.sponsors .container .title h2 {
+      font-family: "Avenir" sans-serif;
+      text-transform: uppercase;
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      margin-top: 5vh;
+      margin-bottom: 10px;
+      font-weight: 600; }
+    section.sponsors .container img {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 16px; }
+    section.sponsors .container .platinum img {
+      width: 40%; }
+    section.sponsors .container .platinum .grid {
+      padding-left: 5%;
+      padding-right: 5%; }
+    section.sponsors .container .gold {
+      padding: 0 5%; }
+      section.sponsors .container .gold img {
+        display: inline-block;
+        width: 28%; }
+    section.sponsors .container .silver {
+      padding: 0 5%; }
+      section.sponsors .container .silver img {
+        display: inline-block;
+        width: 20%; }
+    section.sponsors .container .bronze {
+      padding: 0 5%; }
+      section.sponsors .container .bronze img {
+        display: inline-block;
+        width: 14%; }
+    section.sponsors .container .startup {
+      padding: 0 5%; }
+      section.sponsors .container .startup img {
+        display: inline-block;
+        width: 14%; }
+
 section.info {
   height: 100%;
   min-height: 90vh;
@@ -542,7 +589,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -550,7 +596,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -558,7 +603,6 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
@@ -566,7 +610,8 @@ section.footer {
   from {
     top: 32vh;
     opacity: 0; }
-
   to {
     top: 35vh;
     opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */
