@@ -4,6 +4,10 @@ var company = require('../controller/company');
 
 router.get('/', company.getAll);
 
-router.get('/:companyId', company.getOne);
+router.get('/:companyName/:booth', company.getOne);
+
+router.post('/', company.add);
+
+router.put('/', company.edit);
 
 module.exports = router;

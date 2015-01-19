@@ -329,13 +329,13 @@ section.student {
         font-weight: 800; }
     section.student .content #studentcontent {
       padding: 50px 80px 50px 130px; }
-    section.student .content .subtitle h4 {
-      font-family: "Open Sans" sans-serif;
-      font-weight: 300;
-      line-height: 1.8em;
-      font-size: 1.2em;
-      margin-bottom: 5px;
-      margin-top: 20px; }
+    section.student .content .subtitle {
+      padding-bottom: 10px; }
+      section.student .content .subtitle h4 {
+        font-family: "Open Sans" sans-serif;
+        line-height: 1.8em;
+        font-size: 1.2em;
+        font-weight: 300; }
   section.student .flexslider {
     margin-top: 50px;
     width: 50vw;
@@ -347,6 +347,27 @@ section.student {
   section.student .flex-control-paging li a.flex-active {
     background-color: #f4f3f0;
     opacity: .6; }
+  section.student button, section.student .btn {
+    border-radius: 0;
+    border: 2px solid #f4f3f0;
+    background-color: #102036;
+    font-size: 1em;
+    color: #f4f3f0;
+    font-family: "Avenir" sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding: 0px 30px;
+    margin: 5px 0; }
+    section.student button h4, section.student .btn h4 {
+      font-weight: 500;
+      font-size: 1em; }
+  section.student button:hover, section.student .btn:hover {
+    background-color: #f4f3f0;
+    color: #102036;
+    transition: all 600ms ease; }
+    section.student button:hover h4, section.student .btn:hover h4 {
+      font-weight: 500;
+      font-size: 1em; }
 
 section.exhibitor {
   background-color: #fff;

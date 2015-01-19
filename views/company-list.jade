@@ -1,0 +1,19 @@
+extends layout
+
+block stylesheets
+    script(src="http://d3js.org/d3.v3.min.js" charset="utf-8" type="text/javascript")
+    script(src='/javascripts/company.js')
+
+    link(rel='stylesheet' href='/stylesheets/booths.css' type='text/css')
+
+
+block content
+    div.title
+        h1 xFair Company + Booth List
+
+    div.companies
+        h4 Companies
+        div.row
+            div.col-lg-3
+                div#compList
+

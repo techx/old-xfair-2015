@@ -6,8 +6,16 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'xFair 2015' });
 });
 
-router.get('/booths', function(req, res) {
+router.get('/s3cretb00ths', function(req, res) {
   res.render('booths', { title: 'xFair 2015 / Booth Layout' });
+});
+
+router.get('/s3cretb00thslist', function(req, res) {
+  res.render('company-list', { title: 'xFair 2015 / Booth Layout' });
+});
+
+router.get('/student', function(req, res) {
+  res.render('student', { title: 'xFair 2015 / Booth Layout' });
 });
 
 router.get('/portal', function(req, res) {
