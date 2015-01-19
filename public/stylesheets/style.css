@@ -434,7 +434,8 @@ section.exhibitor {
 
 section.sponsors {
   height: auto;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-bottom: 40px; }
   section.sponsors .container {
     position: relative;
     top: 6vh;
@@ -454,7 +455,7 @@ section.sponsors {
       vertical-align: middle;
       margin: 16px; }
     section.sponsors .container .platinum img {
-      width: 40%; }
+      width: 35%; }
     section.sponsors .container .platinum .grid {
       padding-left: 5%;
       padding-right: 5%; }
