@@ -2,13 +2,11 @@
 
 body {
     overflow: auto;
-    background-color: #fff;
-    background: #fff;
 }
 
 rect {
-    fill: #78c3b7;
-    stroke: #fff; 
+    fill: transparent;
+    stroke: $contrast; 
 }
 
 rect:hover {
@@ -17,7 +15,7 @@ rect:hover {
 }
 
 text {
-    fill: #fff;
+    fill: $dark;
     font-size: 12px;
     z-index: -1;
     cursor: auto;
