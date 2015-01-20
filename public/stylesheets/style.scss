@@ -316,7 +316,7 @@ section.employer {
 
 section.student {
     height: 115vh;
-    background-color: #fff;
+    background-color: #f4f3f0;
     color: $light;
     z-index: 50;
     margin-left: auto;
@@ -531,13 +531,14 @@ section.exhibitor {
 section.sponsors {
     height: auto;
     background-color: #fff;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
 
     .container {
         position: relative;
         top: 6vh;
         z-index: 9;
         text-align: center;
+        width: 80vw;
 
         .title {
             h1 {
@@ -552,20 +553,19 @@ section.sponsors {
         }
 
         img{
-            width: 100%;
+            height: auto;
+            width: auto;
             display: inline-block;
             vertical-align: middle;
             margin: 16px;
         }
 
         .platinum {
-            img{
-                width: 35%;
-            }
+            padding: 0 5%;
 
-            .grid {
-                padding-left: 5%;
-                padding-right: 5%;
+            img{
+                max-height: 100%;
+                max-width: 35%;
             }
         }
 
@@ -573,8 +573,8 @@ section.sponsors {
             padding: 0 5%;
 
             img {
-                display: inline-block;
-                width: 28%;
+                max-height: 20%;
+                max-width: 28%;
             }
         }
 
@@ -582,8 +582,8 @@ section.sponsors {
             padding: 0 5%;
 
             img {
-                display: inline-block;
-                width: 20%;
+                max-height: 15%;
+                max-width: 20%;
             }
         }
 
@@ -591,8 +591,8 @@ section.sponsors {
             padding: 0 5%;
 
             img {
-                display: inline-block;
-                width: 14%;
+                max-height: 12%;
+                max-width: 14%;
             }
         }
 
@@ -600,8 +600,8 @@ section.sponsors {
             padding: 0 5%;
 
             img {
-                display: inline-block;
-                width: 14%;
+                max-height: 12%;
+                max-width: 14%;
             }
         }
     }
