@@ -19,7 +19,7 @@ router.get('/student', function(req, res) {
 });
 
 router.get('/portal', function(req, res) {
-    res.redirect('http://portal.mit-xfair.org');
+  res.render('portal', { title: 'xFair 2015 / Portal' });
 });
 
 router.get('/sponsor', function(req, res) {
