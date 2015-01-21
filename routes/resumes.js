@@ -8,7 +8,7 @@ var mandrill_client = new mandrill.Mandrill('G1_xZ9XmFMF6zvNazi7wUA');
 
 var sendEmail = function(name,email){
     var emailHtml = "<p>Hi " + name + ",</p>" +
-    "<p>Thanks for submitting your resume! Check out our <a href='http://xfair.mit.edu/student'>student info page here</a> for detailed xFair information such as schedules, raffles, and more! Just a reminder, xFair is February 2, 2015 from 10am - 4pm. If you're looking for an opportunity, make sure to also bring hard copies of your resume. Even if you aren't, still make sure to swing by -- companies and students alike will be showcasing cutting-edge demos and products.</p><p>Check out our <a href='xfair.mit.edu'>website</a> and <a href='https://www.facebook.com/MITxFair'>Facebook page</a> for updates!</p><p>Cheers,</p><p>The xFair Team</p>";
+    "<p>Thanks for submitting your resume! Check out our <a href='http://xfair.mit.edu/student'>student info page here</a> for detailed xFair information such as schedules, raffles, and more! As a reminder, xFair is February 2, 2015 from 10am - 4pm. If you're looking for a job opportunity, don't forget to also bring hard copies of your resume. Even if you aren't, still make sure to swing by -- companies and students alike will be showcasing cutting-edge demos and products.</p><p>Check out our <a href='xfair.mit.edu'>website</a> and <a href='https://www.facebook.com/MITxFair'>Facebook page</a> for updates!</p><p>Cheers,</p><p>The xFair Team</p>";
 
     var message = {
         "html": emailHtml,
@@ -41,7 +41,8 @@ var sendEmail = function(name,email){
 };
 
 router.post("/drop", function(req, res) {
-     Student.findOneAndUpdate({
+    req.body.date = Date.now();
+    Student.findOneAndUpdate({
         email: req.body.email
     }, req.body, {
         upsert: true

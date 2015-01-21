@@ -72,4 +72,10 @@ block content
             .filter-item
               h4 Citizenship:
               select.citizenship(ng-change='changeFilter()', ng-model='selectedCitizenships', multiple='multiple', size='4', ng-options='citizenship.label as citizenship.label for citizenship in citizenships | orderBy: "order"')
+            .filter-item
+              h4 Submission Date:
+              label From:
+              input(type="date")
+              label To:
+              input(type="date")
             // <button class="btn btn-primary">Search</button>
