@@ -3,9 +3,10 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 var schema = new Schema({
-    createdAt: {
+    date: {
         type: Date,
-        "default": Date.now
+        default: Date.now,
+        required: true
   	},
   	name: String,
   	email: {
