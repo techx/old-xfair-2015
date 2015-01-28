@@ -31,11 +31,16 @@ text {
 .layout {
   margin-top: -50px;
   margin-left: 30px;
-  width: 800px;
+  width: 60vwpx;
   float: left; }
 
-.companies #compList1, .companies #compList2 {
-  font-size: .9em; }
-.companies #boothNum {
-  color: #559f93;
-  font-weight: 600; }
+.companies {
+  width: 40vw; }
+  .companies #compList1, .companies #compList2 {
+    font-size: .9em; }
+    .companies #compList1 li, .companies #compList2 li {
+      list-style-type: none; }
+  .companies #boothNum {
+    color: #559f93;
+    font-weight: 600;
+    margin-right: 5px; }
