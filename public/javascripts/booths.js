@@ -294,10 +294,7 @@ $(document).ready(function(){
                     url: '/companies/'+boothNum,
                     type: 'GET',
                     success: function(company) {
-                        console.log(company);
-                        console.log(company[0]);
-                        console.log(company[0].name);
-                        $('.companies .row').html(company[0].name);
+                        $('.companies .row').html('<h3>'+company[0].name+"</h3>");
                     }
                 })
             });
