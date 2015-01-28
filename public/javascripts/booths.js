@@ -272,7 +272,7 @@ $(document).ready(function(){
                     type: 'GET',
                     success: function(companies) {
                         for (company in companies) {
-                            $('#compList').append("<li>"+company.name+"</li>");
+                            $('#compList').append("<li>"+company[0].name+"</li>");
                         }       
                     }
                 });
@@ -284,7 +284,7 @@ $(document).ready(function(){
                     url: '/companies/'+boothNum,
                     type: 'GET',
                     success: function(company) {
-                        console.log(company);
+                        $('#compList').html(company[0].name);
                     }
                 })
             });
