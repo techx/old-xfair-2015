@@ -276,10 +276,10 @@ $(document).ready(function(){
                             });
 
                             for (var i = 0; i < 70; i++) {
-                                $('#compList1').append("<li id="+companies[i].name+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                                $('#compList1').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
                             } 
                             for (var i = 70; i < companies.length; i++) {
-                                $('#compList2').append("<li id="+companies[i].name+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                                $('#compList2').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
                             }  
                         }
                     });
@@ -290,13 +290,7 @@ $(document).ready(function(){
 
             $(document).on('mouseover', 'rect', function() {
                 var boothNum = $(this).data("booth");
-                $.ajax({
-                    url: '/companies/'+boothNum,
-                    type: 'GET',
-                    success: function(company) {
-                        $('li #'+company[0].name).css('color', 'rgba(85,159,147,1)');
-                    }
-                });
+                $('li #'+boothNum).css('color', 'rgba(85,159,147,1)');
             });
 
         // Get form data
