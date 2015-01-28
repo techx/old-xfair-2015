@@ -29,6 +29,11 @@ nav, .navbar {
 }
     
 .student {
+    #divider {
+        border: 1px solid $light;
+        margin: 30px 0;
+    }
+
     .content {
         max-width: 55vw;
         margin-left: auto;
@@ -47,7 +52,6 @@ nav, .navbar {
     h3 {
         letter-spacing: 2px;
         font-weight: 600;
-        margin-top: 40px;
         font-size: 1.4em;
     }
 
@@ -116,6 +120,34 @@ nav, .navbar {
 
         .row:hover {
             background-color: $light;
+        }
+    }
+
+    #company-list {
+        margin-top: 30px;
+
+        .row {
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            color: $contrast;
+            font-weight: 600;
+            margin-top: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid $grey;
+        }
+
+        ul {
+            padding: 0;
+            padding-left: 5px;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+                padding: 2px;
+            }
         }
     }
 }
