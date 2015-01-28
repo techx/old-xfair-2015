@@ -34,21 +34,8 @@ text {
   width: 800px;
   float: left; }
 
-.inputs {
-  float: right;
-  margin-right: 50px;
-  padding: 10px;
-  border: 1px solid #559f93; }
-  .inputs h4 {
-    font-size: 1.2em;
-    margin: 10px; }
-  .inputs .add-company-input {
-    margin: 10px; }
-    .inputs .add-company-input input {
-      padding: 3px 5px;
-      min-width: 200px; }
-  .inputs .companies #compList1, .inputs .companies #compList2 {
-    font-size: .9em; }
-  .inputs .companies #boothNum {
-    color: #559f93;
-    font-weight: 600; }
+.companies #compList1, .companies #compList2 {
+  font-size: .9em; }
+.companies #boothNum {
+  color: #559f93;
+  font-weight: 600; }

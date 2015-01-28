@@ -41,26 +41,6 @@ text {
     float: left;
 }
 
-.inputs {
-    float: right;
-    margin-right: 50px;
-    padding: 10px;
-    border: 1px solid $contrast;
-
-    h4 {
-        font-size: 1.2em;
-        margin: 10px;
-    }
-
-    .add-company-input {
-    margin: 10px;
-
-    input {
-        padding: 3px 5px;
-        min-width: 200px;
-    }
-}
-
 .companies {
 
     #compList1, #compList2 {
@@ -73,6 +53,6 @@ text {
     }
 }
 
-}
+
 
 
