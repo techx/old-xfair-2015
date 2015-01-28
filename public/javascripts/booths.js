@@ -272,6 +272,7 @@ $(document).ready(function(){
                     type: 'GET',
                     success: function(companies) {
                         for (var i = 0; i < 70; i++) {
+                            console.log(companies[i])
                             $.ajax({
                                 url: '/companies/'+companies[i],
                                 type: 'GET',

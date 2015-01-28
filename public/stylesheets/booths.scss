@@ -60,6 +60,19 @@ text {
         min-width: 200px;
     }
 }
+
+.companies {
+
+    #compList1, #compList2 {
+        font-size: .9em;
+    }
+
+    #boothNum {
+        color: $contrast;
+        font-weight: 600;
+    }
+}
+
 }
 
 
