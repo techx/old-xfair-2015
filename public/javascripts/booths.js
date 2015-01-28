@@ -278,7 +278,7 @@ $(document).ready(function(){
                 });
             });
 
-            $(document).on('hover', 'rect', function() {
+            $(document).on('mouseover', 'rect', function() {
                 var boothNum = $(this).data("booth");
                 $.ajax({
                     url: '/companies/'+boothNum,
