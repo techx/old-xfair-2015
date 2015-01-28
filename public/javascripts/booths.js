@@ -294,7 +294,8 @@ $(document).ready(function(){
                     url: '/companies/'+boothNum,
                     type: 'GET',
                     success: function(company) {
-                        $('.companies .row').html(company);
+                        console.log(company);
+                        $('.companies .row').html(company.name);
                     }
                 })
             });
