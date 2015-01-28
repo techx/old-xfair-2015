@@ -272,8 +272,13 @@ $(document).ready(function(){
                     type: 'GET',
                     success: function(companies) {
                         for (company in companies) {
-                            console.log(company);
-                            $('#compList').append("<li>"+company[0].name+"</li>");
+                            $.ajax({
+                                url: '/companies/'+company,
+                                type: 'GET',
+                                success: function(company) {
+                                    $('#compList').append("<li>"+company[0].name+"</li>");
+                                }
+                            });
                         }       
                     }
                 });
