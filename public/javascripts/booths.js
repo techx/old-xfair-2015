@@ -37,7 +37,7 @@ $(document).ready(function(){
                                         .attr("width",boothWidth)
             }
 
-            for (var i=13; i<=22; i++) {
+            for (var i=13; i<=21; i++) {
                 var circle = svgContainer.append("rect")
                                         .attr("x", 110)
                                         .attr("y", 100+boothHeight*(i-13))
@@ -50,7 +50,7 @@ $(document).ready(function(){
                                         .attr("width",boothWidth)
             }
 
-            for (var i=23; i<=32; i++) {
+            for (var i=24; i<=32; i++) {
                 var circle = svgContainer.append("rect")
                                         .attr("x", 150)
                                         .attr("y", 460-boothHeight*(i-23))
@@ -276,7 +276,9 @@ $(document).ready(function(){
                             });
 
                             for (var i = 0; i < 70; i++) {
-                                $('#compList1').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                                if (i != 22 && i != 23) {
+                                    $('#compList1').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                                }
                             } 
                             for (var i = 70; i < companies.length; i++) {
                                 $('#compList2').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
