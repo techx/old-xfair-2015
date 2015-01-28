@@ -267,7 +267,6 @@ $(document).ready(function(){
 
             var boothList = function() {
                 $(document).on('ready', function() {
-                    $('.companies .row').html('');
                     $.ajax({
                         url: '/companies',
                         type: 'GET',
