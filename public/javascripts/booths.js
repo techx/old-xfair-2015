@@ -271,6 +271,10 @@ $(document).ready(function(){
                     url: '/companies',
                     type: 'GET',
                     success: function(companies) {
+                        companies.sort(function(a, b) {
+                            return a.name.localeCompare(b.name);
+                        });
+
                         for (var i = 0; i < 70; i++) {
                             $('#compList1').append("<li>"+"<span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
                         } 

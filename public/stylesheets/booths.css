@@ -1,46 +1,68 @@
-@font-face {
-  font-family: Avenir;
-  src: url("/assets/Avenir.ttc"); }
-body {
-  overflow: auto; }
+/*
+Syntax error: Colors must have either three or six digits: '#c'
+        on line 48 of booths.scss
 
-rect {
-  fill: transparent;
-  stroke: #559f93; }
+43: 
+44: .companies {
+45:     width: 40vw;
+46:     float: right
+47: 
+48:     #compList1, #compList2 {
+49:         font-size: .9em;
+50: 
+51:         li {
+52:             list-style-type: none;
+53:         }
 
-rect:hover {
-  fill: #559f93;
-  transition: all 300ms ease; }
-
-text {
-  fill: #102036;
-  font-size: 12px;
-  z-index: -1;
-  cursor: auto; }
-
-.title {
-  text-align: center;
-  margin-top: 50px; }
-  .title h1 {
-    font-size: 2em;
-    letter-spacing: 5px;
-    border-bottom: 2px solid;
-    padding-bottom: 10px;
-    display: inline-block; }
-
-.layout {
-  margin-top: -50px;
-  margin-left: 30px;
-  width: 60vwpx;
-  float: left; }
-
-.companies {
-  width: 40vw; }
-  .companies #compList1, .companies #compList2 {
-    font-size: .9em; }
-    .companies #compList1 li, .companies #compList2 li {
-      list-style-type: none; }
-  .companies #boothNum {
-    color: #559f93;
-    font-weight: 600;
-    margin-right: 5px; }
+Backtrace:
+booths.scss:48
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/lexer.rb:322:in `color'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/lexer.rb:253:in `token'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/lexer.rb:236:in `read_token'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/lexer.rb:182:in `peek'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:594:in `try_toks'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:222:in `times_div_or_mod'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:221:in `plus_or_minus'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:221:in `relational'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:221:in `eq_or_neq'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:221:in `and_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:221:in `or_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:354:in `space'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:339:in `interpolation'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:287:in `expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:569:in `assert_expr'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/script/parser.rb:56:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:1175:in `sass_script'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:1023:in `value!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:985:in `declaration'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:688:in `block in declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:1288:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:1288:in `rethrow'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:698:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:660:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:652:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:641:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:634:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:659:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:652:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:116:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/engine.rb:409:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/engine.rb:274:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:483:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:208:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:461:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/lib/sass/plugin/compiler.rb:323:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.13/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Colors must have either three or six digits: '#c'\A         on line 48 of booths.scss\A \A 43: \A 44: .companies {\A 45:     width: 40vw;\A 46:     float: right\A 47: \A 48:     #compList1, #compList2 {\A 49:         font-size: .9em;\A 50: \A 51:         li {\A 52:             list-style-type: none;\A 53:         }"; }
