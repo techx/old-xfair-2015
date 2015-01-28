@@ -272,6 +272,7 @@ $(document).ready(function(){
                     type: 'GET',
                     success: function(companies) {
                         for (company in companies) {
+                            console.log(company);
                             $('#compList').append("<li>"+company[0].name+"</li>");
                         }       
                     }
