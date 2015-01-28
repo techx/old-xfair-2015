@@ -271,7 +271,7 @@ $(document).ready(function(){
                     url: '/companies',
                     type: 'GET',
                     success: function(companies) {
-                        console.log(companies);
+                        $('#compList').append("<li>"+company.name+"</li>");
                     }
                 });
             });
@@ -301,7 +301,7 @@ $(document).ready(function(){
                             type: 'POST',
                             data: formData,
                             success: function(company) {
-                                $('#compList').append("<li>"+company.name+"</li>");
+                                
                             }
                         });
                     } else {
