@@ -271,15 +271,24 @@ $(document).ready(function(){
                     url: '/companies',
                     type: 'GET',
                     success: function(companies) {
-                        for (company in companies) {
+                        for (var i = 0; i < 70; i++) {
                             $.ajax({
-                                url: '/companies/'+company,
+                                url: '/companies/'+companies[i],
                                 type: 'GET',
                                 success: function(company) {
-                                    $('#compList').append("<li>"+company[0].name+"</li>");
+                                    $('#compList1').append("<li>"+"<div id='boothNum'>"+company[0].booth +"</div>"+ company[0].name+"</li>");
                                 }
                             });
-                        }       
+                        } 
+                        for (var i = 70; i < companies.length; i++) {
+                            $.ajax({
+                                url: '/companies/'+companies[i],
+                                type: 'GET',
+                                success: function(company) {
+                                    $('#compList2').append("<li>"+"<div id='boothNum'>"+company[0].booth +"</div>"+ company[0].name+"</li>");
+                                }
+                            });
+                        }  
                     }
                 });
             });
