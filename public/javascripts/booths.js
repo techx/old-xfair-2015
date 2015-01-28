@@ -265,36 +265,42 @@ $(document).ready(function(){
                 });
             });
 
+            var boothList = function() {
+                $(document).on('ready', function() {
+                    $.ajax({
+                        url: '/companies',
+                        type: 'GET',
+                        success: function(companies) {
+                            companies.sort(function(a, b) {
+                                return a.name.localeCompare(b.name);
+                            });
 
-            $(document).on('ready', function() {
-                $.ajax({
-                    url: '/companies',
-                    type: 'GET',
-                    success: function(companies) {
-                        companies.sort(function(a, b) {
-                            return a.name.localeCompare(b.name);
-                        });
-
-                        for (var i = 0; i < 70; i++) {
-                            $('#compList1').append("<li>"+"<span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
-                        } 
-                        for (var i = 70; i < companies.length; i++) {
-                            $('#compList2').append("<li>"+"<span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
-                        }  
-                    }
+                            for (var i = 0; i < 70; i++) {
+                                $('#compList1').append("<li>"+"<span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                            } 
+                            for (var i = 70; i < companies.length; i++) {
+                                $('#compList2').append("<li>"+"<span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
+                            }  
+                        }
+                    });
                 });
-            });
+            }
 
-            $(document).on('mouseover', 'rect', function() {
+            boothList();
+
+            $(document).on('mouseenter', 'rect', function() {
                 var boothNum = $(this).data("booth");
                 $.ajax({
                     url: '/companies/'+boothNum,
                     type: 'GET',
                     success: function(company) {
-                        console.log(company)
-                        $('#compList').html(company.name);
+                        $('#compList').html(company[0].name);
                     }
                 })
+            });
+
+            $(document).on('mouseleave', 'rect', function() {
+                boothList();
             });
 
         // Get form data
