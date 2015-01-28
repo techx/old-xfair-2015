@@ -276,7 +276,7 @@ $(document).ready(function(){
                             });
 
                             for (var i = 0; i < 70; i++) {
-                                if (companies[i].booth != 22 && companies[i].booth != 23) {
+                                if (companies[i].booth != 22 || companies[i].booth != 23) {
                                     $('#compList1').append("<li id="+companies[i].booth+"><span id='boothNum'>"+companies[i].booth +"</span>"+ companies[i].name+"</li>");
                                 }
                             } 
