@@ -267,6 +267,7 @@ $(document).ready(function(){
 
             var boothList = function() {
                 $(document).on('ready', function() {
+                    $('.companies .row').html('');
                     $.ajax({
                         url: '/companies',
                         type: 'GET',
@@ -294,7 +295,7 @@ $(document).ready(function(){
                     url: '/companies/'+boothNum,
                     type: 'GET',
                     success: function(company) {
-                        $('#compList').html(company[0].name);
+                        $('.companies .row').html(company);
                     }
                 })
             });
