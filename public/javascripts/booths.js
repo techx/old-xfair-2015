@@ -265,6 +265,17 @@ $(document).ready(function(){
                 });
             });
 
+
+            $(document).on('ready', function() {
+                $.ajax({
+                    url: '/companies',
+                    type: 'GET',
+                    success: function(companies) {
+                        console.log(companies);
+                    }
+                });
+            });
+
         // Get form data
         var getFormData = function(form) {
             var inputs = {};
