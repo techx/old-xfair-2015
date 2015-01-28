@@ -35,7 +35,7 @@ text {
   float: left; }
 
 .companies {
-  width: 40vw;
+  width: 35vw;
   float: right; }
   .companies #compList1, .companies #compList2 {
     font-size: .9em; }
