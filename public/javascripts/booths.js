@@ -31,7 +31,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 45)
+                var label = svgContainer.append("text").text(i).attr("x", 45)
                                         .attr("y", 625-boothHeight*i)
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -44,7 +44,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 125)
+                var label = svgContainer.append("text").text(i).attr("x", 125)
                                         .attr("y", 125+boothHeight*(i-13))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -57,7 +57,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 165)
+                var label = svgContainer.append("text").text(i).attr("x", 165)
                                         .attr("y", 485-boothHeight*(i-23))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -70,7 +70,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 245)
+                var label = svgContainer.append("text").text(i).attr("x", 245)
                                         .attr("y", 125+boothHeight*(i-33))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -85,7 +85,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 285)
+                var label = svgContainer.append("text").text(i).attr("x", 285)
                                         .attr("y", 485-boothHeight*(i-47))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -98,7 +98,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 365)
+                var label = svgContainer.append("text").text(i).attr("x", 365)
                                         .attr("y", 125+boothHeight*(i-57))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -111,7 +111,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 465)
+                var label = svgContainer.append("text").text(i).attr("x", 465)
                                         .attr("y", 605-boothHeight*(i-70))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -124,7 +124,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 545)
+                var label = svgContainer.append("text").text(i).attr("x", 545)
                                         .attr("y", 125+boothHeight*(i-83))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -137,7 +137,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 580)
+                var label = svgContainer.append("text").text(i).attr("x", 580)
                                         .attr("y", 605-boothHeight*(i-96))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -150,7 +150,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 650)
+                var label = svgContainer.append("text").text(i).attr("x", 650)
                                         .attr("y", 125+boothHeight*(i-109))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -164,7 +164,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 690)
+                var label = svgContainer.append("text").text(i).attr("x", 690)
                                         .attr("y", 605-boothHeight*(i-122))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -182,7 +182,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i)).attr("x", 770)
+                var label = svgContainer.append("text").text(i).attr("x", 770)
                                         .attr("y", offset+25+boothHeight*(i-135))
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
@@ -200,7 +200,7 @@ $(document).ready(function(){
                                         .attr("height", boothHeight)
                                         .attr("width",boothWidth)
                                         .attr("booth", i);
-                var label = svgContainer.append("text").text(boothLabel(i))
+                var label = svgContainer.append("text").text(i)
                                         .attr("x", offset+10-boothWidth*(i-146))
                                         .attr("y", 685)
                                         .attr("height", boothHeight)
@@ -301,7 +301,7 @@ $(document).ready(function(){
                             type: 'POST',
                             data: formData,
                             success: function(company) {
-                                console.log(company);
+                                $('#compList').append("<li>"+company.name+"</li>");
                             }
                         });
                     } else {
