@@ -295,7 +295,9 @@ $(document).ready(function(){
                     type: 'GET',
                     success: function(company) {
                         console.log(company);
-                        $('.companies .row').html(company.name);
+                        console.log(company[0]);
+                        console.log(company[0].name);
+                        $('.companies .row').html(company[0].name);
                     }
                 })
             });
