@@ -4,7 +4,7 @@ var company = require('../controller/company');
 
 router.get('/', company.getAll);
 
-router.get('/:companyName/:booth', company.getOne);
+router.get('/:booth', company.getOne)
 
 router.post('/', company.add);
 

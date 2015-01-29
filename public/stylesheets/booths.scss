@@ -36,30 +36,29 @@ text {
 
 .layout {
     margin-top: -50px;
-    margin-left: 30px;
-    width: 800px;
+    width: 60vwpx;
     float: left;
 }
 
-.inputs {
+.companies {
+    width: 35vw;
     float: right;
-    margin-right: 50px;
-    padding: 10px;
-    border: 1px solid $contrast;
 
-    h4 {
-        font-size: 1.2em;
-        margin: 10px;
+    #compList1, #compList2 {
+        font-size: .9em;
+
+        li {
+            list-style-type: none;
+        }
     }
 
-    .add-company-input {
-    margin: 10px;
-
-    input {
-        padding: 3px 5px;
-        min-width: 200px;
+    #boothNum {
+        color: $contrast;
+        font-weight: 600;
+        margin-right: 5px
     }
 }
-}
+
+
 
 

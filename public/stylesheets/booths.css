@@ -30,20 +30,17 @@ text {
 
 .layout {
   margin-top: -50px;
-  margin-left: 30px;
-  width: 800px;
+  width: 60vwpx;
   float: left; }
 
-.inputs {
-  float: right;
-  margin-right: 50px;
-  padding: 10px;
-  border: 1px solid #559f93; }
-  .inputs h4 {
-    font-size: 1.2em;
-    margin: 10px; }
-  .inputs .add-company-input {
-    margin: 10px; }
-    .inputs .add-company-input input {
-      padding: 3px 5px;
-      min-width: 200px; }
+.companies {
+  width: 35vw;
+  float: right; }
+  .companies #compList1, .companies #compList2 {
+    font-size: .9em; }
+    .companies #compList1 li, .companies #compList2 li {
+      list-style-type: none; }
+  .companies #boothNum {
+    color: #559f93;
+    font-weight: 600;
+    margin-right: 5px; }
