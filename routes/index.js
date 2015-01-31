@@ -34,4 +34,8 @@ router.get('/banquet', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/banquet.pdf');
 });
 
+router.get('/map', function(req, res) {
+    res.status(200).sendFile(__dirname + '/pdf/map.pdf');
+});
+
 module.exports = router;
