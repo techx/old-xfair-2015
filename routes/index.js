@@ -34,6 +34,10 @@ router.get('/banquet', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/banquet.pdf');
 });
 
+router.get('/dymo', function(req, res) {
+    res.status(200).sendFile(__dirname + '/techfair-checkin.zip');
+});
+
 router.get('/map', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/map.pdf');
 });
