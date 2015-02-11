@@ -67,8 +67,12 @@ router.post("/search", function(req, res) {
     });
 });
 
+// router.get("/drop", function(req, res) {
+//     res.render('drop', {angular: "xfair", title: "Resume Drop"});
+// });
+
 router.get("/drop", function(req, res) {
-    res.render('drop', {angular: "xfair", title: "Resume Drop"});
+    res.render('drop-closed', {angular: "xfair", title: "Resume Drop"});
 });
 
 router.get("/browse", passport.authenticate('basic', { session: false }), function(req, res) {
