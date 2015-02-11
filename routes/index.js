@@ -42,4 +42,8 @@ router.get('/map', function(req, res) {
     res.status(200).sendFile(__dirname + '/pdf/map.pdf');
 });
 
+router.get('/krabs', function(req, res) {
+    res.render('index2', { title: 'xFair 2015' });
+});
+
 module.exports = router;
