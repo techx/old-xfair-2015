@@ -75,7 +75,7 @@ router.get("/drop", function(req, res) {
     res.render('drop-closed', {angular: "xfair", title: "Resume Drop"});
 });
 
-router.get("/browse", passport.authenticate('basic', { session: false }), function(req, res) {
+router.get("/browse", function(req, res) {
     res.render('drop-closed', {angular: "xfair", title: "Resume Portal"});
 });
 
