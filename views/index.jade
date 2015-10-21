@@ -4,7 +4,7 @@ block header
     script(src='/javascripts/skrollr.menu.min.js')
     script(src='/javascripts/jquery.flexslider.js')
     script(src='/javascripts/style.js')
-    
+
     link(rel='stylesheet' href='/stylesheets/flexslider.css' type='text/css')
 
 block content
@@ -18,17 +18,17 @@ block content
                 div.title
                     h1 X<span id = "bold">FAIR 2</span><span id = "kerning">015</span>
                 div.tagline
-                    h5 Formerly 
-                        a(href='http://techfair.mit.edu/') TechFair 
-                        | and 
-                        a(href='http://tbp-careerfair.herokuapp.com/') Tau Beta Pi Career Fair
+                    h5 Powered by
+                        a(href='http://techx.mit.edu/', style="margin: 0 8px 0 8px;") TechX
+                        | and
+                        a(href='http://web.mit.edu/tbp/www/', style="margin: 0 8px 0 8px;") Tau Beta Pi
                 div.subtitle
                     div.align
-                        h3 <span id="bold">February 2, 2015, 10AM - 4PM</span> / Rockwell Cage
+                        h3 <span id="bold">February 1, 2016, 10AM - 4PM</span> / Rockwell Cage
                 a(id = 'btn-employer' href="#employers")
                     button.btn.register.employers
                         h4 EMPLOYERS
-                a(id = 'btn-student' href="#student")       
+                a(id = 'btn-student' href="#student")
                     button.btn.register.students
                         h4 STUDENTS
 
@@ -55,13 +55,9 @@ block content
                         div.sponsor_subtitle
                             h4 <span id = "bold">Recruit the brightest young minds to make your company's vision come true.</span>
                             h4 Showcase your company and brand to thousands of attendees and inspire the next generation of talent.
-                            h4 We have filled all our spots for xFair 2015. If you missed the company application deadline, we hope you keep us in mind for next year!
+                            h4 We have filled all our spots for xFair 2016. If you missed the company application deadline, we hope you keep us in mind for next year!
             div.row#contrast
                 div.col-md-6
-                    div.apply-btn
-                            a(id = 'employer-apply-btn' href = "#sponsors")
-                                button.btn.apply 
-                                    h4 2015 Sponsors
                 div.col-md-6
                     div.flexslider
                       ul.slides
@@ -72,7 +68,7 @@ block content
                         li
                           img(src='http://i.imgur.com/Z5PCaE9.png')
                         li
-                          img(src='http://i.imgur.com/1mOEldA.png') 
+                          img(src='http://i.imgur.com/1mOEldA.png')
                         li
                           img(src='http://i.imgur.com/QhNY53v.png')
 
@@ -87,13 +83,7 @@ block content
                             div.title
                                 h1 Students
                             div.subtitle
-                                h4 Network, explore, and be inspired. xFair companies feature cutting-edge technologies and industry leaders from a variety of fields. 
-                            a(id = 'employer-apply-btn' href = "/drop")
-                                button.btn.resumedrop
-                                    h4 Resume Drop
-                            a(id = 'employer-apply-btn' href = "/student")
-                                button.btn.studentinfo
-                                    h4 Student Information
+                                h4 Network, explore, and be inspired. xFair companies feature cutting-edge technologies and industry leaders from a variety of fields.
                         div.col-md-6
                             div.flexslider
                               ul.slides
@@ -104,7 +94,7 @@ block content
                                 li
                                   img(src='http://i.imgur.com/4FNmE3a.png')
                                 li
-                                  img(src='http://i.imgur.com/aeLxt1j.png') 
+                                  img(src='http://i.imgur.com/aeLxt1j.png')
 
     section.exhibitor#exhibitor
         div.container
@@ -113,8 +103,7 @@ block content
                     div.title
                         h1 Student Exhibitors
                     div.subtitle
-                        h4 We want to see your creativity, innovation, and engineering at its best. And we want to help you gain the exposure you deserve. xFair student exhibitors will display their projects at xFair 2015 to thousands of students and hundreds of industry professionals.
-                        h4 Applications for xFair 2015 student exhibitors are now closed. We'll notify selected projects soon!
+                        h4 We want to see your creativity, innovation, and engineering at its best. And we want to help you gain the exposure you deserve. xFair student exhibitors will display their projects at xFair 2016 to thousands of students and hundreds of industry professionals.
                 div.exhibits
                     div.container
                         div.row
@@ -122,7 +111,7 @@ block content
                                 div.exhibit-img
                                     img(src="http://i.imgur.com/05qYTMX.png")
                                 h3 MIT TechX SR Project Fund
-                                h5 Every year, MIT TechX's student relations (SR) committee sponsors over 30 student projects with up to $500 in funding. Over the past few years, we've seen projects ranging from quadcopters to light-up dance floors to bartending robots. Applications open every October - stay updated on MIT TechX's site. <span id="script"><a href="http://techx.mit.edu/sr.html">More info here.</a></span>
+                                h5 Every year, MIT TechX's student relations (SR) committee sponsors over 30 student projects with up to $500 in funding. Over the past few years, we've seen projects ranging from quadcopters to light-up dance floors to bartending robots. Applications open every October - stay updated on MIT TechX's site. <span id="script"><a href="http://projx.mit.edu">More info here.</a></span>
                             div.col-lg-4
                                 div.exhibit-img
                                     img(src="http://i.imgur.com/WTDoDRx.png")
@@ -133,253 +122,6 @@ block content
                                         img(src="http://i.imgur.com/kPq55zP.png")
                                 h3 Bottle Jet Turbine
                                 h5 One of last year's student relations funded projects was a jet turbine modeled by a glass Coke bottle. The goal was to make a working model of a complete cycle where one could see the object completely working and each part of the engine functioning at the same time.<span id="script"><a href=""> Read more here.</a></span>
-                            
-    section.sponsors#sponsors
-        div.container
-            div.wrapper
-                div.title
-                    h1 Sponsors
-                div.platinum
-                    a(href="http://www.jobsatdirectv.com/")
-                        img(src="https://www.filepicker.io/api/file/B8PsEEbdRzKhVFzkZz23", alt="directv")
-                div.gold
-                    a(href="http://www.twosigma.com/")
-                        img(src="https://www.filepicker.io/api/file/HV3aWXqzTvSzwsv08YKy", alt="twosigmainvestments")
-                    a(href="http://www.akamai.com/")
-                        img(src="https://www.filepicker.io/api/file/zu53gsI6Q7CumRSgbTRQ", alt="akamai")
-                    a(href="http://www.facebook.com/")
-                        img(src="https://www.filepicker.io/api/file/ZqkaisZ6RR65wIyVe6K9", alt="facebook")
-                    a(href="http://careers.slb.com/")
-                        img(src="https://www.filepicker.io/api/file/8jWAqpsJRZucG8JDNnCE", alt="schlumberger")
-                    a(href="http://careers.gm.com/student-center")
-                        img(src="https://www.filepicker.io/api/file/QmjGZkvnSo2SUYGJ5syp", alt="generalmotors")
-                    a(href="http://www.yelp.com/careers")
-                        img(src="https://www.filepicker.io/api/file/WXKm37ltQQizqEX0jS4M", alt="yelp")
-                    a(href="http://www.idexx.com/")
-                        img(src="https://www.filepicker.io/api/file/Y3mreJFpSW6StA3Aiged", alt="idexxlaboratories")
-                    a(href="https://amplitude.com/")
-                        img(src="https://www.filepicker.io/api/file/MY6Q0lPMRRuRB0frYVDM", alt="amplitude")
-                    a(href="http://palantir.com/")
-                        img(src="https://www.filepicker.io/api/file/coBl1jU0QmObn8f4lpOQ", alt="palantir")
-                    a(href="http://bwater.com/")
-                        img(src="https://www.filepicker.io/api/file/XS5JhweWTE6PcNJsBIyY", alt="bridgewaterassociates")
-                    a(href="https://nest.com/")
-                        img(src="https://www.filepicker.io/api/file/6SrkNJMEQr2GhiJxEqrQ", alt="nest")
-                    a(href="https://www.janestreet.com/")
-                        img(src="https://www.filepicker.io/api/file/gihAu5fNQsujFDo9Y2g4", alt="janestreet")
-                    a(href="http://www.bloomberg.com/rd/")
-                        img(src="https://www.filepicker.io/api/file/OogfzZKaR9NMzvh26C7w", alt="bloomberg")
-                    a(href="http://www.dropbox.com/")
-                        img(src="https://www.filepicker.io/api/file/vx5ccPLSrusGNqxSV0g7", alt="dropbox")
-                    a(href="http://oracle.com/college")
-                        img(src="https://www.filepicker.io/api/file/V9nCnaGrQulLCWceaWxc", alt="oracle")
-                    a(href="http://www.microsoft.com/university")
-                        img(src="https://www.filepicker.io/api/file/RlJqmIN8Q6mQoWZffgGt", alt="microsoft")
-                div.silver
-                    a(href="http://www.amazon.com/")
-                        img(src="https://www.filepicker.io/api/file/AwvE4jOJQQaPIei2i0yw", alt="amazon")
-                    a(href="http://www.intel.com/jobs")
-                        img(src="https://www.filepicker.io/api/file/xhOU1OmJQLOlTGgxlW2n", alt="intel")
-                    a(href="https://www.mdsol.com/")
-                        img(src="https://www.filepicker.io/api/file/ZpwCO9hZQHelprehJJHA", alt="medidata")
-                    a(href="http://google.com/careers/students")
-                        img(src="https://www.filepicker.io/api/file/tH62arEeS7u6s7XgRc88", alt="google")
-                    a(href="http://adobe.com/university")
-                        img(src="https://www.filepicker.io/api/file/dqVUarLiQEuynGfndejv", alt="adobe")
-                    a(href="http://www.twitter.com/")
-                        img(src="https://www.filepicker.io/api/file/sAG63DrSrGVIJ6ngpmHJ", alt="twitter")
-                    a(href="http://www.3redgroup.com/campus/")
-                        img(src="https://www.filepicker.io/api/file/G29gvB4lSmul3R8HFk1y", alt="3red")
-                    a(href="http://www.athenahealth.com/careers")
-                        img(src="https://www.filepicker.io/api/file/2ihndboYQjSCeyOukfBX", alt="athenahealth")
-                    a(href="http://www.exponent.com/")
-                        img(src="https://www.filepicker.io/api/file/BpStYiiDRRqQJ43zuA7N", alt="exponent")
-                    a(href="http://www.amadeus.com/")
-                        img(src="https://www.filepicker.io/api/file/nXNxAedIT0qizoZwHR0B", alt="amadeus")
-                    a(href="http://campus.capitalone.com/")
-                        img(src="https://www.filepicker.io/api/file/z8tTG2QiT0SXQCOof70R", alt="capitalone")
-                    a(href="http://www.alcoa.com/")
-                        img(src="https://www.filepicker.io/api/file/wIRL14csRIBo4uWH7Ybw", alt="alcoa")
-                    //- a(href="")
-                        img(src="", alt="apple")
-                    a(href="http://www.shopkick.com/")
-                        img(src="https://www.filepicker.io/api/file/1lzXP0VeR4S71fCDvsek", alt="shopkick")
-                    a(href="http://careers.yahoo.com/")
-                        img(src="https://www.filepicker.io/api/file/82FStfxwRCAXJibcJXw7", alt="yahoo")
-                    a(href="http://tibco.com/")
-                        img(src="https://www.filepicker.io/api/file/t2e6oyTN6M3tEBqmEAig", alt="tibco")
-                    a(href="http://trove.com/")
-                        img(src="https://www.filepicker.io/api/file/uI35jeuQzW7Spo0SP5Lt", alt="trove")
-                    a(href="http://www.fitbit.com/")
-                        img(src="https://www.filepicker.io/api/file/bRmAvBdTneHmfgw1qxEQ", alt="fitbit")
-                    a(href="http://www.meraki.com/jobs")
-                        img(src="https://www.filepicker.io/api/file/GArsWFZGTo2gCWEGjvne", alt="meraki")
-                    a(href="http://www.a9.com/")
-                        img(src="https://www.filepicker.io/api/file/qe9eoDoqQzWmo5qeTzuP", alt="a9")
-                    a(href="http://www.kivasystems.com/")
-                        img(src="https://www.filepicker.io/api/file/UrWFF8eSLCnfUnNaH9rg", alt="kivasystems")
-                    a(href="http://www.retailmenot.com/")
-                        img(src="https://www.filepicker.io/api/file/NpwhvdgS9e1Ue4udJ1CQ", alt="retailmenot,inc.")
-                    a(href="http://www.predictivetechnologies.com/")
-                        img(src="https://www.filepicker.io/api/file/Z333jO8ET8Kvmmt1i1Ol", alt="appliedpredictivetechnologies(apt)")
-                div.bronze
-                    a(href="http://markforged.com/")
-                        img(src="http://s21.postimg.org/uagoirsom/Mark_Forged_logo_copy.jpg")
-                    a(href="http://www.kbcat.com/")
-                        img(src="https://www.filepicker.io/api/file/IFRMV7UlSRCZNO7xJ1SA", alt="kbc")
-                    a(href="http://www.gore.com/change-life")
-                        img(src="https://www.filepicker.io/api/file/2CHaqh4mTd6ZJ1ga4mWh", alt="wlgore")
-                    a(href="http://www.ll.mit.edu/")
-                        img(src="https://www.filepicker.io/api/file/jtmniafFSw2InSnHRG9a", alt="mitlincolnlaboratory")
-                    a(href="http://www.appdynamics.com/")
-                        img(src="https://www.filepicker.io/api/file/aqV2JnzETuG1urY1qmvd", alt="appdynamics")
-                    a(href="http://www.DEShawResearch.com/")
-                        img(src="https://www.filepicker.io/api/file/Gc6otvyRNyZkPOsgInoE", alt="d.e.shawresearch")
-                    a(href="")
-                        img(src="https://www.filepicker.io/api/file/mx1FuWxlRl2XJkRmhJkN", alt="appliedmaterials")
-                    a(href="http://www.servicenow.com/")
-                        img(src="https://www.filepicker.io/api/file/binA1MNAQadXzzeIQpZJ", alt="servicenow")
-                    a(href="http://www.illumina.com/")
-                        img(src="https://www.filepicker.io/api/file/n7EvgVzRmecE35yidv5G", alt="illumina")
-                    a(href="http://inflection.com/")
-                        img(src="https://www.filepicker.io/api/file/uoMhVLeTPuzyjodVFqDS", alt="inflection")
-                    a(href="https://www.duolingo.com/")
-                        img(src="https://www.filepicker.io/api/file/6IOVH3dnQqCGHVp2Qzf3", alt="duolingo")
-                    a(href="http://www.dnanexus.com/")
-                        img(src="https://dnanexus.com/images/presskit/logos/dnanexus-medium.png", alt="dnanexus")
-                    a(href="http://www.indeed.jobs/")
-                        img(src="https://www.filepicker.io/api/file/ZvayzoU7Q7mFHP5Xol66", alt="indeed")
-                    a(href="http://www.mitre.org/students")
-                        img(src="https://www.filepicker.io/api/file/xYUBGZwESJ62ZWTYxKv2", alt="mitre")
-                    a(href="http://www.netapp.com/")
-                        img(src="https://www.filepicker.io/api/file/HnqdGFToQgqhmM6ThD5B", alt="netapp")
-                    a(href="http://www.ginger.io")
-                        img(src="https://www.filepicker.io/api/file/L3UdoA3Tk2tISj5ShUH7", alt="ginger.io")
-                    a(href="http://quora.com/")
-                        img(src="https://www.filepicker.io/api/file/drNql8vaR7yEDIwZMCfK", alt="quora")
-                    a(href="http://www.nytco.com/")
-                        img(src="https://www.filepicker.io/api/file/28yFssiATl61KEWehnoP", alt="thenewyorktimes")
-                    a(href="http://www.imc-chicago.com/")
-                        img(src="https://www.filepicker.io/api/file/SoryMN0QftnMlz92ZQ9x", alt="imcfinancialmarkets")
-                    a(href="http://www.nrel.gov/careers")
-                        img(src="https://www.filepicker.io/api/file/ONbPSqXQDeL4HUTNw7TQ", alt="nationalrenewableenergylaboratory(nrel)")
-                    a(href="http://www.raytheon.com/campus")
-                        img(src="https://www.filepicker.io/api/file/AzKpmkJ7TEG3b1ymq9Ib", alt="raytheon")
-                    a(href="http://www.Build-It-Yourself.com/")
-                        img(src="http://s22.postimg.org/9ichrxsm9/biy_logo.jpg", alt="build-it-yourself")
-                    a(href="http://www.espncareers.com/")
-                        img(src="https://www.filepicker.io/api/file/AvxBN8qQImVkYpfj1yOQ", alt="espn")
-                    a(href="http://www.Orbital.com/")
-                        img(src="https://www.filepicker.io/api/file/jnzoUrJqShyPSqLnh7Zg", alt="orbitalsciences")
-                    a(href="http://www.vmware.com/company/careers/university-relations.html")
-                        img(src="https://www.filepicker.io/api/file/pIE7NjsIQb6cMPP9Q9e8", alt="vmware")
-                    a(href="http://www.dwavesys.com/")
-                        img(src="https://www.filepicker.io/api/file/zlOJhm9jRgyz3WLEZCrA", alt="d-wavesystemsinc.")
-                    a(href="http://www.wolve.com/")
-                        img(src="https://www.filepicker.io/api/file/0THbB8IZRCCbNmGTPWnq", alt="wolverinetrading")
-                    a(href="http://www.medtronic.com/")
-                        img(src="https://www.filepicker.io/api/file/AhrAKyDrQTqJuL2oogZX", alt="medtronic")
-                    a(href="http://www.synaptics.com/")
-                        img(src="https://www.filepicker.io/api/file/ptPhUM7xQMqehkwr0irH", alt="synaptics")
-                    a(href="http://www.tripadvisor.com/careers")
-                        img(src="https://www.filepicker.io/api/file/IsoCjjRMQISj6SCSKONm", alt="tripadvisor")
-                    a(href="http://www.editshare.com/")
-                        img(src="https://www.filepicker.io/api/file/OM6HUchXSbin6FukdeTS", alt="editshare")
-                    a(href="http://www.gdeb.com/")
-                        img(src="http://www.freelogovectors.net/wp-content/uploads/2012/05/general_dynamics-logo.jpg", alt="generaldynamicselectricboat")
-                    a(href="http://Www.ultimatesoftware.com/")
-                        img(src="https://www.filepicker.io/api/file/kqkQjjeyQeCvL8ZSBhUe", alt="ultimatesoftware")
-                    a(href="https://civisanalytics.com/")
-                        img(src="https://www.filepicker.io/api/file/f7JasBKTdS5tgqpGG6PQ", alt="civisanalytics")
-                    a(href="http://att.jobs/TDP")
-                        img(src="https://www.filepicker.io/api/file/M49gFRKnSrC6rIZgFS6X", alt="at&t")
-                    a(href="http://www.bostonscientific.com/careers")
-                        img(src="https://www.filepicker.io/api/file/3VcoNUVRyCCelhTWA2b8", alt="bostonscientific")
-                    a(href="http://www.aurora.aero/")
-                        img(src="https://www.filepicker.io/api/file/Nr7xzPFQzi24UgTcXASo", alt="auroraflightsciences")
-                    a(href="http://www.gilt.com/")
-                        img(src="http://i.imgur.com/887KzmI.png", alt="giltgroupe")
-                    a(href="http://www.kayak.com/")
-                        img(src="https://www.filepicker.io/api/file/ZR30E3vIQB2nh25j1C9R", alt="kayak")
-                    a(href="https://squareup.com/careers")
-                        img(src="https://www.filepicker.io/api/file/TwMT1odkSY2JUN9uHfOF", alt="square")
-                    a(href="http://www.sandia.gov/")
-                        img(src="https://www.filepicker.io/api/file/ZatypWt5QCGmb6902t2W", alt="sandianationallaboratories")
-                    a(href="http://Nomura.com/americas/careers")
-                        img(src="https://www.filepicker.io/api/file/5ODDr3oqRMm079mgpXDT", alt="nomura")
-                    a(href="http://www.analog.com/")
-                        img(src="https://www.filepicker.io/api/file/nKSO5rPCQUeJA2pYxKsC", alt="analogdevices")
-                    a(href="http://www.bandcamp.com/")
-                        img(src="http://s27.postimg.org/o1obo5u81/bandcamp.gif", alt="bandcamp")
-                    a(href="http://www.citadel.com/")
-                        img(src="https://www.filepicker.io/api/file/5W98PViXQuyIbmV7N5qg", alt="citadel")
-                    a(href="http://www.counsyl.com/")
-                        img(src="https://www.filepicker.io/api/file/tpacAMtRQ42pmmfvSuux", alt="counsyl")
-                    a(href="http://www.benefitfocus.com/")
-                        img(src="https://www.filepicker.io/api/file/Q1MiX8rRoaKMd0IyFlUt", alt="benefitfocus")
-                    a(href="http://www.Shmoop.com/")
-                        img(src="https://www.filepicker.io/api/file/n4VdVuuMQ3ebNTPUEqgj", alt="shmoop")
-                    a(href="http://Nilas.com/")
-                        img(src="https://www.filepicker.io/api/file/fzsO9FIwTK2smpiqiBkL", alt="nilas")
-                    a(href="http://www.sbgenomics.com/")
-                        img(src="https://www.filepicker.io/api/file/6vb6y6bFRMSUQyOUtlwB", alt="sevenbridges")
-                    a(href="http://www.intentional.com/")
-                        img(src="https://www.filepicker.io/api/file/Ym1tpUWAR4C6rLKS2pCv", alt="intentionalsoftware")
-                    a(href="http://www.vecna.com/")
-                        img(src="https://www.filepicker.io/api/file/bFngFXQTjugNR4IK4ZLQ", alt="vecna")
-                    a(href="http://www.goldmansachs.com/careers/index.html")
-                        img(src="https://www.filepicker.io/api/file/IGL28iGzRm6re4zXOQqc", alt="goldmansachs")
-                    a(href="http://www.irobot.com/")
-                        img(src="https://www.filepicker.io/api/file/uKKQtgOhSDWgWa7xrDb5", alt="irobot")
-                    a(href="http://www.finoconsulting.com/")
-                        img(src="https://www.filepicker.io/api/file/Reua66anRZyDjrEpNs6Y", alt="finoconsulting")
-                    a(href="")
-                        img(src="https://www.filepicker.io/api/file/SQa8y9eRRkOzzFFQAgPe", alt="accenture")
-                    a(href="http://www.ti.com/students")
-                        img(src="https://www.filepicker.io/api/file/nBuy0xT5SXO4bEFuBlkB", alt="texasinstruments")
-                    a(href="http://www.hillcrestlabs.com/")
-                        img(src="https://www.filepicker.io/api/file/kI1ZI6SmiA5AdTAhhSAj", alt="hillcrestlabs")
-                    a(href="http://redfin.com/")
-                        img(src="https://www.filepicker.io/api/file/f7DDUEUTgGEZBZdbsyoM", alt="redfin")
-                    a(href="http://www.mathworks.com/")
-                        img(src="https://www.filepicker.io/api/file/ELjg5TJ7SlyhlL2cEnx0", alt="mathworks")
-                    a(href="http://www.kamcord.com/")
-                        img(src="https://www.filepicker.io/api/file/iwSVuTefRtK4vEZOnDNr", alt="kamcord")
-                    a(href="http://www.onshape.com/")
-                        img(src="https://www.filepicker.io/api/file/i01stiTbQYCjDLB6dM8U", alt="onshape")
-                    a(href="http://www.nutanix.com/")
-                        img(src="https://www.filepicker.io/api/file/6INg5zNTV6RIGaBCDAhY", alt="nutanix")
-                    a(href="http://formlabs.com/")
-                        img(src="https://www.filepicker.io/api/file/G6BQNrchRESY7rbGZ9pm", alt="formlabs")
-                    a(href="http://www.mediamath.com/")
-                        img(src="http://www.videoadnews.com/wp-content/uploads/2012/12/mediamath.jpg", alt="mediamath")
-                    a(href="http://www.aerospace.org/careers")
-                        img(src="http://ndia.multiview.com/userlogo/ndia/329511v7v1.jpg", alt="theaerospacecorporation")
-                    a(href="http://www.ixl.com/")
-                        img(src="https://www.filepicker.io/api/file/ZtWZqbLaQ22SRlEfyz1S", alt="ixllearning")
-                    a(href="http://www.splunk.com/")
-                        img(src="https://www.filepicker.io/api/file/5CMRjgDxSTCA9yTkNbcA", alt="splunk")
-                    a(href="https://piazza.com/")
-                        img(src="https://www.filepicker.io/api/file/Ya15n7jHRsmv95yXGg2V", alt="piazza")
-                    a(href="http://www.flux.io/")
-                        img(src="http://s29.postimg.org/9wiz5k239/Flux_Logo.png", alt="fluxfactory")
-                    a(href="http://www.oliverwyman.com/")
-                        img(src="https://www.filepicker.io/api/file/xn2n4UBpQV6BqX0W7e8U", alt="oliverwyman")
-                    a(href="http://www.undercurrent.com/")
-                        img(src="https://www.filepicker.io/api/file/ZAnIr27oS5SUVxgy7sR1", alt="undercurrent")
-                div.startup
-                    a(href="http://zinc.io/")
-                        img(src="https://www.filepicker.io/api/file/Lfjlc3gOSieaFLnPHbsU", alt="zinc")
-                    a(href="http://www.leaflabs.com/")
-                        img(src="http://oi59.tinypic.com/ztrgp.jpg", alt="leaflabs")
-                    a(href="http://picnichealth.com/")
-                        img(src="https://www.filepicker.io/api/file/xmRU16BXQh6LWChd6mcb", alt="picnichealth")
-                    a(href="https://benchling.com/")
-                        img(src="https://www.filepicker.io/api/file/rQDieNPsRh6tXYFqbSYW", alt="benchling")
-                    a(href="http://quizlet.com/")
-                        img(src="https://www.filepicker.io/api/file/zlgl22sUSLurVxpyNf31", alt="quizlet")
-                    a(href="http://www.n12technologies.com/")
-                        img(src="https://www.filepicker.io/api/file/ILLqkd4SSp6EBdhCj4a8", alt="n12technologies")
 
     section.info#info
         div.container
@@ -397,21 +139,21 @@ block content
                             h5 Yes. There will be a resume drop opening in January so employers can find you before the fair, but also bring paper copies. Some recruiters like writing on resumes in person.
                         div.col-md-4
                             h3 What's the dress code?
-                            h5 
-                                a(href="http://en.wikipedia.org/wiki/Smart_casual") Smart 
+                            h5
+                                a(href="http://en.wikipedia.org/wiki/Smart_casual") Smart
                                 | or business casual.
-                            
+
                     div.row
                         div.col-md-4
                             h3 What distinguishes xFair from traditional career fairs?
                             h5 Many companies at xFair will be displaying cool demos, so you can check out the products that you'll help build at your future job. In addition to company demos, we'll also be displaying cool projects made by MIT students like you! Check out your friends' and classmates' projects at the fair.
                         div.col-md-4
                             h3 Where can I get more information?
-                            h5 
-                                | Student information is available <a href='/student'>here</a>. You can follow MIT xFair on 
-                                a(href='https://www.facebook.com/MITTechX') Facebook 
-                                | or  
-                                a(href='https://twitter.com/mittechx') Twitter 
+                            h5
+                                | Student information is available <a href='/student'>here</a>. You can follow MIT xFair on
+                                a(href='https://www.facebook.com/MITTechX',style="margin: 0 5px 0 5px;") Facebook
+                                | or
+                                a(href='https://twitter.com/mittechx',style="margin: 0 5px 0 5px;") Twitter
                                 | to stay updated.
                         div.col-md-4
                             h3 Why should I even go?
@@ -421,21 +163,21 @@ block content
             div.row
                 div.foot-wrap
                     div.col-lg-6#left
-                        h5 
+                        h5
                             span#light MIT x
-                            | Fair 2015 
+                            | Fair 2016
                             span#light /
                             span#icons
                                 a(href='https://www.facebook.com/MITXFair')
-                                    i.fa.fa-facebook 
+                                    i.fa.fa-facebook
                                 a(href='https://twitter.com/MITxFair')
-                                    i.fa.fa-twitter 
+                                    i.fa.fa-twitter
                                 a(href='mailto:xfair-cr@mit.edu')
-                                    i.fa.fa-envelope 
+                                    i.fa.fa-envelope
                     div.col-lg-6#right
-                        h5 
-                        | Powered by 
-                        a(href='http://techx.mit.edu/') MIT TechX
-                        |  and 
-                        a(href='http://web.mit.edu/tbp/www/') MIT Tau Beta Pi
+                        h5
+                        | Powered by
+                        a(href='http://techx.mit.edu/',style="margin: 0 5px 0 5px;") MIT TechX
+                        |  and
+                        a(href='http://web.mit.edu/tbp/www/',style="margin: 0 5px 0 5px;") MIT Tau Beta Pi
 
