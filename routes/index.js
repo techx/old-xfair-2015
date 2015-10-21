@@ -3,19 +3,19 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'xFair 2015' });
+  res.render('index', { title: 'xFair 2016' });
 });
 
 router.get('/booths', function(req, res) {
-  res.render('booths', { title: 'xFair 2015 / Booth Layout' });
+  res.render('booths', { title: 'xFair 2016 / Booth Layout' });
 });
 
 router.get('/student', function(req, res) {
-  res.render('student', { title: 'xFair 2015 / Booth Layout' });
+  res.render('student', { title: 'xFair 2016 / Booth Layout' });
 });
 
 router.get('/portal', function(req, res) {
-  res.render('portal', { title: 'xFair 2015 / Portal' });
+  res.render('portal', { title: 'xFair 2016 / Portal' });
 });
 
 router.get('/sponsor', function(req, res) {
@@ -43,7 +43,7 @@ router.get('/map', function(req, res) {
 });
 
 router.get('/krabs', function(req, res) {
-    res.render('index2', { title: 'xFair 2015' });
+    res.render('index2', { title: 'xFair 2016' });
 });
 
 module.exports = router;
